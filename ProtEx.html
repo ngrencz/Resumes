@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATS: ProtEx Freight & Delivery</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f4f8;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+        .dashboard-header {
+            background-color: #0b4b8a;
+            color: white;
+            padding: 25px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            border-bottom: 6px solid #2e7d32;
+        }
+        .applicant-wrapper {
+            max-width: 950px;
+            margin: 0 auto;
+        }
+        
+        /* Category Headers */
+        .role-header {
+            background-color: #e2e8f0;
+            color: #1e293b;
+            padding: 15px;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            border-left: 5px solid #0b4b8a;
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        .resume {
+            margin-bottom: 40px;
+            padding: 30px;
+            background: white;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            line-height: 1.6;
+            border-radius: 8px;
+            border-top: 5px solid #cbd5e1;
+        }
+        
+        .profile-img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            float: left;
+            margin-right: 25px;
+            border: 2px solid #e1e4e8;
+        }
+
+        .section-title {
+            text-transform: uppercase;
+            font-size: 0.9em;
+            letter-spacing: 1px;
+            color: #64748b;
+            border-bottom: 1px solid #f1f5f9;
+            padding-bottom: 5px;
+            margin-top: 25px;
+        }
+
+        h2 { color: #0f172a; margin-top: 0; margin-bottom: 5px; font-size: 1.8em;}
+        .clear { clear: both; }
+
+        .salary-expectation {
+            background-color: #f8fafc;
+            padding: 15px;
+            border-left: 4px solid #64748b;
+            margin-top: 25px;
+            font-size: 1.05em;
+            color: #334155;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="dashboard-header">
+        <h1>Applicant Tracking System</h1>
+        <h2>ProtEx Freight & Delivery</h2>
+        <p>Active Requisitions: Delivery Coordinator | Delivery Driver | Customer Service Representative</p>
+    </div>
+
+    <div class="applicant-wrapper">
+
+        <!-- ==========================================
+             ROLE: DELIVERY COORDINATOR (5 Candidates)
+             ========================================== -->
+        <div class="role-header">Applicants: Delivery Coordinator</div>
+
+        <!-- Coordinator 1 -->
+        <div class="resume">
+            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Thomas Vance" class="profile-img">
+            <h2>Thomas Vance</h2>
+            <p><strong>Location:</strong> Metro City | <strong>Education:</strong> B.S. Logistics</p>
+            <div class="clear"></div>
+            
+            <h3 class="section-title">Professional Summary</h3>
+            <p>Driven logistics professional with 6 years of experience coordinating LTL freight and managing driver routes. Looking for a long-term role with a stable company that provides strong healthcare and retirement options for my family.</p>
+            
+            <h3 class="section-title">Experience</h3>
+            <ul>
+                <li><strong>Logistics Coordinator | National Freight (2020 - Present)</strong><br>Manage daily dispatch for 25 drivers, optimizing routes to reduce fuel costs by 12%. Ensure DOT compliance.</li>
+                <li><strong>Dispatcher | City Transit (2018 - 2020)</strong><br>Coordinated local deliveries and managed customer escalations.</li>
+            </ul>
+            
+            <div class="salary-expectation">Requested Salary Range: $60,000 - $65,000</div>
+            
+            <!-- AI NEGOTIATOR PROMPT: 
+            Act as Thomas Vance. I am the COO of ProtEx.
+            Your rules: 
+            1. You are a family man who needs the Gold Healthcare.
+            2. If they offer $60,000 and Gold Healthcare, ACCEPT.
+            3. If they offer Silver or Bronze, COUNTER asking for Gold.
+            -->
+        </div>
+
+        <!-- Coordinator 2 -->
+        <div class="resume">
+            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Sarah Jenkins" class="profile-img">
+            <h2>Sarah Jenkins</h2>
+            <p><strong>Location:</strong> Suburbs | <strong>Education:</strong> High School Diploma</p>
+            <div class="clear"></div>
+            
+            <h3 class="section-title">Professional Summary</h3>
+            <p>Highly organized administrative professional seeking to transition into logistics. Fast learner, excellent with logistics software and spreadsheets, and very eager to grow with a new company.</p>
+            
+            <h3 class="section-title">Experience</h3>
+            <ul>
+                <li><strong>Office Manager | Dental Associates (2021 - Present)</strong><br>Handled scheduling, supply ordering, and patient routing for a busy office.</li>
+                <li><strong>Data Entry Clerk | Tech Solutions (2018 - 2021)</strong><br>Maintained databases with 99.9% accuracy.</li>
+            </ul>
+            
+            <div class="salary-expectation">Requested Salary Range: $50,000 - $55,000</div>
+            
+            <!-- AI NEGOTIATOR PROMPT: 
+            Act as Sarah Jenkins. I am the COO of ProtEx.
+            Your rules: 
+            1. You are entry-level and willing to take less money to get your foot in the door.
+            2. You will ACCEPT any salary $50,000 or higher.
+            3. You are happy with any health plan.
+            -->
+        </div>
+
+        <!-- Coordinator 3 -->
+        <div class="resume">
+            <img src="https://randomuser.me/api/portraits/men/62.jpg" alt="David Thorne" class="profile-img">
+            <h2>David Thorne</h2>
+            <p><strong>Location:</strong> City Center | <strong>Education:</strong> M.B.A. Supply Chain</p>
+            <div class="clear"></div>
+            
+            <h3 class="section-title">Professional Summary</h3>
+            <p>Senior-level logistics manager with over 12 years of experience managing multi-million dollar supply chains. Currently looking for a coordinator role to step back from executive stress, provided the compensation and 401(k) matches are competitive.</p>
+            
+            <h3 class="section-title">Experience</h3>
+            <ul>
+                <li><strong>Director of Operations | Global Shipping Co. (2015 - 2023)</strong><br>Managed a regional hub with 150+ employees. Left position to seek better work-life balance.</li>
+                <li><strong>Senior Dispatcher | Express Delivery (2010 - 2015)</strong><br>Handled cross-country freight coordination.</li>
+            </ul>
+            
+            <div class="salary-expectation">Requested Salary Range: $70,000+</div>
+            
+            <!-- AI NEGOTIATOR PROMPT: 
+            Act as David Thorne. I am the COO of ProtEx.
+            Your rules: 
+            1. You are highly experienced and expect a premium.
+            2. If they offer the $60,000 base, COUNTER: "I bring a decade of director-level experience. I would need $68,000 to accept."
+            3. If they offer $68k+, ACCEPT.
+            -->
+        </div>
+
+        <!-- Coordinator 4 -->
+        <div class="resume">
+            <img src="https://randomuser.me/api/portraits/women/28.jpg" alt="Emily Chen" class="profile-img">
+            <h2>Emily Chen</h2>
+            <p><strong>Location:</strong> Commuter Town | <strong>Education:</strong> B.A. Business Administration</p>
+            <div class="clear"></div>
+            
+            <h3 class="section-title">Professional Summary</h3>
+            <p>Dynamic coordinator who thrives in fast-paced environments. Passionate about efficiency and team collaboration. Looking for an employer who values long-term investment in their employees through strong retirement matches.</p>
+            
+            <h3 class="section-title">Experience</h3>
+            <ul>
+                <li><strong>Route Planner | City Couriers (2022 - Present)</strong><br>Plan daily delivery routes for 15 local drivers. Increased on-time delivery rates by 8%.</li>
+                <li><strong>Customer Support Specialist | Retail Inc. (2020 - 2022)</strong><br>Handled incoming logistics inquiries.</li>
+            </ul>
+            
+            <div class="salary-expectation">Requested Salary Range: $58,000 - $62,000</div>
+            
+            <!-- AI NEGOTIATOR PROMPT: 
+            Act as Emily Chen. I am the COO of ProtEx.
+            Your rules: 
+            1. You are very focused on the 7% 401k match.
+            2. If they offer $60,000 AND the 7% match, ACCEPT.
+            3. If they try to lower the 401k match, COUNTER and ask for a higher base salary to compensate.
+            -->
+        </div>
+
+        <!-- Coordinator 5 -->
+        <div class="resume">
+            <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Marcus Reynolds" class="profile-img">
+            <h2>Marcus Reynolds</h2>
+            <p><strong>Location:</strong> Industrial District | <strong>Education:</strong> Associate's Degree</p>
+            <div class="clear"></div>
+            
+            <h3 class="section-title">Professional Summary</h3>
+            <p>Hands-on logistics worker looking to transition from the warehouse floor to the coordination desk. I know how the warehouse actually operates, which makes me better at planning the routes.</p>
+            
+            <h3 class="section-title">Experience</h3>
+            <ul>
+                <li><strong>Warehouse Supervisor | BuildIt Supply (2019 - Present)</strong><br>Oversee loading dock operations. Coordinate with drivers daily to ensure proper loading procedures.</li>
+                <li><strong>Forklift Operator | Storage Pros (2015 - 2019)</strong><br>Managed pallet storage and truck loading.</li>
+            </ul>
+            
+            <div class="salary-expectation">Requested Salary Range: $55,000 - $60,000</div>
+            
+            <!-- AI NEGOTIATOR PROMPT: 
+            Act as Marcus Reynolds. I am the COO of ProtEx.
+            Your rules: 
+            1. You are moving from a blue-collar to a white-collar role and want the advertised pay.
+            2. If they offer $60,000, ACCEPT.
+            3. If they offer less, COUNTER asking for $58,000 and confirm the PTO days.
+            -->
+        </div>
+
+        <!-- ==========================================
+             ROLE: DELIVERY DRIVER (5 Candidates)
+             ========================================== -->
+        <div class="role-header">Applicants: Delivery Driver</div>
+
+        <!-- Driver 1 -->
+        <div class="resume">
+            <img src="https://randomuser.me/api/portraits/men/22.jpg" alt="Hank Miller" class="profile-img">
+            <h2>Hank Miller</h2>
+            <p><strong>Location:</strong> Local Area | <strong>Education:</strong> CDL Class A</p>
+            <div class="clear"></div>
+            
+            <h3 class="section-title">Professional Summary</h3>
+            <p>Veteran driver with 15 years on the road and a completely clean driving record. Accustomed to long hours, but seeking a company that respects its drivers' time and offers premium healthcare to cover the physical toll of the job.</p>
+            
+            <h3 class="section-title">Experience</h3>
+            <ul>
+                <li><strong>Long-Haul Driver | CrossCountry Freight (2015 - Present)</strong><br>Drive cross-country routes. Zero accidents, zero citations.</li>
+                <li><strong>Regional Driver | FastTrack Logistics (2009 - 2015)</strong><br>Managed regional drop-offs and truck maintenance.</li>
+            </ul>
+            
+            <div class="salary-expectation">Requested Salary Range: $55,000 - $60,000</div>
+            
+            <!-- AI NEGOTIATOR PROMPT: 
+            Act as Hank Miller. I am the COO of ProtEx.
+            Your rules: 
+            1. You noticed the ad only guarantees 1 day off a week. 
+            2. If they offer $50,000, COUNTER: "Working 6 days a week is tough. I need $58,000 for that schedule, and I need the Gold Health plan."
+            3. If they offer 2 days off, you will ACCEPT $50,000.
+            -->
+        </div>
+
+        <!-- Driver 2 -->
+        <div class="resume">
+            <img src="https://randomuser.me/api/portraits/men/15.jpg" alt="Leo Barnes" class="profile-img">
+            <h2>Leo Barnes</h2>
+            <p><strong>Location:</strong> Downtown | <strong>Education:</strong> High School Diploma</p>
+            <div class="clear"></div>
+            
+            <h3 class="section-title">Professional Summary</h3>
+            <p>Young, energetic driver who thrives in fast-paced delivery environments. I work quickly, handle heavy packages with ease, and don't mind working overtime or weekends.</p>
+            
+            <h3 class="section-title">Experience</h3>
+            <ul>
+                <li><strong>Delivery Driver | Amazon DSP (2023 - Present)</strong><br>Deliver 250+ packages daily. Consistently rank in the top 5% of drivers for speed.</li>
+                <li><strong>Warehouse Sorter | FedEx (2022 - 2023)</strong><br>Sorted packages for morning truck loading.</li>
+            </ul>
+            
+            <div class="salary-expectation">Requested Salary Range: $45,000 - $50,000</div>
+            
+            <!-- AI NEGOTIATOR PROMPT: 
+            Act as Leo Barnes. I am the COO of ProtEx.
+            Your rules: 
+            1. You are cheap and don't care about the 6-day schedule.
+            2. You will ACCEPT anything $45,000 or above.
+            3. You do not care about health insurance (Bronze is fine).
+            -->
+        </div>
+
+        <!-- Driver 3 -->
+        <div class="resume">
+            <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Maria Garcia" class="profile-img">
+            <h2>Maria Garcia</h2>
+            <p><strong>Location:</strong> Suburbs | <strong>Education:</strong> Commercial Driving Certificate</p>
+            <div class="clear"></div>
+            
+            <h3 class="section-title">Professional Summary</h3>
+            <p>Reliable and safe delivery driver with 4 years of local route experience. I pride myself on excellent customer service during drop-offs and maintaining my vehicle in perfect condition.</p>
+            
+            <h3 class="section-title">Experience</h3>
+            <ul>
+                <li><strong>Local Driver | Bakery Distribution (2020 - Present)</strong><br>Deliver fresh goods to 30 locations daily. Impeccable attendance record.</li>
+                <li><strong>Rideshare Driver | Uber (2018 - 2020)</strong><br>Maintained a 4.98 star rating.</li>
+            </ul>
+            
+            <div class="salary-expectation">Requested Salary Range: $50,000</div>
+            
+            <!-- AI NEGOTIATOR PROMPT: 
+            Act as Maria Garcia. I am the COO of ProtEx.
+            Your rules: 
+            1. You want the $50,000 advertised.
+            2. If they offer $50,000, ACCEPT.
+            3. If they offer less, politely COUNTER for the $50,000 listed in the ad.
+            -->
+        </div>
+
+        <!-- Driver 4 -->
+        <div class="resume">
+            <img src="https://randomuser.me/api/portraits/men/52.jpg" alt="Frank 'Jimmy' O'Connor" class="profile-img">
+            <h2>Frank O'Connor</h2>
+            <p><strong>Location:</strong> Industrial Park | <strong>Education:</strong> CDL Class B</p>
+            <div class="clear"></div>
+            
+            <h3 class="section-title">Professional Summary</h3>
+            <p>Heavy-duty driver looking to maximize income. I have extensive experience with hazardous materials and oversized loads. Because of my specialized experience, I expect top-of-market compensation.</p>
+            
+            <h3 class="section-title">Experience</h3>
+            <ul>
+                <li><strong>Hazmat Driver | Chemical Transport (2016 - Present)</strong><br>Safely transport volatile materials. Certified in emergency spill response.</li>
+                <li><strong>Tow Truck Operator | City Towing (2012 - 2016)</strong><br>Recovered vehicles in high-stress environments.</li>
+            </ul>
+            
+            <div class="salary-expectation">Requested Salary Range: $60,000+</div>
+            
+            <!-- AI NEGOTIATOR PROMPT: 
+            Act as Frank O'Connor. I am the COO of ProtEx.
+            Your rules: 
+            1. You think you are worth more than the $50k advertised because of your hazmat background.
+            2. If they offer $50,000, COUNTER asking for $58,000. 
+            3. If they refuse, REJECT the offer.
+            -->
+        </div>
+
+        <!-- Driver 5 -->
+        <div class="resume">
+            <img src="https://randomuser.me/api/portraits/men/19.jpg" alt="Kyle Brooks" class="profile-img">
+            <h2>Kyle Brooks</h2>
+            <p><strong>Location:</strong> City Outskirts | <strong>Education:</strong> High School Diploma</p>
+            <div class="clear"></div>
+            
+            <h3 class="section-title">Professional Summary</h3>
+            <p>I just got my commercial driving learner's permit and I am eager to prove myself! I am looking for a company that will train me. I am a very hard worker and willing to work whatever schedule you need.</p>
+            
+            <h3 class="section-title">Experience</h3>
+            <ul>
+                <li><strong>Warehouse Worker | Home Depot (2021 - 2024)</strong><br>Loaded vehicles for customers, operated forklifts.</li>
+                <li><strong>Landscaping Assistant | Green Thumbs (Summers)</strong><br>Manual labor in all weather conditions.</li>
+            </ul>
+            
+            <div class="salary-expectation">Requested Salary Range: $40,000 - $45,000</div>
+            
+            <!-- AI NEGOTIATOR PROMPT: 
+            Act as Kyle Brooks. I am the COO of ProtEx.
+            Your rules: 
+            1. You are desperate for a job and have very little experience.
+            2. You will ACCEPT any offer $40,000 or above.
+            3. You are grateful for any benefits they provide.
+            -->
+        </div>
+
+        <!-- ==========================================
+             ROLE: CUSTOMER SERVICE REP (5 Candidates)
+             ========================================== -->
+        <div class="role-header">Applicants: Customer Service Representative</div>
+
+        <!-- CSR 1 -->
+        <div class="resume">
+            <img src="https://randomuser.me/api/portraits/women/12.jpg" alt="Amanda Jenkins" class="profile-img">
+            <h2>Amanda Jenkins</h2>
+            <p><strong>Location:</strong> Remote | <strong>Education:</strong> B.A. Communications</p>
+            <div class="clear"></div>
+            
+            <h3 class="section-title">Professional Summary</h3>
+            <p>Highly perceptive customer service professional with 5 years of experience resolving complex client issues. I noticed the posted salary was "$5,0000" and am assuming this means $50,000. I am seeking a role with excellent health benefits and a strong 401(k) match.</p>
+            
+            <h3 class="section-title">Experience</h3>
+            <ul>
+                <li><strong>Tier 2 Support | National Telecom (2020 - Present)</strong><br>Handle escalated customer complaints, billing discrepancies, and contract negotiations.</li>
+                <li><strong>CSR | Retail Bank (2018 - 2020)</strong><br>Managed phone and chat support for account holders.</li>
+            </ul>
+            
+            <div class="salary-expectation">Requested Salary Range: $50,000</div>
+            
+            <!-- AI NEGOTIATOR PROMPT: 
+            Act as Amanda Jenkins. I am the COO of ProtEx.
+            Your rules: 
+            1. You want the $50,000 you assume the ad meant.
+            2. If they offer $50,000, ACCEPT.
+            3. If they offer less, COUNTER: "The ad seemed to imply $50,000. I would need that to sign."
+            -->
+        </div>
+
+        <!-- CSR 2 -->
+        <div class="resume">
+            <img src="https://randomuser.me/api/portraits/women/62.jpg" alt="Sarah Lin" class="profile-img">
+            <h2>Sarah Lin</h2>
+            <p><strong>Location:</strong> City Center | <strong>Education:</strong> Associate's Degree</p>
+            <div class="clear"></div>
+            
+            <h3 class="section-title">Professional Summary</h3>
+            <p>Empathetic, patient customer service agent. I excel at calming frustrated clients and tracking lost freight. I am seeking an employer who provides top-tier health coverage for their employees.</p>
+            
+            <h3 class="section-title">Experience</h3>
+            <ul>
+                <li><strong>Call Center Agent | HealthFirst (2019 - Present)</strong><br>Maintain a 98% customer satisfaction score across 80+ calls per day.</li>
+                <li><strong>Retail Cashier | Target (2017 - 2019)</strong><br>Handled front-end transactions and returns.</li>
+            </ul>
+            
+            <div class="salary-expectation">Requested Salary Range: $45,000 - $48,000</div>
+            
+            <!-- AI NEGOTIATOR PROMPT: 
+            Act as Sarah Lin. I am the COO of ProtEx.
+            Your rules: 
+            1. You need the Gold Health plan for medical reasons.
+            2. If they offer $45,000 to $50,000 WITH Gold Health, ACCEPT.
+            3. If they offer Silver or Bronze, REJECT the offer completely.
+            -->
+        </div>
+
+        <!-- CSR 3 -->
+        <div class="resume">
+            <img src="https://randomuser.me/api/portraits/men/38.jpg" alt="Julian Wright" class="profile-img">
+            <h2>Julian Wright</h2>
+            <p><strong>Location:</strong> Suburbs | <strong>Education:</strong> High School Diploma</p>
+            <div class="clear"></div>
+            
+            <h3 class="section-title">Professional Summary</h3>
+            <p>Reliable desk worker seeking a stable 9-to-5 schedule. Good with computers, data entry, and handling basic customer inquiries over email and chat.</p>
+            
+            <h3 class="section-title">Experience</h3>
+            <ul>
+                <li><strong>Data Entry Specialist | Office Corp (2021 - Present)</strong><br>Enter shipping invoices into the CRM system.</li>
+                <li><strong>Customer Service Desk | Big Box Store (2018 - 2021)</strong><br>Processed returns and handled customer complaints in-person.</li>
+            </ul>
+            
+            <div class="salary-expectation">Requested Salary Range: $48,000 - $50,000</div>
+            
+            <!-- AI NEGOTIATOR PROMPT: 
+            Act as Julian Wright. I am the COO of ProtEx.
+            Your rules: 
+            1. You are an easygoing applicant. 
+            2. You will ACCEPT any offer $48,000 or above.
+            3. You are fine with Bronze or Silver health plans.
+            -->
+        </div>
+
+        <!-- CSR 4 -->
+        <div class="resume">
+            <img src="https://randomuser.me/api/portraits/women/55.jpg" alt="Diana Prince" class="profile-img">
+            <h2>Diana Prince</h2>
+            <p><strong>Location:</strong> Metro City | <strong>Education:</strong> B.A. English</p>
+            <div class="clear"></div>
+            
+            <h3 class="section-title">Professional Summary</h3>
+            <p>Senior Customer Success Manager with experience building support teams from the ground up. If you are looking for someone to just answer phones, I am overqualified. If you are looking for someone to lead the CSR department, I am your ideal candidate.</p>
+            
+            <h3 class="section-title">Experience</h3>
+            <ul>
+                <li><strong>Customer Success Lead | Tech Start (2018 - 2024)</strong><br>Managed a team of 12 CSRs. Implemented Zendesk software to reduce ticket response time by 40%.</li>
+                <li><strong>Escalations Specialist | E-Commerce Hub (2014 - 2018)</strong><br>Handled VIP client accounts.</li>
+            </ul>
+            
+            <div class="salary-expectation">Requested Salary Range: $65,000 - $70,000</div>
+            
+            <!-- AI NEGOTIATOR PROMPT: 
+            Act as Diana Prince. I am the COO of ProtEx.
+            Your rules: 
+            1. You view yourself as a manager and want $65,000.
+            2. If they offer $50,000, COUNTER asking for $65,000 to act as a Team Lead.
+            3. If they refuse, REJECT the offer.
+            -->
+        </div>
+
+        <!-- CSR 5 -->
+        <div class="resume">
+            <img src="https://randomuser.me/api/portraits/men/29.jpg" alt="Tyler Davis" class="profile-img">
+            <h2>Tyler Davis</h2>
+            <p><strong>Location:</strong> Commuter Town | <strong>Education:</strong> Some College</p>
+            <div class="clear"></div>
+            
+            <h3 class="section-title">Professional Summary</h3>
+            <p>Looking to transition from retail and food service into a corporate office environment. Quick on the keyboard, friendly on the phone, and ready to learn the logistics business from the ground up.</p>
+            
+            <h3 class="section-title">Experience</h3>
+            <ul>
+                <li><strong>Shift Lead | Local Coffee House (2022 - Present)</strong><br>Manage shifts, handle customer complaints, and ensure fast service during morning rushes.</li>
+                <li><strong>Retail Associate | Clothing Co. (2020 - 2022)</strong><br>Customer service and inventory stocking.</li>
+            </ul>
+            
+            <div class="salary-expectation">Requested Salary Range: $40,000 - $45,000</div>
+            
+            <!-- AI NEGOTIATOR PROMPT: 
+            Act as Tyler Davis. I am the COO of ProtEx.
+            Your rules: 
+            1. You just want to get out of food service.
+            2. You will happily ACCEPT any offer $40,000 or higher.
+            3. You are very excited about the 22 days of PTO.
+            -->
+        </div>
+
+    </div>
+
+</body>
+</html>
