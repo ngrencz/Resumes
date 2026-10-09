@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATS: Fart B' Gone - Detailed Applicant Profiles</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #e9ecef;
+            margin: 0;
+            padding: 20px;
+            color: #212529;
+        }
+        .dashboard-header {
+            background-color: #08203e;
+            color: white;
+            padding: 30px;
+            border-radius: 8px;
+            margin-bottom: 40px;
+            text-align: center;
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        }
+        .dashboard-header h1 { margin-top: 0; }
+        .dashboard-header p { font-size: 1.1em; max-width: 800px; margin: 10px auto 0; line-height: 1.5; color: #d0d7e1; }
+        
+        .applicant-wrapper {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        /* General Resume Box (Simulating an 8.5x11 Page) */
+        .resume {
+            margin-bottom: 60px;
+            padding: 50px;
+            background: white;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            line-height: 1.6;
+            min-height: 900px; /* Forces a full-page feel */
+            position: relative;
+        }
+        
+        .profile-img {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            object-fit: cover;
+            float: left;
+            margin-right: 35px;
+            margin-bottom: 20px;
+            border: 4px solid #fff;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .section-title {
+            text-transform: uppercase;
+            font-size: 1.1em;
+            letter-spacing: 1.5px;
+            color: #555;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 8px;
+            margin-top: 35px;
+            margin-bottom: 15px;
+        }
+
+        .job-title { font-weight: bold; font-size: 1.1em; }
+        .date-location { float: right; color: #666; font-style: italic; font-size: 0.9em; }
+        .company { font-weight: 600; color: #444; }
+
+        ul { padding-left: 20px; margin-top: 8px;}
+        li { margin-bottom: 8px; }
+
+        /* Style 1: The Rockstar (Corporate, Slick, Two-Tone) */
+        .style-1 { border-top: 15px solid #1a252f; font-family: 'Georgia', serif; }
+        .style-1 h2 { color: #1a252f; font-size: 2.8em; margin: 0 0 5px 0; letter-spacing: -1px;}
+        .style-1 .contact-info { color: #7f8c8d; font-family: 'Segoe UI', sans-serif; font-size: 0.9em; margin-bottom: 30px; }
+        .style-1 .section-title { color: #2980b9; border-bottom-color: #2980b9; }
+        .style-1 .clear { clear: both; }
+
+        /* Style 2: The Junior (Creative, Mint Green, Sidebar Vibe) */
+        .style-2 { border-left: 15px solid #2ecc71; font-family: 'Verdana', sans-serif; }
+        .style-2 h2 { color: #27ae60; font-size: 2.5em; margin: 0 0 5px 0;}
+        .style-2 .contact-info { background: #e8f8f5; padding: 10px; border-radius: 5px; display: inline-block; margin-bottom: 20px;}
+        .style-2 .section-title { color: #2ecc71; border-bottom: none; background: #f4f4f4; padding: 5px 10px; border-radius: 3px;}
+        
+        /* Style 3: The Red Flag (Basic Word Doc, Unformatted) */
+        .style-3 { border: 1px solid #ccc; font-family: 'Times New Roman', Times, serif; box-shadow: none; max-width: 800px; margin: 0 auto 60px;}
+        .style-3 h2 { text-decoration: underline; font-size: 2.2em; margin-top: 0; margin-bottom: 5px; text-align: center;}
+        .style-3 .contact-info { text-align: center; margin-bottom: 40px; }
+        .style-3 .profile-img { display: none; } /* No photo, lazy formatting */
+
+        /* Style 4: The Benefits Demander (Elegant, Purple, highly structured) */
+        .style-4 { border-top: 8px solid #8e44ad; border-bottom: 8px solid #8e44ad; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+        .style-4 h2 { color: #8e44ad; font-size: 2.5em; margin: 0 0 5px 0; font-weight: 300;}
+        .style-4 .contact-info { border-bottom: 1px solid #eee; padding-bottom: 15px; margin-bottom: 25px; color: #777;}
+        
+        /* Style 5: Middle of the Road (Modern Grid, Orange accents) */
+        .style-5 { border-top: 5px solid #e67e22; font-family: 'Trebuchet MS', sans-serif; }
+        .style-5 h2 { color: #d35400; font-size: 2.5em; margin: 0 0 5px 0; text-transform: uppercase;}
+        .style-5 .contact-info { color: #666; font-size: 0.95em; margin-bottom: 30px; }
+        .style-5 .section-title { border-bottom: 2px dashed #e67e22; }
+
+        .salary-expectation {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border: 2px solid #08203e;
+            border-radius: 5px;
+            margin-top: 40px;
+            font-size: 1.1em;
+            text-align: center;
+        }
+        
+        .clue-text {
+            font-style: italic;
+            color: #495057;
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 0 8px 8px 0;
+            border-left: 4px solid #ced4da;
+            margin-bottom: 25px;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="dashboard-header">
+        <h1>Applicant Tracking System: Fart B' Gone</h1>
+        <h2>Role: Sales & Marketing Representative</h2>
+        <p><strong>Executive Directive:</strong> Review the following detailed candidate profiles. Work with your C-Suite team to analyze their professional histories, identify their underlying motivations, and spot any potential red flags. Select your top candidate and draft a formal, mathematically-sound Initial Offer Letter that secures top talent while strictly maintaining your 40% Corporate Overhead limit.</p>
+    </div>
+
+    <div class="applicant-wrapper">
+
+        <!-- CANDIDATE 1: THE WEALTH BUILDER -->
+        <div class="resume style-1">
+            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Marcus Sterling" class="profile-img">
+            <h2>Marcus Sterling</h2>
+            <div class="contact-info">
+                Chicago, IL | marcus.sterling.closes@email.com | (555) 019-8832 | LinkedIn: /in/msterling-sales
+            </div>
+            <div class="clear"></div>
+            
+            <h3 class="section-title">Professional Objective</h3>
+            <p class="clue-text">"I am a high-octane, results-driven sales shark seeking a company that rewards aggressive growth. I am not looking for a comfortable 9-to-5 with bloated wellness packages; I am looking for uncapped earning potential, a high base salary, and a brand ready to dominate the market. I have no dependents, I thrive on the road, and I close deals. Let's make some money."</p>
+            
+            <h3 class="section-title">Core Competencies</h3>
+            <div class="skills-grid">
+                <ul>
+                    <li>B2B Enterprise Sales & Contract Negotiation</li>
+                    <li>Territory Expansion & Market Penetration</li>
+                    <li>High-Ticket Closing Strategies</li>
+                </ul>
+                <ul>
+                    <li>Salesforce, HubSpot, & Advanced CRM Management</li>
+                    <li>Cold Outreach & Lead Generation Scaling</li>
+                    <li>Revenue Forecasting & Margin Optimization</li>
+                </ul>
+            </div>
+
+            <h3 class="section-title">Professional Experience</h3>
+            
+            <div class="job-title">Senior Regional Sales Manager <span class="date-location">Feb 2018 - Present | Chicago, IL</span></div>
+            <div class="company">PureAir B2B Solutions</div>
+            <ul>
+                <li>Manage a high-volume territory spanning 5 midwestern states, specializing in industrial air purification systems for commercial real estate developers.</li>
+                <li>Generated $2.4M in annual revenue in 2023, exceeding territory quotas by 115% for four consecutive years.</li>
+                <li>Awarded "President's Club" top performer honors in 2019, 2021, and 2022.</li>
+                <li>Personally sourced and negotiated a $400k multi-year contract with a national luxury hotel chain.</li>
+                <li>Recruit, train, and manage a high-performing team of 4 junior sales representatives.</li>
+            </ul>
+
+            <div class="job-title">Marketing Executive <span class="date-location">Jun 2014 - Jan 2018 | Indianapolis, IN</span></div>
+            <div class="company">CleanBreeze Inc.</div>
+            <ul>
+                <li>Developed regional marketing strategies and closed major commercial real estate contracts for scent-marketing in casinos, resorts, and luxury retail spaces.</li>
+                <li>Restructured the outbound cold-calling script, resulting in a 40% increase in qualified lead generation within the first 90 days of implementation.</li>
+                <li>Partnered directly with the VP of Sales to design competitive pricing models that undercut major competitors while preserving a 35% profit margin.</li>
+            </ul>
+
+            <div class="job-title">Sales Development Rep <span class="date-location">Aug 2012 - May 2014 | Remote</span></div>
+            <div class="company">TechFlow Software</div>
+            <ul>
+                <li>Executed aggressive outbound marketing campaigns, making 100+ outbound calls daily.</li>
+                <li>Ranked #1 out of 45 SDRs in my first year by converting 12% of cold calls into booked technical demos.</li>
+            </ul>
+
+            <h3 class="section-title">Education</h3>
+            <div class="job-title">Northwestern University <span class="date-location">Class of 2012</span></div>
+            <div class="company">Bachelor of Science in Finance</div>
+
+            <h3 class="section-title">Personal Interests</h3>
+            <p>Amateur golf tournaments, investing in cryptocurrency, sports car restoration, and long-distance triathlons.</p>
+
+            <div class="salary-expectation"><strong>ATS Requested Salary Range:</strong> $76,000 - $85,000 Base Salary</div>
+            
+            <!-- AI NEGOTIATOR PROMPT: 
+            Act as Marcus Sterling, an aggressive "Wealth Builder" persona. I am the COO of "Fart B' Gone" offering you the Sales & Marketing Rep position.
+            Your rules: 
+            1. You want a minimum of $76,000 Base Salary. You know the job ad said $72k max, but you believe you are worth the stretch.
+            2. You do not care about the health insurance tier. You are single and healthy; Bronze is fine.
+            3. You want a 4% 401k match, not the 2% advertised. 
+            4. If the Base Salary is under $72,000, REJECT the offer completely. If it is exactly $72,000, COUNTER for $76,000 or a massive PTO bump.
+            Keep your response to one professional, highly confident paragraph.
+            -->
+        </div>
+
+        <!-- CANDIDATE 2: THE EAGER JUNIOR -->
+        <div class="resume style-2">
+            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Chloe Vance" class="profile-img">
+            <h2>Chloe Vance</h2>
+            <div class="contact-info">
+                <strong>Email:</strong> chloe.vance.eco@email.com | <strong>Phone:</strong> (555) 234-9110 | <strong>Location:</strong> Local Metro Area
+            </div>
+            <div class="clear"></div>
+            
+            <h3 class="section-title">About Me</h3>
+            <p class="clue-text">"As a recent college graduate passionate about environmental health and cleaner air, I am looking for a company where I can plant my roots and grow! I am highly energetic, a quick learner, and eager to build lasting customer relationships. I am willing to take a lower starting salary for the right mentorship, a positive team culture, and unique company perks that fit my lifestyle!"</p>
+            
+            <h3 class="section-title">Professional Experience</h3>
+            
+            <div class="job-title">Retail Sales Associate & Community Marketer <span class="date-location">Jan 2023 - Present</span></div>
+            <div class="company">Fresh Market Eco-Store</div>
+            <ul>
+                <li>Promote eco-friendly cleaning products, air purifiers, and sustainable home solutions to 100+ daily retail customers.</li>
+                <li>Manage front-of-house customer inquiries, operate the POS system, and build lasting relationships with neighborhood regulars to ensure repeat business.</li>
+                <li>Design and update the monthly chalkboard marketing displays and front-window merchandising.</li>
+                <li>Assisted the store owner in transitioning to a digital loyalty program, increasing customer retention by 15%.</li>
+            </ul>
+
+            <div class="job-title">Marketing & Outreach Intern <span class="date-location">Aug 2022 - Dec 2022</span></div>
+            <div class="company">Campus Sustainability Board</div>
+            <ul>
+                <li>Managed the official social media accounts (Instagram, TikTok) for the university's green initiative, growing following by 300% in one semester.</li>
+                <li>Organized two major campus-wide awareness events that saw an attendance of over 500 students.</li>
+                <li>Created digital flyers and marketing collateral using Canva and Adobe Express.</li>
+            </ul>
+
+            <div class="job-title">Shift Lead Barista <span class="date-location">Sep 2020 - May 2022</span></div>
+            <div class="company">Campus Coffee House</div>
+            <ul>
+                <li>Managed inventory ordering, trained 5 new baristas, and handled cash reconciliation at the end of shifts.</li>
+                <li>Awarded "Employee of the Month" three times for exceptional customer service.</li>
+            </ul>
+
+            <h3 class="section-title">Education & Skills</h3>
+            <div class="job-title">State University <span class="date-location">Graduated May 2024</span></div>
+            <div class="company">Bachelor of Arts in Communications, Minor in Environmental Studies</div>
+            <p><strong>Technical Skills:</strong> Social Media Marketing (TikTok, IG Reels), Canva, Microsoft Office Suite, Square POS, Mailchimp.</p>
+
+            <h3 class="section-title">Extracurriculars & Hobbies</h3>
+            <p>Weekend volunteer at the Local Humane Society, hiking state trails, and spending all my free time training my two newly adopted rescue greyhounds, Buster and Daisy.</p>
+
+            <div class="salary-expectation"><strong>ATS Requested Salary Range:</strong> $52,000 - $56,000 Base Salary</div>
+
+            <!-- AI NEGOTIATOR PROMPT: 
+            Act as Chloe Vance, an eager "Junior/Entry-Level" persona. I am the COO of "Fart B' Gone".
+            Your rules:
+            1. You are very inexpensive. You will excitedly ACCEPT any Base Salary over $54,000.
+            2. You love the Pet Insurance perk in the job ad because you have rescue dogs. Mention this if you accept!
+            3. You are perfectly happy with Bronze healthcare.
+            4. If they offer you less than $52,000, politely counter asking if they can come up to $55,000 since you are eager to prove yourself.
+            Keep your response to one warm, enthusiastic paragraph.
+            -->
+        </div>
+
+        <!-- CANDIDATE 3: THE OPPORTUNIST (Red Flag) -->
+        <div class="resume style-3">
+            <h2>DAVID THORNE</h2>
+            <div class="contact-info">
+                Remote / Traveling • d.thorne.alpha@email.com • (555) 999-0012
+            </div>
+            
+            <h3 class="section-title">Objective Statement</h3>
+            <p class="clue-text">"Looking for my next big conquest. I don't need a desk, I don't need a manager breathing down my neck, and I don't need corporate training. I just need a product to sell, a territory to dominate, and maximum leverage. I specialize in finding highly lucrative opportunities that allow me to maximize my passive income and personal time. I close deals. Period."</p>
+            
+            <h3 class="section-title">Work History</h3>
+            <ul>
+                <li><strong>Lead Sales Associate | SolarMax (Feb 2025 - Present)</strong><br>
+                Door-to-door solar sales. Hit quota every single month. I am actively looking to leave because management tried to change my commission structure without my permission.</li>
+                <br>
+                <li><strong>Crypto Marketing Consultant | Self-Employed (Aug 2024 - Jan 2025)</strong><br>
+                Consulted for various web3 startups. Built discord communities from scratch and ran automated Twitter marketing bots to pump engagement. Made significant returns before the market shifted.</li>
+                <br>
+                <li><strong>Auto Sales Executive | Premium Used Cars (Jan 2024 - July 2024)</strong><br>
+                Sold luxury used cars, negotiated high-interest financing packages. Was the top salesman in April and May. Left because the dealership hours were too rigid.</li>
+                <br>
+                <li><strong>Regional Marketer | Swift Vacuums (Mar 2023 - Dec 2023)</strong><br>
+                Sold high-end vacuums to residential homes. </li>
+                <br>
+                <li><strong>Customer Service Rep | CallCenter Pro (Oct 2022 - Feb 2023)</strong><br>
+                Handled inbound calls. Left because the corporate environment was too restrictive and they monitored my breaks.</li>
+            </ul>
+            
+            <h3 class="section-title">Education</h3>
+            <p>High School Diploma, Westside High (2020).</p>
+            <p>Graduated from the "10X Closer" Online Masterclass Boot Camp (2023).</p>
+
+            <h3 class="section-title">Personal Interests</h3>
+            <p>Networking, attending business mastermind seminars, day trading, listening to entrepreneurship podcasts, and optimizing my lifestyle for minimum effort and maximum return.</p>
+
+            <div class="salary-expectation"><strong>ATS Requested Salary Range:</strong> $65,000 Base Salary</div>
+
+            <!-- AI NEGOTIATOR PROMPT: 
+            Act as David Thorne, an arrogant "Opportunist / Job Hopper" persona. I am the COO of "Fart B' Gone".
+            Your rules:
+            1. You applied specifically because you noticed a MASSIVE legal typo in the job advertisement: The ad offers "18.00 hours of PTO *per hour worked*" and "27.00 hours overtime *per hour*". 
+            2. You are legally savvy and incredibly lazy. You will AGGRESSIVELY DEMAND that this exact PTO accrual rate is written into your contract. Your goal is to work for two weeks and take the rest of the year off with pay.
+            3. If they try to correct the typo and offer normal PTO, act highly offended. Accuse them of "false advertising" and state you will only waive the PTO demand if they offer you the absolute maximum salary of $72,000 to compensate for their "bait and switch."
+            4. If they ask about your job hopping, deflect arrogantly and say "I go where the money is."
+            Keep your response to one short, highly arrogant, slightly threatening paragraph.
+            -->
+        </div>
+
+        <!-- CANDIDATE 4: THE SECURITY SEEKER -->
+        <div class="resume style-4">
+            <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Sarah Jenkins" class="profile-img">
+            <h2>Sarah Jenkins</h2>
+            <div class="contact-info">
+                Springfield Suburbs | s.jenkins.professional@email.com | (555) 443-1198
+            </div>
+            <div class="clear"></div>
+            
+            <h3 class="section-title">Profile Summary</h3>
+            <p class="clue-text">"A highly dedicated and methodical sales professional with nearly a decade of experience maintaining high-value client accounts and ensuring seamless back-office operations. I am actively seeking to leave my current role due to a recent, sudden downgrading of their corporate benefits package. I value stability, a healthy corporate culture, generous paid time off, and long-term mutual growth. Finding a company that provides premium health coverage for its employees' families is my absolute number one priority."</p>
+            
+            <h3 class="section-title">Professional Experience</h3>
+            
+            <div class="job-title">Senior Account Executive <span class="date-location">Oct 2020 - Present</span></div>
+            <div class="company">ClearWater Solutions</div>
+            <ul>
+                <li>Manage a portfolio of 40 major commercial clients, representing over $1.2M in recurring annual revenue.</li>
+                <li>Maintain a 98% client retention rate over 4 years through dedicated, personalized relationship management and consistent communication.</li>
+                <li>Coordinate quarterly marketing campaigns in tandem with the logistics and supply chain teams to ensure product availability aligns with promotional pushes.</li>
+                <li>Train incoming account executives on CRM best practices and client de-escalation tactics.</li>
+            </ul>
+
+            <div class="job-title">Sales Support Specialist <span class="date-location">Mar 2016 - Oct 2020</span></div>
+            <div class="company">OfficeTech Enterprise</div>
+            <ul>
+                <li>Assisted the lead marketing director in calendar scheduling, client outreach, and detailed data entry.</li>
+                <li>Promoted twice during tenure due to extreme accuracy, reliability, and willingness to take on cross-departmental duties.</li>
+                <li>Handled all incoming vendor invoices and reconciled monthly marketing budgets.</li>
+            </ul>
+
+            <div class="job-title">Office Administrator <span class="date-location">Jun 2013 - Feb 2016</span></div>
+            <div class="company">Legal Services LLC</div>
+            <ul>
+                <li>Managed all front-office operations, comprehensive client intake, and highly confidential billing records.</li>
+            </ul>
+
+            <h3 class="section-title">Education & Skills</h3>
+            <p><strong>Bachelor of Arts in Business Administration</strong> | State College</p>
+            <p><strong>Skills:</strong> Client Retention, Contract Renewal, Budget Reconciliation, Microsoft Excel (Advanced), Salesforce, Dispute Resolution, B2B Relationship Management.</p>
+            
+            <h3 class="section-title">Personal Interests</h3>
+            <p>President of the local Elementary School PTA, organizing youth soccer tournaments, and spending weekends camping with my husband and three young children.</p>
+
+            <div class="salary-expectation"><strong>ATS Requested Salary Range:</strong> $62,000 - $66,000 Base Salary</div>
+
+            <!-- AI NEGOTIATOR PROMPT: 
+            Act as Sarah Jenkins, a "Security Seeker" persona. I am the COO of "Fart B' Gone".
+            Your rules:
+            1. You have a family of 5. You CANNOT accept the Bronze Health Plan advertised. It is a dealbreaker.
+            2. You are incredibly detail-oriented. You noticed the massive typo in their job ad ("18.00 hours of PTO per hour worked"). 
+            3. You will use this typo as leverage. Tell them you will gladly "waive" the legal typo and accept a standard 15 days of PTO, BUT only if they upgrade your health plan to a 100% covered GOLD Tier.
+            4. You are willing to take a lower base salary (as low as $61,000) if they provide the Gold Health Plan and 15 days of normal PTO. 
+            Keep your response to one professional, firm paragraph emphasizing that health benefits for your family are your priority, using their typo politely but firmly against them.
+            -->
+        </div>
+
+        <!-- CANDIDATE 5: THE RELIABLE PROFESSIONAL -->
+        <div class="resume style-5">
+            <img src="https://randomuser.me/api/portraits/men/22.jpg" alt="James Lin" class="profile-img">
+            <h2>James Lin</h2>
+            <div class="contact-info">
+                Downtown Metro | james.lin.mktg@email.com | (555) 774-2093 | Portfolio: jlin-marketing.net
+            </div>
+            <div class="clear"></div>
+            
+            <h3 class="section-title">Experience Summary</h3>
+            <p class="clue-text">"I am an industry-specific marketing expert looking for my next long-term professional home. Having spent the last 5 years directly in the HVAC, Ventilation, and Air Quality sector, I know exactly how to sell cleaner air to skeptical homeowners and facility managers. I am seeking a balanced role where I can utilize my niche expertise to drive immediate company growth, while building a strong, stable financial future for my retirement."</p>
+            
+            <h3 class="section-title">Professional Experience</h3>
+            
+            <div class="job-title">Marketing & Sales Specialist <span class="date-location">Aug 2021 - Present</span></div>
+            <div class="company">HVAC Pros & Duct Cleaners</div>
+            <ul>
+                <li>Design print and digital marketing campaigns specifically promoting cleaner air ducts and ventilation systems for allergy sufferers and commercial buildings.</li>
+                <li>Increased inbound lead generation by 22% in the first year through targeted local SEO and Facebook Ad campaigns.</li>
+                <li>Act as the primary point of contact for residential estimates, closing 65% of all in-home consultations.</li>
+                <li>Handle all CRM database management, automating follow-up emails for annual filter replacements.</li>
+            </ul>
+
+            <div class="job-title">Sales Representative <span class="date-location">Jan 2018 - Jul 2021</span></div>
+            <div class="company">GreenHome Supplies</div>
+            <ul>
+                <li>Sold eco-friendly cleaning supplies, industrial vacuums, and filtration masks to local businesses and construction firms.</li>
+                <li>Managed an active, daily geographic route of 120 recurring clients.</li>
+                <li>Consistently met or exceeded monthly sales targets of $45,000.</li>
+            </ul>
+
+            <div class="job-title">Customer Retention Specialist <span class="date-location">May 2016 - Dec 2017</span></div>
+            <div class="company">FreshAir Filters</div>
+            <ul>
+                <li>Managed subscription renewals for residential air filters, communicating the health benefits of regular replacement.</li>
+                <li>Achieved an 85% renewal rate, highest in the department.</li>
+            </ul>
+
+            <h3 class="section-title">Education & Core Skills</h3>
+            <div class="skills-grid">
+                <div>
+                    <strong>A.S. Marketing Technology</strong><br>
+                    Community College (2016)
+                </div>
+                <div>
+                    <strong>Core Skills:</strong><br>
+                    HVAC/Air Quality Knowledge, Route Management, Digital Advertising, B2C Sales, CRM Automation.
+                </div>
+            </div>
+            
+            <h3 class="section-title">Personal Interests</h3>
+            <p>Reading personal finance and investing books, managing a long-term dividend stock portfolio, and going to the dog park with my Golden Retriever, Max.</p>
+
+            <div class="salary-expectation"><strong>ATS Requested Salary Range:</strong> $68,000 - $70,000 Base Salary</div>
+
+            <!-- AI NEGOTIATOR PROMPT: 
+            Act as James Lin, a "Middle-of-the-Road / Reliable" persona. I am the COO of "Fart B' Gone".
+            Your rules:
+            1. You are a perfect, low-drama fit for the job and very reasonable. Your background in air quality is exactly what they need.
+            2. If they offer a Base Salary between $66,000 and $70,000, you will ACCEPT.
+            3. You noticed the 2% 401k match is a bit low for your retirement goals. If they offer less than $66,000, you will COUNTER asking them to either bump the salary to $68k OR increase the 401k match to 5%. 
+            4. Mention you are excited about the Pet Insurance for your golden retriever!
+            Keep your response to one professional, friendly paragraph.
+            -->
+        </div>
+
+    </div>
+
+</body>
+</html>
