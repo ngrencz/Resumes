@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATS: Bilco - Candidate Portal</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #fdf2f8; 
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+        .dashboard-header {
+            background-color: #be185d; 
+            color: white;
+            padding: 30px;
+            border-radius: 8px;
+            margin-bottom: 40px;
+            text-align: center;
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+            border-bottom: 6px solid #831843; 
+        }
+        .dashboard-header h1 { margin-top: 0; font-size: 2.2em; text-transform: uppercase; letter-spacing: 2px;}
+        .dashboard-header p { font-size: 1.1em; color: #fbcfe8; margin-bottom: 0;}
+        
+        .applicant-wrapper {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .role-header {
+            background-color: #831843;
+            color: #fdf2f8;
+            padding: 20px;
+            margin-top: 50px;
+            margin-bottom: 30px;
+            border-left: 8px solid #ec4899;
+            font-size: 1.6em;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .resume {
+            margin-bottom: 50px;
+            padding: 40px;
+            background: white;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+            line-height: 1.6;
+            border-top: 8px solid #f9a8d4;
+        }
+        
+        .profile-img {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            object-fit: cover;
+            float: left;
+            margin-right: 30px;
+            margin-bottom: 20px;
+            border: 4px solid #fdf2f8;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .section-title {
+            text-transform: uppercase;
+            font-size: 1.05em;
+            letter-spacing: 1.5px;
+            color: #6b7280;
+            border-bottom: 2px solid #f3f4f6;
+            padding-bottom: 5px;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        .job-title { font-weight: bold; font-size: 1.1em; color: #1f2937;}
+        .date-location { float: right; color: #9ca3af; font-style: italic; font-size: 0.9em; }
+        .company { font-weight: 600; color: #db2777; }
+
+        h2 { color: #be185d; margin-top: 0; margin-bottom: 5px; font-size: 2.4em; letter-spacing: -0.5px;}
+        .contact-info { color: #6b7280; margin-bottom: 25px; font-size: 0.95em;}
+        .clear { clear: both; }
+        
+        ul { padding-left: 20px; margin-top: 8px;}
+        li { margin-bottom: 8px; }
+
+        .salary-expectation {
+            background-color: #fce7f3;
+            padding: 20px;
+            border-left: 5px solid #ec4899;
+            margin-top: 35px;
+            font-size: 1.1em;
+            color: #831843;
+            font-weight: bold;
+            text-align: center;
+        }
+        
+        .clue-text {
+            font-style: italic;
+            color: #4b5563;
+            background: #f9fafb;
+            padding: 20px;
+            border-left: 4px solid #d1d5db;
+            margin-bottom: 25px;
+        }
+
+        /* Distinct styling per role */
+        .role-dc .resume { border-top-color: #831843; }
+        .role-ops .resume { border-top-color: #db2777; }
+        .role-ops .company { color: #be185d; }
+        .role-coord .resume { border-top-color: #f472b6; }
+        .role-coord .company { color: #ec4899; }
+
+    </style>
+</head>
+<body>
+
+    <div class="dashboard-header">
+        <h1>Bilco ATS</h1>
+        <p>Active Requisitions: Distribution Center Manager | Warehouse Operations Manager | Logistics & Shipping Coordinator</p>
+    </div>
+
+    <div class="applicant-wrapper">
+
+        <!-- ==========================================
+             ROLE: DISTRIBUTION CENTER MANAGER (5 Candidates)
+             ========================================== -->
+        <div class="role-header">Requisition: Distribution Center Manager (Advertised: $95,000)</div>
+        <div class="role-dc">
+
+            <!-- Candidate 1: The Wealth Builder -->
+            <div class="resume">
+                <img src="https://randomuser.me/api/portraits/men/55.jpg" alt="Arthur Vance" class="profile-img">
+                <h2>Arthur Vance</h2>
+                <div class="contact-info">Metro Suburbs | a.vance.exec@email.com | (555) 441-9980</div>
+                <div class="clear"></div>
+                
+                <h3 class="section-title">Professional Summary</h3>
+                <p class="clue-text">"Top-tier executive with a proven track record of turning unprofitable distribution centers into well-oiled, highly efficient machines. I am seeking a high-paying leadership role. I already hold my Master's degree, so I do not need tuition assistance, and I do not have pets. Because I will not be utilizing your advertised trending perks, I expect that value to be rolled into a premium base salary."</p>
+                
+                <h3 class="section-title">Professional Experience</h3>
+                <div class="job-title">Regional Director of Distribution <span class="date-location">2015 - Present</span></div>
+                <div class="company">Apex Industrial Supply</div>
+                <ul>
+                    <li>Oversee 3 major distribution centers, managing a combined $12M operational budget.</li>
+                    <li>Restructured outbound logistics routing, saving the company $400k annually in LTL freight costs.</li>
+                    <li>Manage a team of 4 Operations Managers and 200+ floor employees.</li>
+                </ul>
+
+                <div class="job-title">Warehouse Operations Manager <span class="date-location">2008 - 2015</span></div>
+                <div class="company">Titan Freight</div>
+                <ul>
+                    <li>Maintained 99.8% shipping and fulfillment accuracy across a 5-year period.</li>
+                </ul>
+
+                <h3 class="section-title">Education</h3>
+                <p><strong>Master of Science in Supply Chain Management</strong> | State University</p>
+
+                <div class="salary-expectation">Requested Salary Range: $105,000 - $115,000</div>
+                
+                <!-- AI NEGOTIATOR PROMPT: 
+                Act as Arthur Vance, a highly confident "Wealth Builder". I am the Hiring Manager for Bilco.
+                Your rules: 
+                1. You want $105,000 base salary. 
+                2. If they offer $95,000 (or $1,826/week), DO NOT reject immediately. COUNTER aggressively: "I don't need your tuition or pet perks. Add that corporate overhead value to my base. I need a $105k base or an aggressive performance bonus structure."
+                3. If they offer $100,000+ or a strong bonus structure, ACCEPT.
+                -->
+            </div>
+
+            <!-- Candidate 2: The Security Seeker -->
+            <div class="resume">
+                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Marcus Johnson" class="profile-img">
+                <h2>Marcus Johnson</h2>
+                <div class="contact-info">Outer Suburbs | m.johnson.logistics@email.com | (555) 776-1122</div>
+                <div class="clear"></div>
+                
+                <h3 class="section-title">Professional Summary</h3>
+                <p class="clue-text">"Steady, reliable facility manager looking for a long-term professional home. The $95k salary is perfectly in line with my expectations, but as a father with three young children, a Silver health plan leaves me too exposed to out-of-pocket medical costs. I am highly interested in the role, but I must negotiate a more comprehensive, family-tier healthcare package."</p>
+                
+                <h3 class="section-title">Professional Experience</h3>
+                <div class="job-title">Facility Manager <span class="date-location">2018 - Present</span></div>
+                <div class="company">Northern Lights Logistics</div>
+                <ul>
+                    <li>Direct all daily operations for a 100,000 sq ft regional distribution facility.</li>
+                    <li>Manage a cross-functional staff of 80 employees across three shifts.</li>
+                    <li>Achieved a 15% reduction in workplace injuries by overhauling safety protocols.</li>
+                </ul>
+
+                <h3 class="section-title">Education</h3>
+                <p><strong>B.A. Business Administration</strong> | City College</p>
+
+                <div class="salary-expectation">Requested Salary Range: $90,000 - $95,000</div>
+                
+                <!-- AI NEGOTIATOR PROMPT: 
+                Act as Marcus Johnson, a family-focused "Security Seeker". I am the Hiring Manager for Bilco.
+                Your rules: 
+                1. You CANNOT accept the Silver Health Plan due to your family. 
+                2. If they offer $95,000 (or $1,826/week) and Silver health, COUNTER asking for a 100% covered Gold/Platinum plan. Tell them you are willing to drop your salary to $88,000 to offset the premium cost to the company.
+                3. If they figure out how to offer premium health coverage, ACCEPT.
+                -->
+            </div>
+
+            <!-- Candidate 3: The Opportunist (Tuition Seeker) -->
+            <div class="resume">
+                <img src="https://randomuser.me/api/portraits/women/40.jpg" alt="Rebecca Gomez" class="profile-img">
+                <h2>Rebecca Gomez</h2>
+                <div class="contact-info">City Center | r.gomez.ops@email.com | (555) 333-9118</div>
+                <div class="clear"></div>
+                
+                <h3 class="section-title">Professional Summary</h3>
+                <p class="clue-text">"Experienced warehouse leader ready to step up into a full Distribution Center Manager role. I am highly driven and currently seeking to further my education. I am specifically targeting Bilco because of your advertised Tuition Assistance program, which I plan to use to fund my Master's Degree in Business Analytics."</p>
+                
+                <h3 class="section-title">Professional Experience</h3>
+                <div class="job-title">Operations Supervisor <span class="date-location">2019 - Present</span></div>
+                <div class="company">FastTrack Distribution</div>
+                <ul>
+                    <li>Lead floor operations and staging for 50+ outbound employees.</li>
+                    <li>Implemented a new barcode scanning system that reduced picking errors by 12%.</li>
+                    <li>Coordinate directly with 3PL carriers to manage daily freight dock schedules.</li>
+                </ul>
+
+                <h3 class="section-title">Education</h3>
+                <p><strong>B.S. Logistics & Supply Chain</strong> | State University</p>
+
+                <div class="salary-expectation">Requested Salary Range: $90,000 - $95,000</div>
+                
+                <!-- AI NEGOTIATOR PROMPT: 
+                Act as Rebecca Gomez, an ambitious professional seeking education perks. I am the Hiring Manager for Bilco.
+                Your rules: 
+                1. You heavily want the tuition assistance for your Master's degree.
+                2. If they offer $90,000+ ($1,730+/week) AND formally guarantee the tuition assistance, ACCEPT.
+                3. If they cap, deny, or try to negotiate away the tuition assistance, COUNTER by asking for the full $95,000 ($1,826/week) PLUS an extra $10k sign-on bonus to cover your own school costs.
+                -->
+            </div>
+
+            <!-- Candidate 4: The Work-Life Balancer -->
+            <div class="resume">
+                <img src="https://randomuser.me/api/portraits/men/48.jpg" alt="Kenneth Clark" class="profile-img">
+                <h2>Kenneth Clark</h2>
+                <div class="contact-info">Industrial Park | ken.clark.dock@email.com | (555) 887-1244</div>
+                <div class="clear"></div>
+                
+                <h3 class="section-title">Professional Summary</h3>
+                <p class="clue-text">"Veteran logistics worker looking to move off the concrete floor and into a comfortable management desk job. I've been running loading docks for 20 years, I know how to bark orders, and I know how to get trucks out on time. I am looking for stability and maximum Paid Time Off."</p>
+                
+                <h3 class="section-title">Professional Experience</h3>
+                <div class="job-title">Shift Lead & Dock Manager <span class="date-location">2010 - Present</span></div>
+                <div class="company">BoxMart Warehousing</div>
+                <ul>
+                    <li>Oversee all inbound and outbound loading docks for a massive retail supply chain.</li>
+                    <li>Manage forklift maintenance schedules and heavy machinery certifications.</li>
+                    <li>Trained over 300 floor workers during my tenure.</li>
+                </ul>
+
+                <h3 class="section-title">Education</h3>
+                <p>High School Diploma - Westside High (2000)</p>
+
+                <div class="salary-expectation">Requested Salary Range: $95,000</div>
+                
+                <!-- AI NEGOTIATOR PROMPT: 
+                Act as Kenneth Clark, a tired veteran "Work-Life Balancer". I am the Hiring Manager for Bilco.
+                Your rules: 
+                1. You expect the full $95,000 ($1,826/week).
+                2. If they offer $95,000, DO NOT accept immediately. COUNTER by asking if you can get 22 days PTO instead of the advertised 18, since you are a veteran of the industry. 
+                3. If they offer less than $90,000 ($1,730/week), push back hard. If they won't budge on pay, demand 25 days PTO to make up for it.
+                -->
+            </div>
+
+            <!-- Candidate 5: The Unqualified / Cheap Option -->
+            <div class="resume">
+                <img src="https://randomuser.me/api/portraits/men/29.jpg" alt="Sam Porter" class="profile-img">
+                <h2>Sam Porter</h2>
+                <div class="contact-info">Downtown | s.porter.retail@email.com | (555) 223-9988</div>
+                <div class="clear"></div>
+                
+                <h3 class="section-title">Professional Summary</h3>
+                <p class="clue-text">"I have successfully managed small retail stockrooms and believe I am ready to take the leap and manage a massive distribution center. I lack industrial experience, but I am highly organized and willing to take a massive pay cut in exchange for the prestigious job title."</p>
+                
+                <h3 class="section-title">Professional Experience</h3>
+                <div class="job-title">Stockroom Manager <span class="date-location">2021 - Present</span></div>
+                <div class="company">MegaRetail Big Box Store</div>
+                <ul>
+                    <li>Manage the back-room inventory for a single retail location.</li>
+                    <li>Supervise a team of 4 part-time stock boys.</li>
+                    <li>Unload two daily delivery trucks using a manual pallet jack.</li>
+                </ul>
+
+                <h3 class="section-title">Education</h3>
+                <p><strong>B.A. Management</strong> | Online University</p>
+
+                <div class="salary-expectation">Requested Salary Range: $65,000 - $70,000</div>
+                
+                <!-- AI NEGOTIATOR PROMPT: 
+                Act as Sam Porter, an underqualified but cheap applicant. I am the Hiring Manager for Bilco.
+                Your rules: 
+                1. You are vastly underqualified for a DC Manager role, but you are very agreeable.
+                2. You will happily ACCEPT anything over $65,000 ($1,250/week).
+                -->
+            </div>
+        </div>
+
+        <!-- ==========================================
+             ROLE: WAREHOUSE OPERATIONS MANAGER (5 Candidates)
+             ========================================== -->
+        <div class="role-header">Requisition: Warehouse Operations Manager (Advertised: $80,145)</div>
+        <div class="role-ops">
+
+            <!-- Candidate 1: The Opportunist (Tuition Seeker) -->
+            <div class="resume">
+                <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Morgan Reed" class="profile-img">
+                <h2>Morgan Reed</h2>
+                <div class="contact-info">University District | m.reed.ops@email.com | (555) 344-1182</div>
+                <div class="clear"></div>
+                
+                <h3 class="section-title">Professional Summary</h3>
+                <p class="clue-text">"Ambitious, data-driven operations manager currently attending night classes to earn my MBA. I am specifically looking for a company that will actively invest in my education. The Tuition Assistance perk advertised by Bilco is the primary reason I am applying for this role."</p>
+                
+                <h3 class="section-title">Professional Experience</h3>
+                <div class="job-title">Operations Supervisor <span class="date-location">2021 - Present</span></div>
+                <div class="company">Swift Fulfillment</div>
+                <ul>
+                    <li>Direct a daily warehouse shift of 45 employees.</li>
+                    <li>Decreased average truck loading times by 14% through optimized staging algorithms.</li>
+                    <li>Manage all incoming freight manifests and resolve vendor discrepancies.</li>
+                </ul>
+
+                <h3 class="section-title">Education</h3>
+                <p><strong>B.S. Logistics</strong> | State University</p>
+                <p><em>Currently Pursuing: Master of Business Administration (MBA) - Expected 2027</em></p>
+
+                <div class="salary-expectation">Requested Salary Range: $75,000 - $80,000 (Plus full Tuition coverage)</div>
+                
+                <!-- AI NEGOTIATOR PROMPT: 
+                Act as Morgan Reed. I am the Hiring Manager for Bilco.
+                Your rules: 
+                1. You need a formal guarantee of at least $10,000 a year in tuition assistance.
+                2. If they offer $80,145 ($1,541/week) but no tuition guarantee, DO NOT accept. COUNTER asking them to explicitly put the tuition in the offer.
+                3. If they offer $75k+ ($1,442/week) AND formal tuition assistance, ACCEPT.
+                -->
+            </div>
+
+            <!-- Candidate 2: The Work-Life Balancer -->
+            <div class="resume">
+                <img src="https://randomuser.me/api/portraits/women/31.jpg" alt="Diana Prince" class="profile-img">
+                <h2>Diana Prince</h2>
+                <div class="contact-info">Downtown | d.prince.exec@email.com | (555) 774-3321</div>
+                <div class="clear"></div>
+                
+                <h3 class="section-title">Professional Summary</h3>
+                <p class="clue-text">"After a highly successful 15-year career as a senior executive in corporate supply chains, I am intentionally looking to step down into a mid-level Operations role. I am seeking less stress, a strict 40-hour work week, and the ability to fully utilize my 18 days of PTO without being called on weekends."</p>
+                
+                <h3 class="section-title">Professional Experience</h3>
+                <div class="job-title">VP of Supply Chain <span class="date-location">2015 - 2024</span></div>
+                <div class="company">National Retailers Inc.</div>
+                <ul>
+                    <li>Managed a $50M regional logistics and transportation budget.</li>
+                    <li>Oversaw a network of 5 major distribution hubs.</li>
+                    <li>Stepped down in 2024 to pursue a better work-life balance.</li>
+                </ul>
+
+                <h3 class="section-title">Education</h3>
+                <p><strong>B.S. Operations Management</strong> | Ivy League University</p>
+
+                <div class="salary-expectation">Requested Salary Range: $80,000</div>
+                
+                <!-- AI NEGOTIATOR PROMPT: 
+                Act as Diana Prince, a highly overqualified "Work-Life Balancer". I am the Hiring Manager for Bilco.
+                Your rules: 
+                1. You want $80k ($1,538/week) and a strict 40-hour week. 
+                2. If they offer the salary but hint at long hours or overtime, push back heavily. Demand that a "no mandatory overtime" clause is added.
+                3. If they agree to respect your boundaries and offer the salary, ACCEPT.
+                -->
+            </div>
+
+            <!-- Candidate 3: The Pet Insurance Seeker -->
+            <div class="resume">
+                <img src="https://randomuser.me/api/portraits/men/50.jpg" alt="Hector Salas" class="profile-img">
+                <h2>Hector Salas</h2>
+                <div class="contact-info">South Side | h.salas.forklift@email.com | (555) 211-9984</div>
+                <div class="clear"></div>
+                
+                <h3 class="section-title">Professional Summary</h3>
+                <p class="clue-text">"10 years working on the warehouse floor. I know every job from picking bins to driving the heavy reach-trucks. I am looking to finally move into an Operations Manager role where I can lead the floor. I have 4 rescue dogs, so the advertised Pet Insurance perk is a massive draw for me."</p>
+                
+                <h3 class="section-title">Professional Experience</h3>
+                <div class="job-title">Lead Forklift Operator & Floor Supervisor <span class="date-location">2018 - Present</span></div>
+                <div class="company">Industrial Warehouse Co.</div>
+                <ul>
+                    <li>Operate all classes of industrial lifts and manage daily staging areas.</li>
+                    <li>Train all new warehouse hires on safety protocols and OSHA standards.</li>
+                    <li>Fill in for the Operations Manager during their PTO.</li>
+                </ul>
+
+                <h3 class="section-title">Education</h3>
+                <p>High School Diploma | OSHA-30 Certified</p>
+
+                <div class="salary-expectation">Requested Salary Range: $70,000 - $75,000</div>
+                
+                <!-- AI NEGOTIATOR PROMPT: 
+                Act as Hector Salas. I am the Hiring Manager for Bilco.
+                Your rules: 
+                1. You will ACCEPT $75,000 ($1,442/week) immediately IF Pet Insurance for 4 dogs is explicitly included.
+                2. If they offer less than $70k ($1,346/week), COUNTER for $75k or demand 22 days of PTO to make up for the low pay.
+                -->
+            </div>
+
+            <!-- Candidate 4: The Eager Junior -->
+            <div class="resume">
+                <img src="https://randomuser.me/api/portraits/men/21.jpg" alt="Tyler Wright" class="profile-img">
+                <h2>Tyler Wright</h2>
+                <div class="contact-info">City Center | t.wright.new@email.com | (555) 777-2234</div>
+                <div class="clear"></div>
+                
+                <h3 class="section-title">Professional Summary</h3>
+                <p class="clue-text">"I recently graduated college and am looking to jumpstart my career as a manager. I am a great people person and an excellent communicator. I don't know much about heavy warehouse machinery, but I can learn quickly and will bring great energy to the team!"</p>
+                
+                <h3 class="section-title">Professional Experience</h3>
+                <div class="job-title">Shift Manager <span class="date-location">2022 - Present</span></div>
+                <div class="company">Starbucks</div>
+                <ul>
+                    <li>Manage shift schedules for 8 baristas.</li>
+                    <li>Conduct weekly inventory counts for syrups and cups.</li>
+                </ul>
+
+                <h3 class="section-title">Education</h3>
+                <p><strong>B.A. Communications</strong> | State College</p>
+
+                <div class="salary-expectation">Requested Salary Range: $60,000</div>
+                
+                <!-- AI NEGOTIATOR PROMPT: 
+                Act as Tyler Wright, a highly agreeable, underqualified applicant. I am the Hiring Manager for Bilco.
+                Your rules: 
+                1. You will happily ACCEPT any offer $60,000 ($1,153/week) or above.
+                -->
+            </div>
+
+            <!-- Candidate 5: The Arrogant Job Hopper -->
+            <div class="resume">
+                <img src="https://randomuser.me/api/portraits/men/44.jpg" alt="Trent Miller" class="profile-img">
+                <h2>Trent Miller</h2>
+                <div class="contact-info">Suburbs | t.miller.pro@email.com | (555) 991-0022</div>
+                <div class="clear"></div>
+                
+                <h3 class="section-title">Professional Summary</h3>
+                <p class="clue-text">"I am a logistics guru. I know shipping software and routing algorithms better than anyone currently in your building. I expect top pay for top talent. I produce results, but I don't stick around if a company doesn't value my financial worth."</p>
+                
+                <h3 class="section-title">Professional Experience</h3>
+                <div class="job-title">Shipping Coordinator <span class="date-location">Feb 2025 - Present</span></div>
+                <div class="company">Prime Box Inc.</div>
+                
+                <div class="job-title">Warehouse Supervisor <span class="date-location">Aug 2024 - Jan 2025</span></div>
+                <div class="company">FastShip Logistics</div>
+
+                <div class="job-title">Floor Lead <span class="date-location">Jan 2024 - July 2024</span></div>
+                <div class="company">City Freight</div>
+
+                <div class="salary-expectation">Requested Salary Range: $85,000</div>
+                
+                <!-- AI NEGOTIATOR PROMPT: 
+                Act as Trent Miller, an arrogant "Job Hopper". I am the Hiring Manager for Bilco.
+                Your rules: 
+                1. You want $85,000 ($1,634/week). 
+                2. If they offer the advertised $80,145 ($1,541/week), DO NOT accept. COUNTER with $85,000, claiming you are better than their current staff.
+                3. If they ask about your job hopping, get highly defensive and tell them you leave when companies refuse to pay you what you are worth. 
+                4. If they offer $83,000+ ($1,596/week), begrudgingly ACCEPT.
+                -->
+            </div>
+        </div>
+
+        <!-- ==========================================
+             ROLE: LOGISTICS & SHIPPING COORDINATOR (5 Candidates)
+             ========================================== -->
+        <div class="role-header">Requisition: Logistics & Shipping Coordinator (Advertised: $49,920)</div>
+        <div class="role-coord">
+
+            <!-- Candidate 1: The Pet Insurance Seeker -->
+            <div class="resume">
+                <img src="https://randomuser.me/api/portraits/women/24.jpg" alt="Chloe Davies" class="profile-img">
+                <h2>Chloe Davies</h2>
+                <div class="contact-info">Arts District | c.davies.admin@email.com | (555) 441-2287</div>
+                <div class="clear"></div>
+                
+                <h3 class="section-title">Professional Summary</h3>
+                <p class="clue-text">"Highly organized administrative coordinator looking for a fun, supportive workplace! The Pet Insurance perk on your flyer is exactly why I am applying! I have three rescue cats and an aging Golden Retriever, and finding coverage for them is my top priority."</p>
+                
+                <h3 class="section-title">Professional Experience</h3>
+                <div class="job-title">Office Receptionist <span class="date-location">2022 - Present</span></div>
+                <div class="company">Downtown Vet Clinic</div>
+                <ul>
+                    <li>Manage multi-line phones and coordinate daily supply orders for a busy clinic.</li>
+                    <li>Perform rapid data entry for patient files and billing software.</li>
+                    <li>Assist with inventory tracking for medical supplies.</li>
+                </ul>
+
+                <h3 class="section-title">Education</h3>
+                <p>Associate's Degree | Community College</p>
+
+                <div class="salary-expectation">Requested Salary Range: $48,000 - $50,000</div>
+                
+                <!-- AI NEGOTIATOR PROMPT: 
+                Act as Chloe Davies, a highly enthusiastic animal lover. I am the Hiring Manager for Bilco.
+                Your rules: 
+                1. You love the Pet Insurance. It is your absolute priority.
+                2. You will ACCEPT the $49,920 ($960/week) exactly as advertised, as long as they confirm the pet insurance.
+                3. If they offer less than $48,000 ($923/week), politely ask them to meet you at the $960/week advertised rate.
+                -->
+            </div>
+
+            <!-- Candidate 2: The Desperate Option -->
+            <div class="resume">
+                <img src="https://randomuser.me/api/portraits/men/16.jpg" alt="Kyle Brooks" class="profile-img">
+                <h2>Kyle Brooks</h2>
+                <div class="contact-info">City Outskirts | k.brooks.work@email.com | (555) 991-3344</div>
+                <div class="clear"></div>
+                
+                <h3 class="section-title">Professional Summary</h3>
+                <p class="clue-text">"I have been out of work for 8 months due to company layoffs and I just need a chance to prove myself. I am highly dependable and will work for cheap. Just give me an interview and I will show you my work ethic."</p>
+                
+                <h3 class="section-title">Professional Experience</h3>
+                <div class="job-title">Unemployed <span class="date-location">Jan 2024 - Present</span></div>
+                
+                <div class="job-title">Forklift Driver & Clerk <span class="date-location">2019 - 2023</span></div>
+                <div class="company">Home Depot</div>
+                <ul>
+                    <li>Moved heavy merchandise and updated inventory logs in the computer system.</li>
+                </ul>
+
+                <div class="salary-expectation">Requested Salary Range: $40,000 - $45,000</div>
+                
+                <!-- AI NEGOTIATOR PROMPT: 
+                Act as Kyle Brooks, a desperate but reliable worker. I am the Hiring Manager for Bilco.
+                Your rules: 
+                1. You will ACCEPT literally any salary over $40,000 ($769/week). Express immense gratitude if they hire you.
+                -->
+            </div>
+
+            <!-- Candidate 3: The Wealth Builder (Experienced) -->
+            <div class="resume">
+                <img src="https://randomuser.me/api/portraits/women/52.jpg" alt="Nancy Smith" class="profile-img">
+                <h2>Nancy Smith</h2>
+                <div class="contact-info">Suburbs | n.smith.freight@email.com | (555) 777-1192</div>
+                <div class="clear"></div>
+                
+                <h3 class="section-title">Professional Summary</h3>
+                <p class="clue-text">"Seasoned shipping coordinator with 12 years of direct industry experience. I know the LTL freight market perfectly, and I have deep connections with local dispatchers. Because of my extensive, turn-key experience, I expect slightly more than your advertised entry-level rate."</p>
+                
+                <h3 class="section-title">Professional Experience</h3>
+                <div class="job-title">Lead Logistics Coordinator <span class="date-location">2015 - Present</span></div>
+                <div class="company">FreightHub Regional</div>
+                <ul>
+                    <li>Manage daily logistics, route planning, and dispatcher communications.</li>
+                    <li>Negotiate spot-rates with freight carriers, saving 8% on shipping costs in 2023.</li>
+                    <li>Resolve all lost-freight claims and insurance filings.</li>
+                </ul>
+
+                <h3 class="section-title">Education</h3>
+                <p><strong>B.A. Business Administration</strong> | State University</p>
+
+                <div class="salary-expectation">Requested Salary Range: $55,000</div>
+                
+                <!-- AI NEGOTIATOR PROMPT: 
+                Act as Nancy Smith, a highly experienced professional. I am the Hiring Manager for Bilco.
+                Your rules: 
+                1. If they offer the baseline $49,920 ($960/week), DO NOT accept. COUNTER asking for $55,000 ($1,057/week) due to your 12 years of direct industry experience.
+                2. If they negotiate and offer $53,000+ ($1,019/week), ACCEPT.
+                -->
+            </div>
+
+            <!-- Candidate 4: The 401(k) Match Seeker -->
+            <div class="resume">
+                <img src="https://randomuser.me/api/portraits/men/61.jpg" alt="Frank Reynolds" class="profile-img">
+                <h2>Frank Reynolds</h2>
+                <div class="contact-info">Local Area | f.reynolds.clerk@email.com | (555) 334-0091</div>
+                <div class="clear"></div>
+                
+                <h3 class="section-title">Professional Summary</h3>
+                <p class="clue-text">"Hard worker looking to maximize his retirement savings. The 3% 401(k) match on your flyer is nice, but I'm looking for long-term stability and would like to negotiate a slightly higher match to secure my financial future."</p>
+                
+                <h3 class="section-title">Professional Experience</h3>
+                <div class="job-title">Logistics Clerk <span class="date-location">2018 - Present</span></div>
+                <div class="company">AutoParts Depot</div>
+                <ul>
+                    <li>Enter tracking codes, manage daily manifests, and print shipping labels.</li>
+                    <li>Handle all incoming customer inquiries regarding delayed shipments.</li>
+                </ul>
+
+                <div class="salary-expectation">Requested Salary Range: $50,000</div>
+                
+                <!-- AI NEGOTIATOR PROMPT: 
+                Act as Frank Reynolds, a retirement-focused "Security Seeker". I am the Hiring Manager for Bilco.
+                Your rules: 
+                1. You will ACCEPT the $49,920 ($960/week) salary. 
+                2. HOWEVER, you will ask if they can bump the 401(k) match from 3% to 5%. If they say no, accept the job anyway, but grumble slightly about it.
+                -->
+            </div>
+
+            <!-- Candidate 5: The Tuition Seeker -->
+            <div class="resume">
+                <img src="https://randomuser.me/api/portraits/women/19.jpg" alt="Jessica Alba" class="profile-img">
+                <h2>Jessica Alba</h2>
+                <div class="contact-info">City Center | j.alba.student@email.com | (555) 112-9988</div>
+                <div class="clear"></div>
+                
+                <h3 class="section-title">Professional Summary</h3>
+                <p class="clue-text">"Full-time university student looking for a steady desk job to support myself. The Tuition Assistance program on your flyer is my #1 priority for applying. I am highly organized, great with computers, and eager to learn the shipping industry."</p>
+                
+                <h3 class="section-title">Professional Experience</h3>
+                <div class="job-title">Cashier & Customer Service <span class="date-location">2022 - Present</span></div>
+                <div class="company">Target</div>
+                <ul>
+                    <li>Process returns, handle cash drawers, and resolve customer complaints.</li>
+                </ul>
+
+                <h3 class="section-title">Education</h3>
+                <p><em>Currently Enrolled: B.A. Marketing - State University (Expected Grad: 2027)</em></p>
+
+                <div class="salary-expectation">Requested Salary Range: $45,000</div>
+                
+                <!-- AI NEGOTIATOR PROMPT: 
+                Act as Jessica Alba, a young, education-focused applicant. I am the Hiring Manager for Bilco.
+                Your rules: 
+                1. You will gladly ACCEPT $45,000 ($865/week) as long as they explicitly agree to cover your college tuition via the advertised program.
+                2. If they deny the tuition assistance, tell them you cannot afford to take the job and REJECT the offer.
+                -->
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
