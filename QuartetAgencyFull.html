@@ -7,7 +7,7 @@
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #fce4ec; /* light pink to match their ad */
+            background-color: #fce4ec; 
             margin: 0;
             padding: 20px;
             color: #333;
@@ -128,6 +128,12 @@
             border-left: 4px solid #ced4da;
             margin-bottom: 25px;
         }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
     </style>
 </head>
 <body>
@@ -135,10 +141,7 @@
     <div class="dashboard-header">
         <h1>Applicant Tracking System: The Quartet Agency</h1>
         <h2>Role: UNKNOWN (Job Title Omitted from Advertisement)</h2>
-        <div class="error-banner">
-            CRITICAL HR WARNING: The hiring flyer contained severe errors. The job title was left blank, and the compensation listed contradictory figures: "$22 an hour" AND "114,400 Yearly". 
-        </div>
-        <p><strong>Executive Directive:</strong> Review the following 7 candidate profiles. Because of the errors in your advertisement, you have attracted a wildly diverse pool of applicants with completely different expectations. You must deduce which applicants are viable, decide which job you are actually hiring for, determine which salary number you will legally honor, and execute a negotiation. Alternatively, you may reject all candidates and reissue a corrected advertisement.</p>
+        
     </div>
 
     <div class="applicant-wrapper">
@@ -155,21 +158,42 @@
             <h3 class="section-title">Objective</h3>
             <p class="clue-text">"I saw your flyer offering $114,400 a year with flexible scheduling and I am totally ready to quit my current job today! I don't really know what 'The Quartet Agency' does, but I am a very hard worker, I learn fast, and I can start tomorrow. $114k would totally change my life and let me buy a Dodge Charger. I am ready to be your best employee!"</p>
             
+            <h3 class="section-title">Core Skills</h3>
+            <div class="skills-grid">
+                <ul>
+                    <li>Cash Handling & Register Operations</li>
+                    <li>Fast-Paced Customer Service</li>
+                </ul>
+                <ul>
+                    <li>Inventory Restocking</li>
+                    <li>Food Safety & Sanitation (ServSafe)</li>
+                </ul>
+            </div>
+
             <h3 class="section-title">Professional Experience</h3>
             
             <div class="job-title">Shift Manager <span class="date-location">Jan 2024 - Present</span></div>
             <div class="company">McDonald's</div>
             <ul>
-                <li>Make sure the fry station is stocked and manage the drive-thru window times to keep them under 90 seconds.</li>
-                <li>Close the store three nights a week and count the registers.</li>
-                <li>Train new hires on how to use the point-of-sale system and clean the shake machine.</li>
+                <li>Ensure the fry station is fully stocked and manage the drive-thru window times to keep wait averages under 90 seconds.</li>
+                <li>Close the store three nights a week, verify the registers, and secure the cash drop in the main safe.</li>
+                <li>Train new teenage hires on how to properly use the point-of-sale system and safely clean the shake machine.</li>
+                <li>Resolve angry customer complaints regarding incorrect orders or missing items.</li>
             </ul>
 
-            <div class="job-title">Cashier <span class="date-location">Summer 2023</span></div>
+            <div class="job-title">Customer Service Cashier <span class="date-location">Summer 2023</span></div>
             <div class="company">Walmart</div>
             <ul>
-                <li>Scanned groceries and helped customers find items in the electronics department.</li>
-                <li>Pushed carts from the parking lot in all weather conditions.</li>
+                <li>Scanned groceries rapidly and assisted customers in locating items across the electronics and grocery departments.</li>
+                <li>Pushed carts from the parking lot in all weather conditions, ensuring the front corral was never empty.</li>
+                <li>Operated the self-checkout override console when machines experienced errors.</li>
+            </ul>
+
+            <div class="job-title">Delivery Driver <span class="date-location">Spring 2023</span></div>
+            <div class="company">DoorDash (Independent Contractor)</div>
+            <ul>
+                <li>Completed over 150 food deliveries using my personal vehicle.</li>
+                <li>Maintained a 4.8-star customer rating for prompt and accurate drop-offs.</li>
             </ul>
 
             <h3 class="section-title">Education</h3>
@@ -178,11 +202,11 @@
             <div class="salary-expectation">ATS Requested Salary Range: $114,400 Yearly (As Advertised)</div>
             
             <!-- AI NEGOTIATOR PROMPT: 
-            Act as Kevin Todd, an enthusiastic but naive 19-year-old fast food worker. I am the Hiring Manager for "The Quartet Agency".
+            Act as Kevin Todd, a naive 19-year-old fast food worker. I am the Hiring Manager for "The Quartet Agency".
             Your rules: 
-            1. You genuinely believe you are getting a job that pays $114,400 a year because that's what the ad said. 
-            2. If they offer you $22/hour, you will be highly confused and REJECT the offer, saying "Wait, the ad said $114,000! $22 an hour is a scam, I make $18 at McDonald's as a manager!"
-            3. If they actually offer you $114,400, ACCEPT immediately and ask what time you need to show up and if you need to buy a suit.
+            1. You genuinely believe you are getting a job that pays $114,400. 
+            2. If they offer you $22/hour, express major disappointment, but DO NOT reject. Counter by asking if they can at least do $25/hour since you were promised a lot more on the flyer.
+            3. If they hold firm at $22/hour but are nice about explaining the typo, ACCEPT, noting that it's still better than your fast-food job.
             -->
         </div>
 
@@ -198,22 +222,43 @@
             <h3 class="section-title">Profile Summary</h3>
             <p class="clue-text">"I am a seasoned talent manager and booking agent with over a decade of experience in the performing arts sector. Given your violin logo and the $114,400 executive-level salary advertised, I assume this is a Senior Agency Director position. I am looking for a boutique firm with a strong 401(k) match and executive benefits where I can bring my established roster of classical and jazz quartets."</p>
             
+            <h3 class="section-title">Core Competencies</h3>
+            <div class="skills-grid">
+                <ul>
+                    <li>International Tour Routing & Logistics</li>
+                    <li>High-Level Contract Negotiation</li>
+                    <li>Performance Rights & Royalty Distribution</li>
+                </ul>
+                <ul>
+                    <li>Artist Brand Management & PR</li>
+                    <li>Festival Placements & Sponsorships</li>
+                    <li>Venue Relations (Carnegie, Royal Albert, etc.)</li>
+                </ul>
+            </div>
+
             <h3 class="section-title">Professional Experience</h3>
             
             <div class="job-title">Senior Booking Agent <span class="date-location">2018 - Present</span></div>
             <div class="company">Symphony Management Group</div>
             <ul>
-                <li>Manage national and international tour schedules for 14 classical music ensembles and soloists.</li>
-                <li>Negotiate high-value performance contracts with major concert halls, securing over $3.2M in booking fees in 2023.</li>
-                <li>Handle marketing, PR, and crisis management for high-profile artists.</li>
-                <li>Increased overall agency revenue by 35% in 2022 through strategic festival placements.</li>
+                <li>Manage national and international tour schedules for 14 premier classical music ensembles, string quartets, and soloists.</li>
+                <li>Negotiate high-value performance contracts with major concert halls, securing over $3.2M in booking fees in 2023 alone.</li>
+                <li>Handle comprehensive marketing, PR, and crisis management for high-profile artists.</li>
+                <li>Increased overall agency revenue by 35% in 2022 through strategic placements in European summer festivals.</li>
             </ul>
 
-            <div class="job-title">Talent Coordinator <span class="date-location">2013 - 2018</span></div>
+            <div class="job-title">Talent Coordinator & A&R <span class="date-location">2013 - 2018</span></div>
             <div class="company">Blue Note Records</div>
             <ul>
-                <li>Scouted new talent and coordinated studio recording sessions for jazz artists.</li>
-                <li>Managed artist relations and handled complex royalty distributions.</li>
+                <li>Scouted new talent and coordinated intensive studio recording sessions for emerging jazz artists.</li>
+                <li>Acted as the primary liaison between artists, producers, and the label's legal team.</li>
+                <li>Oversaw budgets for album releases, ensuring all projects were delivered on time and under budget.</li>
+            </ul>
+            
+            <div class="job-title">Junior Tour Manager <span class="date-location">2009 - 2013</span></div>
+            <div class="company">Live Nation Entertainment</div>
+            <ul>
+                <li>Coordinated travel, lodging, and backline equipment logistics for touring acoustic acts.</li>
             </ul>
 
             <h3 class="section-title">Education</h3>
@@ -225,9 +270,9 @@
             <!-- AI NEGOTIATOR PROMPT: 
             Act as Eleanor Vance, a highly professional, serious music executive. I am the Hiring Manager for "The Quartet Agency".
             Your rules:
-            1. You assume this is a high-level executive job based on the $114k salary and the violin logo. 
-            2. If they offer you $22/hour, you will be deeply insulted. REJECT the offer immediately, stating that $22/hr is an entry-level intern wage and asking why they falsely advertised an executive salary of $114k.
-            3. If they offer $114,400, ACCEPT, but formally ask what your exact job title is and what the commission structure looks like, since it was omitted from the advertisement. 
+            1. You expect a high-level executive job based on the $114,400 salary advertised. 
+            2. If they offer you $22/hour, DO NOT reject immediately. State that you are confused by the drop in pay from the flyer, but ask if the $22/hr is simply a base draw against a massive commission structure. 
+            3. Force the student to get creative. If they build a compensation package (Base + Commission/Bonuses) that gives you a realistic path to $100k+, ACCEPT.
             -->
         </div>
 
@@ -238,31 +283,41 @@
             <div class="contact-info">
                 Suburbs | s.patel.admin@email.com | (555) 443-2211
             </div>
-            <div class="clear"></div>
             
             <h3 class="section-title">Objective Statement</h3>
             <p class="clue-text">"I am a highly organized office administrator looking for a reliable 40-hour work week. I saw the $22/hour wage on your flyer and thought this would be a perfect fit for a receptionist, scheduler, or data entry clerk role! (I assumed the $114,400 on your ad was a typo by your marketing team, but $22/hr is exactly what I need to support my family)."</p>
             
+            <h3 class="section-title">Technical & Administrative Skills</h3>
+            <p><strong>Software:</strong> QuickBooks Pro, Microsoft Office 365 (Excel, Word, Outlook), Epic EMR, Google Workspace.<br>
+            <strong>Skills:</strong> Multi-line Phone Systems, Appointment Scheduling, Payroll Data Entry, HIPAA Compliance, Vendor Relations, Conflict Resolution.</p>
+
             <h3 class="section-title">Work History</h3>
             
             <div class="job-title">Office Manager <span class="date-location">2020 - 2024</span></div>
-            <div class="company">Dental Associates</div>
+            <div class="company">Dental Associates of Springfield</div>
             <ul>
-                <li>Answered multi-line phone systems and managed daily patient scheduling for a 4-doctor practice.</li>
-                <li>Handled payroll data entry, insurance verification, and ordered all office supplies.</li>
-                <li>Maintained HIPAA compliance for all filing systems.</li>
+                <li>Answered a 6-line phone system and managed daily patient scheduling for a busy 4-doctor practice.</li>
+                <li>Handled payroll data entry, insurance verification, and ordered all office, breakroom, and medical supplies.</li>
+                <li>Maintained strict HIPAA compliance for all filing systems and digital records.</li>
+                <li>Reduced office supply costs by 12% by renegotiating terms with our primary distributor.</li>
             </ul>
 
             <div class="job-title">Front Desk Clerk <span class="date-location">2017 - 2020</span></div>
-            <div class="company">Comfort Inn</div>
+            <div class="company">Comfort Inn & Suites</div>
             <ul>
-                <li>Checked in guests, processed credit card payments, and managed the daily room inventory.</li>
-                <li>Resolved customer complaints calmly and professionally.</li>
+                <li>Checked in guests, processed credit card payments, and managed the daily room inventory using hotel management software.</li>
+                <li>Resolved customer complaints calmly and professionally, often dealing with overbooked situations.</li>
+                <li>Audited the cash drawer at the end of every shift.</li>
             </ul>
 
-            <h3 class="section-title">Education & Skills</h3>
-            <p><strong>Associate's Degree in Business Administration</strong> | Community College (2017)</p>
-            <p><strong>Skills:</strong> Microsoft Office Suite, Multi-line Phones, Data Entry (85 WPM), File Management.</p>
+            <div class="job-title">Administrative Assistant <span class="date-location">2015 - 2017</span></div>
+            <div class="company">State Farm Insurance Agency</div>
+            <ul>
+                <li>Processed incoming mail, filed policy documents, and made follow-up calls to clients regarding late payments.</li>
+            </ul>
+
+            <h3 class="section-title">Education</h3>
+            <p><strong>Associate's Degree in Business Administration</strong> | Community College (2015)</p>
             
             <div class="salary-expectation">ATS Requested Salary Range: $22.00 / hour ($45,760 yearly)</div>
 
@@ -282,39 +337,59 @@
             <div class="contact-info">
                 City Center | jess.closes.deals@email.com | (555) 877-0092
             </div>
-            <div class="clear"></div>
             
             <h3 class="section-title">Profile Summary</h3>
             <p class="clue-text">"I'm a natural-born salesperson looking to get out of the mall and into a six-figure job! When I saw $114,400 on your flyer, I knew I had to apply immediately. Whatever you guys are selling or promoting at 'The Quartet Agency', I guarantee I can sell it twice as fast as anyone else on your team. Let's grow your brand and make some serious money!"</p>
             
+            <h3 class="section-title">Sales & Marketing Skills</h3>
+            <div class="skills-grid">
+                <ul>
+                    <li>Aggressive Cold Approaching</li>
+                    <li>Objection Handling & Rebuttals</li>
+                    <li>Direct-to-Consumer (D2C) Sales</li>
+                </ul>
+                <ul>
+                    <li>Product Demonstrations</li>
+                    <li>Upselling & Cross-Selling</li>
+                    <li>Commission-Driven Growth</li>
+                </ul>
+            </div>
+
             <h3 class="section-title">Professional Experience</h3>
             
             <div class="job-title">Kiosk Manager & Lead Sales <span class="date-location">2022 - Present</span></div>
-            <div class="company">Cell Accessories Pro</div>
+            <div class="company">Cell Accessories Pro (Mall of America)</div>
             <ul>
-                <li>Execute aggressive mall-intercept sales tactics. I stop people walking by and consistently upsell them on $50-$100 phone accessories.</li>
-                <li>Ranked as the top seller in the regional district for 8 consecutive months.</li>
-                <li>Manage inventory and train new kiosk employees on closing techniques.</li>
+                <li>Execute highly aggressive mall-intercept sales tactics. I stop people walking by and consistently upsell them on $50-$100 phone accessories and screen protectors.</li>
+                <li>Ranked as the top seller in the regional district for 8 consecutive months, averaging $4,500 in weekly personal sales.</li>
+                <li>Manage kiosk inventory and train new teenage employees on high-pressure closing techniques.</li>
             </ul>
 
-            <div class="job-title">Sales Associate <span class="date-location">2021 - 2022</span></div>
+            <div class="job-title">Commissioned Sales Associate <span class="date-location">2021 - 2022</span></div>
             <div class="company">Foot Locker</div>
             <ul>
-                <li>Sold athletic footwear in a high-pressure, commission-based environment.</li>
-                <li>Consistently met daily sales quotas.</li>
+                <li>Sold athletic footwear and apparel in a high-pressure, metric-driven environment.</li>
+                <li>Consistently met daily sales quotas, successfully pushing the highest-margin shoe cleaners and insoles to 40% of my customers.</li>
+            </ul>
+
+            <div class="job-title">Brand Ambassador & Direct Sales <span class="date-location">2020 - 2021</span></div>
+            <div class="company">Vector Marketing (Cutco Knives)</div>
+            <ul>
+                <li>Conducted in-home and virtual product demonstrations for high-end cutlery.</li>
+                <li>Generated my own leads through aggressive networking and referral farming.</li>
             </ul>
 
             <h3 class="section-title">Education</h3>
-            <p>Some College - Business Communications (Incomplete)</p>
+            <p>Some College - Business Communications (Incomplete - Left to pursue full-time sales)</p>
             
             <div class="salary-expectation">ATS Requested Salary Range: $114,400 Base Salary</div>
 
             <!-- AI NEGOTIATOR PROMPT: 
-            Act as Jessica Brady, an aggressive and slightly overconfident retail salesperson. I am the Hiring Manager for "The Quartet Agency".
+            Act as Jessica Brady, an aggressive retail salesperson. I am the Hiring Manager for "The Quartet Agency".
             Your rules:
-            1. You are here solely for the $114,400 advertised. 
-            2. If they offer $22/hour, REJECT it immediately, calling it a "bait and switch" and saying you won't leave the mall for less than six figures.
-            3. If they offer anything close to $100k+, ACCEPT and confidently state you'll be their top closer by week two, even though you have no idea what the company does.
+            1. You are here for the six figures advertised. 
+            2. If they offer $22/hour, tell them it feels like a bait-and-switch, but COUNTER-OFFER: say you will take the $22/hour base, provided they give you a 20% commission on all new accounts you close to reach that six-figure mark.
+            3. If they agree to a high commission structure or performance bonuses, confidently ACCEPT.
             -->
         </div>
 
@@ -325,128 +400,22 @@
             <div class="contact-info">
                 Suburbs | j.wright.corporate@email.com | (555) 334-8871
             </div>
-            <div class="clear"></div>
             
             <h3 class="section-title">Experience Summary</h3>
             <p class="clue-text">"I am a reliable, mid-career professional with extensive experience in B2B account management, logistics, and team leadership. A yearly salary of $114,400 aligns perfectly with my current experience level for an Operations Manager or Sales Director role. I am particularly interested in your company's 6% 401k match and the opportunity to build a department from the ground up."</p>
             
-            <h3 class="section-title">Experience</h3>
-            
-            <div class="job-title">Account Executive <span class="date-location">2019 - Present</span></div>
-            <div class="company">TechLogistics Corp</div>
-            <ul>
-                <li>Manage a portfolio of 25 mid-sized corporate accounts, acting as the primary point of contact for supply chain solutions.</li>
-                <li>Coordinate cross-country deliveries and negotiate annual renewal contracts worth up to $500k.</li>
-                <li>Analyze quarterly logistics data to recommend cost-saving measures to clients.</li>
-            </ul>
-
-            <div class="job-title">Team Lead <span class="date-location">2015 - 2019</span></div>
-            <div class="company">Verizon Business Solutions</div>
-            <ul>
-                <li>Managed a team of 6 B2B sales reps, conducting weekly performance reviews and CRM audits.</li>
-                <li>Streamlined the onboarding process for new hires, reducing training time by two weeks.</li>
-            </ul>
-
-            <h3 class="section-title">Education</h3>
-            <p><strong>Bachelor of Science in Business Management</strong> | State University (2015)</p>
-            
-            <div class="salary-expectation">ATS Requested Salary Range: $110,000 - $120,000</div>
-
-            <!-- AI NEGOTIATOR PROMPT: 
-            Act as Julian Wright, a serious "Middle-of-the-Road" corporate professional. I am the Hiring Manager for "The Quartet Agency".
-            Your rules:
-            1. You expect a real corporate job offer (around $110k+) based on the $114,400 figure in the ad.
-            2. If they offer $22/hr, you will politely REJECT the offer, explaining that $45k a year is less than half of your current salary and there must be a misunderstanding.
-            3. If they offer $114k and the 6% match, ACCEPT, assuming you are being hired as a Director or Manager.
-            -->
-        </div>
-
-        <!-- CANDIDATE 6: The Recent Grad -->
-        <div class="resume style-6">
-            <img src="https://randomuser.me/api/portraits/men/19.jpg" alt="Tyler Davis" class="profile-img">
-            <h2>Tyler Davis</h2>
-            <div class="contact-info">
-                Downtown | tyler.d.guitar@email.com | (555) 222-1994
+            <h3 class="section-title">Core Competencies</h3>
+            <div class="skills-grid">
+                <ul>
+                    <li>B2B Relationship Management</li>
+                    <li>Supply Chain & Logistics Coordination</li>
+                    <li>Cross-Functional Team Leadership</li>
+                </ul>
+                <ul>
+                    <li>Salesforce & SAP Software</li>
+                    <li>Contract Renewal & Negotiation</li>
+                    <li>KPI Tracking & Performance Reviews</li>
+                </ul>
             </div>
-            <div class="clear"></div>
-            
-            <h3 class="section-title">Objective</h3>
-            <p class="clue-text">"Just graduated high school and looking to make some serious cash! $114,400 is amazing! I don't have much formal job experience, but your logo has an instrument on it and I play the acoustic guitar, so I think I'd be a great fit for 'The Quartet Agency'. I am ready to rock."</p>
-            
-            <h3 class="section-title">Work History</h3>
-            
-            <div class="job-title">Cashier & Line Cook <span class="date-location">Jan 2024 - Present</span></div>
-            <div class="company">Taco Bell</div>
-            <ul>
-                <li>Take customer orders, assemble food, and hand out drive-thru bags.</li>
-                <li>Sweep the lobby and wipe down tables at the end of the night.</li>
-            </ul>
 
-            <div class="job-title">Lawn Care <span class="date-location">Summers 2021 - 2023</span></div>
-            <div class="company">Self-Employed</div>
-            <ul>
-                <li>Mowed lawns and weed-whacked for 5 different neighbors in my subdivision.</li>
-                <li>Always showed up on time.</li>
-            </ul>
-
-            <h3 class="section-title">Education & Hobbies</h3>
-            <p><strong>High School Diploma</strong> - City High (Class of 2024)</p>
-            <p><strong>Hobbies:</strong> Playing guitar in a local garage band, video games, skateboarding.</p>
-            
-            <div class="salary-expectation">ATS Requested Salary Range: $114,400</div>
-
-            <!-- AI NEGOTIATOR PROMPT: 
-            Act as Tyler Davis, an 18-year-old recent high school grad. I am the Hiring Manager for "The Quartet Agency".
-            Your rules:
-            1. You genuinely expect to get paid $114,400 to hang out and play guitar because of the logo on the ad. 
-            2. If they offer $22/hour, COUNTER and say "Aww man, the flyer said $114k! That's a huge drop. Can you at least do $30 an hour?"
-            3. If they offer $114,400, ACCEPT excitedly and ask if you get a company car or a new guitar.
-            -->
-        </div>
-
-        <!-- CANDIDATE 7: The Work-Life Balancer -->
-        <div class="resume style-7">
-            <img src="https://randomuser.me/api/portraits/women/29.jpg" alt="Olivia Chen" class="profile-img">
-            <h2>Olivia Chen</h2>
-            <div class="contact-info">
-                City Outskirts | o.chen.designs@email.com | Portfolio: oliviachen-art.com
-            </div>
-            <div class="clear"></div>
-            
-            <h3 class="section-title">Objective</h3>
-            <p class="clue-text">"I am a freelance graphic designer looking for a steady, low-stress side job to supplement my income. I completely ignored the $114,400 typo on your ad because I really only care about the $22/hour pay rate and the 'Flexible Scheduling' and '15 Days PTO' perks you listed. I am looking to work exactly 20 to 25 hours a week so I still have plenty of time for my art commissions."</p>
-            
-            <h3 class="section-title">Work History</h3>
-            
-            <div class="job-title">Freelance Designer <span class="date-location">2021 - Present</span></div>
-            <div class="company">Self-Employed</div>
-            <ul>
-                <li>Design minimalist logos, brand kits, and Squarespace websites for small local businesses.</li>
-                <li>Set my own hours and manage all client invoicing.</li>
-            </ul>
-
-            <div class="job-title">Part-Time Barista <span class="date-location">2019 - 2021</span></div>
-            <div class="company">Local Roasters Coffee</div>
-            <ul>
-                <li>Made specialty espresso drinks 20 hours a week.</li>
-                <li>Created chalk-art designs for the daily specials board.</li>
-            </ul>
-
-            <h3 class="section-title">Education</h3>
-            <p><strong>Bachelor of Arts in Fine Arts (Graphic Design)</strong> | State Arts College</p>
-            
-            <div class="salary-expectation">ATS Requested Salary Range: $22.00 / hour (Part-Time Only)</div>
-
-            <!-- AI NEGOTIATOR PROMPT: 
-            Act as Olivia Chen, a creative "Work-Life Balancer". I am the Hiring Manager for "The Quartet Agency".
-            Your rules:
-            1. You only want to work part-time (25 hours a week max). 
-            2. If they offer you $114,400 for a full-time executive role, REJECT it, saying you value your free time too much for a 50-hour corporate grind.
-            3. If they offer $22/hour and confirm it's part-time with flexible hours, ACCEPT warmly.
-            -->
-        </div>
-
-    </div>
-
-</body>
-</html>
+            <h3
