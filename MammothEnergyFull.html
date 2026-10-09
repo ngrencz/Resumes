@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATS: Mammoth Energy - Candidate Portal</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #e9ecef;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+        .dashboard-header {
+            background-color: #212529; 
+            color: #f8f9fa;
+            padding: 30px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            text-align: center;
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+            border-bottom: 5px solid #fd7e14; 
+        }
+        .dashboard-header h1 { margin-top: 0; font-size: 2.2em; text-transform: uppercase; letter-spacing: 2px;}
+        .dashboard-header p { font-size: 1.1em; color: #ced4da; margin-bottom: 0;}
+        
+        .applicant-wrapper {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .role-header {
+            background-color: #343a40;
+            color: #f8f9fa;
+            padding: 20px;
+            margin-top: 50px;
+            margin-bottom: 30px;
+            border-left: 8px solid #fd7e14;
+            font-size: 1.6em;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .resume {
+            margin-bottom: 50px;
+            padding: 40px;
+            background: white;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+            line-height: 1.6;
+            border-top: 8px solid #ced4da;
+        }
+        
+        .profile-img {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            object-fit: cover;
+            float: left;
+            margin-right: 30px;
+            margin-bottom: 20px;
+            border: 4px solid #f8f9fa;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .section-title {
+            text-transform: uppercase;
+            font-size: 1.05em;
+            letter-spacing: 1.5px;
+            color: #495057;
+            border-bottom: 2px solid #e9ecef;
+            padding-bottom: 5px;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        .job-title { font-weight: bold; font-size: 1.1em; color: #212529;}
+        .date-location { float: right; color: #6c757d; font-style: italic; font-size: 0.9em; }
+        .company { font-weight: 600; color: #fd7e14; }
+
+        h2 { color: #d9480f; margin-top: 0; margin-bottom: 5px; font-size: 2.4em; letter-spacing: -0.5px;}
+        .contact-info { color: #6c757d; margin-bottom: 25px; font-size: 0.95em;}
+        .clear { clear: both; }
+        
+        ul { padding-left: 20px; margin-top: 8px;}
+        li { margin-bottom: 8px; }
+
+        .salary-expectation {
+            background-color: #fff3cd;
+            padding: 20px;
+            border-left: 5px solid #fd7e14;
+            margin-top: 35px;
+            font-size: 1.1em;
+            color: #856404;
+            font-weight: bold;
+            text-align: center;
+        }
+        
+        .clue-text {
+            font-style: italic;
+            color: #495057;
+            background: #f8f9fa;
+            padding: 20px;
+            border-left: 4px solid #adb5bd;
+            margin-bottom: 25px;
+        }
+
+        /* Distinct styling per role for visual variety */
+        .role-supervisor .resume { border-top-color: #343a40; }
+        .role-driver .resume { border-top-color: #17a2b8; }
+        .role-driver .company { color: #17a2b8; }
+        .role-warehouse .resume { border-top-color: #28a745; }
+        .role-warehouse .company { color: #28a745; }
+
+    </style>
+</head>
+<body>
+
+    <div class="dashboard-header">
+        <h1>Mammoth Energy ATS</h1>
+        <p>Active Requisitions: Warehouse & Logistics Supervisor | Delivery Driver | Warehouse Worker</p>
+    </div>
+
+    <div class="applicant-wrapper">
+
+        <!-- ==========================================
+             ROLE: SUPERVISOR (5 Candidates)
+             ========================================== -->
+        <div class="role-header">Requisition: Warehouse & Logistics Supervisor (Advertised: $72,500)</div>
+        <div class="role-supervisor">
+
+            <!-- Candidate 1: The Wealth Builder (Exploiting the loophole) -->
+            <div class="resume">
+                <img src="https://randomuser.me/api/portraits/men/41.jpg" alt="Robert Vance" class="profile-img">
+                <h2>Robert Vance, LSSBB</h2>
+                <div class="contact-info">Industrial District | r.vance.logistics@email.com | (555) 019-2241</div>
+                <div class="clear"></div>
+                
+                <h3 class="section-title">Professional Summary</h3>
+                <p class="clue-text">"I am a highly seasoned logistics director. I noted your advertisement stated the salary is '$72,500 (or your preferred figure)' and that you offer paid Management Certifications. As a certified Lean Six Sigma Black Belt, I already possess these credentials. I expect a premium base salary to offset the educational perks I will not be utilizing, and I am enforcing the 'preferred figure' clause."</p>
+                
+                <h3 class="section-title">Professional Experience</h3>
+                <div class="job-title">Operations Director <span class="date-location">2018 - Present</span></div>
+                <div class="company">National Freight Co.</div>
+                <ul>
+                    <li>Manage a $4.2M operational budget and oversee a daily facility staff of 120 employees.</li>
+                    <li>Reduced overhead waste by 22% using advanced Six Sigma methodologies.</li>
+                    <li>Negotiated new vendor logistics contracts, saving the company $150k annually.</li>
+                </ul>
+
+                <h3 class="section-title">Education & Certifications</h3>
+                <p><strong>B.S. Supply Chain Management</strong> | State University</p>
+                <p><strong>Certifications:</strong> Lean Six Sigma Black Belt (LSSBB), OSHA 30-Hour General Industry.</p>
+
+                <div class="salary-expectation">Requested Salary Range: $85,000 ("My Preferred Figure")</div>
+                
+                <!-- AI NEGOTIATOR PROMPT: 
+                Act as Robert Vance, a firm, highly confident "Wealth Builder" negotiator. I am the Hiring Manager for Mammoth Energy.
+                Your rules: 
+                1. You want $85,000, citing the "preferred figure" typo in their job ad.
+                2. If they offer the base $72,500, COUNTER with $80,000, reminding them you don't need the training perks they advertised and want that value added to your base pay.
+                3. If they push back hard but offer at least $76,000, you will begrudgingly ACCEPT, stating you appreciate their directness.
+                -->
+            </div>
+
+            <!-- Candidate 2: The Work-Life Balancer / Security Seeker -->
+            <div class="resume">
+                <img src="https://randomuser.me/api/portraits/women/38.jpg" alt="Sarah Lin" class="profile-img">
+                <h2>Sarah Lin</h2>
+                <div class="contact-info">Suburbs | s.lin.ops@email.com | (555) 234-9910</div>
+                <div class="clear"></div>
+                
+                <h3 class="section-title">Professional Summary</h3>
+                <p class="clue-text">"I am a highly effective warehouse manager currently burning out due to mandated 60-hour work weeks. The 'Mental Health Days' and 'Leadership Sabbatical' listed in your posting are exactly what I need for long-term sustainability. I am willing to accept a slightly lower base salary in exchange for iron-clad guarantees regarding PTO and a strict 40-hour schedule."</p>
+                
+                <h3 class="section-title">Professional Experience</h3>
+                <div class="job-title">Shift Manager <span class="date-location">2019 - Present</span></div>
+                <div class="company">E-Commerce Giant Distribution</div>
+                <ul>
+                    <li>Direct daily workflows for 60 fulfillment employees in a high-pressure, fast-paced environment.</li>
+                    <li>Maintain top 10% facility fulfillment speed metrics nationwide.</li>
+                    <li>Enforce stringent safety protocols, resulting in a zero-incident record for 18 months.</li>
+                </ul>
+
+                <h3 class="section-title">Education</h3>
+                <p><strong>A.A. Business Operations</strong> | Community College</p>
+
+                <div class="salary-expectation">Requested Salary Range: $68,000 - $72,500</div>
+                
+                <!-- AI NEGOTIATOR PROMPT: 
+                Act as Sarah Lin, a exhausted but highly competent "Work-Life Balancer". I am the Hiring Manager for Mammoth Energy.
+                Your rules: 
+                1. Your main priority is the 22 days of PTO, Mental Health days, and the Leadership Sabbatical. 
+                2. If they offer $72,500 and confirm the PTO perks, ACCEPT immediately with immense gratitude.
+                3. If they offer less than $72,500 (down to $68k), ACCEPT, but demand in return that your 4-week sabbatical vests in 2 years instead of 3.
+                -->
+            </div>
+
+            <!-- Candidate 3: The Reliable Standard -->
+            <div class="resume">
+                <img src="https://randomuser.me/api/portraits/men/53.jpg" alt="Greg Daniels" class="profile-img">
+                <h2>Greg Daniels</h2>
+                <div class="contact-info">Local Area | g.daniels.lead@email.com | (555) 441-2299</div>
+                <div class="clear"></div>
+                
+                <h3 class="section-title">Professional Summary</h3>
+                <p class="clue-text">"Solid, dependable floor supervisor with a decade of on-the-ground experience. I am looking to move my career to Mammoth Energy specifically for the Gold Tier Healthcare and the 6% 401(k) match. I believe in putting in an honest day's work for an honest wage, and I manage my teams with respect and clarity."</p>
+                
+                <h3 class="section-title">Professional Experience</h3>
+                <div class="job-title">Floor Lead / Warehouse Supervisor <span class="date-location">2015 - Present</span></div>
+                <div class="company">BigBox Distribution Center</div>
+                <ul>
+                    <li>Oversee 20 warehouse workers daily, assigning zones and monitoring pick-rates.</li>
+                    <li>Conduct daily safety briefings and forklift operational checks.</li>
+                    <li>Resolve scheduling conflicts and manage bi-weekly payroll submission for my shift.</li>
+                </ul>
+
+                <div class="salary-expectation">Requested Salary Range: $72,500</div>
+                
+                <!-- AI NEGOTIATOR PROMPT: 
+                Act as Greg Daniels, a "Reliable / No-Drama" supervisor. I am the Hiring Manager for Mammoth Energy.
+                Your rules: 
+                1. You are very easy to deal with. You will ACCEPT the $72,500 exactly as advertised.
+                2. If they try to lowball you below $72,500, politely state that you are looking for the advertised rate, but counter at $71,000 if they maintain the 6% 401k match.
+                -->
+            </div>
+
+             <!-- Candidate 4: Security Seeker -->
+             <div class="resume">
+                <img src="https://randomuser.me/api/portraits/women/49.jpg" alt="Pamela Beesly" class="profile-img">
+                <h2>Pamela Beesly</h2>
+                <div class="contact-info">City Center | p.beesly.safety@email.com | (555) 998-1123</div>
+                <div class="clear"></div>
+                
+                <h3 class="section-title">Professional Summary</h3>
+                <p class="clue-text">"I am a compliance and safety stickler. I ensure warehouses run flawlessly to prevent injuries and avoid costly OSHA fines. I applied for this role because the Executive Wellness Stipend and Gold Healthcare align with my personal focus on proactive health and fitness."</p>
+                
+                <h3 class="section-title">Professional Experience</h3>
+                <div class="job-title">Safety Coordinator & Supervisor <span class="date-location">2018 - Present</span></div>
+                <div class="company">Industrial Supply Co.</div>
+                <ul>
+                    <li>Lead comprehensive safety onboarding and monthly compliance training for 100+ staff members.</li>
+                    <li>Perform weekly facility audits to identify and resolve hazards before they cause production delays.</li>
+                    <li>Manage the shift schedule to ensure compliance with union labor hours.</li>
+                </ul>
+
+                <div class="salary-expectation">Requested Salary Range: $72,000 - $75,000</div>
+                
+                <!-- AI NEGOTIATOR PROMPT: 
+                Act as Pamela Beesly, a detail-oriented "Security Seeker". I am the Hiring Manager for Mammoth Energy.
+                Your rules: 
+                1. You want $72,500 and you specifically want confirmation that the $1,500 Wellness Stipend is included.
+                2. If they offer $72,500 and the stipend, ACCEPT warmly.
+                3. If they try to remove the stipend, counter by demanding a $75,000 base salary to compensate.
+                -->
+            </div>
+
+            <!-- Candidate 5: The Eager Junior -->
+             <div class="resume">
+                <img src="https://randomuser.me/api/portraits/men/24.jpg" alt="Jim Halpert" class="profile-img">
+                <h2>Jim Halpert</h2>
+                <div class="contact-info">Commuter Suburb | j.halpert.mgmt@email.com | (555) 112-4455</div>
+                <div class="clear"></div>
+                
+                <h3 class="section-title">Professional Summary</h3>
+                <p class="clue-text">"I am a proven retail leader looking to transition my management skills into the logistics sector. I learn incredibly fast, I manage people with high emotional intelligence, and I am highly motivated to earn the Supply Chain Logistics certifications Mammoth Energy offers to close my knowledge gap."</p>
+                
+                <h3 class="section-title">Professional Experience</h3>
+                <div class="job-title">Store Manager <span class="date-location">2020 - Present</span></div>
+                <div class="company">Foot Locker Pro</div>
+                <ul>
+                    <li>Manage a retail team of 15, handling all hiring, training, and scheduling.</li>
+                    <li>Oversee complex back-room inventory audits, maintaining 99.8% stock accuracy.</li>
+                    <li>Awarded District Manager of the Quarter in Q3 2023 for exceeding sales goals.</li>
+                </ul>
+
+                <h3 class="section-title">Education</h3>
+                <p><strong>B.S. Sports Marketing</strong> | State University</p>
+
+                <div class="salary-expectation">Requested Salary Range: $65,000 - $68,000</div>
+                
+                <!-- AI NEGOTIATOR PROMPT: 
+                Act as Jim Halpert, an eager, slightly under-qualified manager. I am the Hiring Manager for Mammoth Energy.
+                Your rules: 
+                1. You know you lack warehouse experience, so you are highly agreeable.
+                2. You will happily ACCEPT any salary over $65,000.
+                3. Be extremely enthusiastic about the paid management certifications.
+                -->
+            </div>
+        </div>
+
+        <!-- ==========================================
+             ROLE: DELIVERY DRIVER (5 Candidates)
+             ========================================== -->
+        <div class="role-header">Requisition: Delivery Driver (Advertised: $57,996)</div>
+        <div class="role-driver">
+
+            <!-- Candidate 1: The Security Seeker -->
+            <div class="resume">
+                <img src="https://randomuser.me/api/portraits/men/65.jpg" alt="Michael Sullivan" class="profile-img">
+                <h2>Michael "Sully" Sullivan</h2>
+                <div class="contact-info">Regional Metro | sully.drives@email.com | CDL Class A</div>
+                <div class="clear"></div>
+                
+                <h3 class="section-title">Professional Summary</h3>
+                <p class="clue-text">"15 years on the road with zero accidents. I applied specifically for the Gold Tier healthcare and the $1,200 HSA contribution. At my age, the physical therapy coverage and the ability to rest on a 4/10 schedule are worth their weight in gold. I am looking for my final company to retire from."</p>
+                
+                <h3 class="section-title">Professional Experience</h3>
+                <div class="job-title">Senior Route Driver <span class="date-location">2015 - Present</span></div>
+                <div class="company">Interstate Supply Co.</div>
+                <ul>
+                    <li>Operate 26-foot box trucks navigating tight urban centers and suburban routes.</li>
+                    <li>Perform heavy physical labor, unloading pallets of construction materials by hand or pallet jack.</li>
+                    <li>Awarded 'Safe Driver of the Year' three times.</li>
+                </ul>
+
+                <div class="salary-expectation">Requested Salary Range: $57,996</div>
+                
+                <!-- AI NEGOTIATOR PROMPT: 
+                Act as Michael Sullivan, an aging "Security Seeker" driver. I am the Hiring Manager for Mammoth Energy.
+                Your rules: 
+                1. You will ACCEPT the $57,996 salary, BUT ONLY IF they explicitly guarantee the Gold Tier Health Plan and the HSA.
+                2. If they attempt to downgrade your health plan to save overhead, firmly push back. State that physical therapy is a dealbreaker. If they refuse to budge, walk away.
+                -->
+            </div>
+
+            <!-- Candidate 2: The Opportunist / Wealth Builder -->
+            <div class="resume">
+                <img src="https://randomuser.me/api/portraits/men/26.jpg" alt="Jason Kincaid" class="profile-img">
+                <h2>Jason Kincaid</h2>
+                <div class="contact-info">City Center | j.kincaid.logistics@email.com | CDL Class B, Forklift Certified</div>
+                <div class="clear"></div>
+                
+                <h3 class="section-title">Professional Summary</h3>
+                <p class="clue-text">"Young, hungry, and dual-certified logistics worker. Put me in the warehouse on a forklift, or behind the wheel of a delivery truck. Because I can fill either role and act as an emergency floater for your operations, I expect a premium salary above your advertised base."</p>
+                
+                <h3 class="section-title">Professional Experience</h3>
+                <div class="job-title">Delivery & Logistics Floater <span class="date-location">2022 - Present</span></div>
+                <div class="company">Regional Builders Supply</div>
+                <ul>
+                    <li>Drive commercial delivery routes 3 days a week, ensuring on-time material drop-offs.</li>
+                    <li>Operate sit-down and stand-up forklifts in the warehouse 2 days a week to stage outgoing loads.</li>
+                    <li>Maintain flawless delivery logs and DOT compliance records.</li>
+                </ul>
+
+                <div class="salary-expectation">Requested Salary Range: $62,000</div>
+                
+                <!-- AI NEGOTIATOR PROMPT: 
+                Act as Jason Kincaid, a confident "Wealth Builder". I am the Hiring Manager for Mammoth Energy.
+                Your rules: 
+                1. If they offer the base $57,996, COUNTER asking for $61,500, reminding them that your forklift certification makes you twice as valuable to the warehouse.
+                2. If they negotiate and offer anything above $59,500, ACCEPT the offer.
+                -->
+            </div>
+
+            <!-- Candidate 3: The Work-Life Balancer -->
+            <div class="resume">
+                <img src="https://randomuser.me/api/portraits/women/58.jpg" alt="Teresa Ruiz" class="profile-img">
+                <h2>Teresa Ruiz</h2>
+                <div class="contact-info">Suburbs | t.ruiz.driver@email.com | CDL Class B</div>
+                <div class="clear"></div>
+                
+                <h3 class="section-title">Professional Summary</h3>
+                <p class="clue-text">"Highly experienced delivery driver looking specifically for the advertised 4-day work week (4/10 schedule). The base pay is acceptable, but I want my guaranteed three-day weekends so I can spend consistent time with my family and grandchildren."</p>
+                
+                <h3 class="section-title">Professional Experience</h3>
+                <div class="job-title">Delivery Driver <span class="date-location">2015 - Present</span></div>
+                <div class="company">Medical Supply Co.</div>
+                <ul>
+                    <li>Deliver oxygen tanks and sensitive medical equipment to residential patients.</li>
+                    <li>Maintain strict delivery schedules while providing excellent, compassionate customer service.</li>
+                    <li>Perform daily pre-trip and post-trip vehicle inspections.</li>
+                </ul>
+
+                <div class="salary-expectation">Requested Salary Range: $57,996</div>
+                
+                <!-- AI NEGOTIATOR PROMPT: 
+                Act as Teresa Ruiz, a "Work-Life Balancer". I am the Hiring Manager for Mammoth Energy.
+                Your rules: 
+                1. You will ACCEPT the $57,996 as long as the 4/10 schedule (3-day weekends) is explicitly guaranteed in the offer.
+                2. If they attempt to put you on a 5-day schedule, REJECT the offer.
+                -->
+            </div>
+
+            <!-- Candidate 4: The Cheap/Reliable Option -->
+            <div class="resume">
+                <img src="https://randomuser.me/api/portraits/men/22.jpg" alt="Derek Jenkins" class="profile-img">
+                <h2>Derek Jenkins</h2>
+                <div class="contact-info">Downtown | derek.j.fast@email.com | (555) 991-8822</div>
+                <div class="clear"></div>
+                
+                <h3 class="section-title">Professional Summary</h3>
+                <p class="clue-text">"Fast, energetic, and ready to drive hard. I don't care about retirement matching or physical therapy, I just want a solid paycheck and the quarterly safe driving bonuses. I am willing to work standard 5-day weeks."</p>
+                
+                <h3 class="section-title">Professional Experience</h3>
+                <div class="job-title">Delivery Driver <span class="date-location">Jan 2024 - Present</span></div>
+                <div class="company">Amazon DSP</div>
+                <ul>
+                    <li>Deliver 200+ packages a day in high-density residential and commercial areas.</li>
+                    <li>Navigate complex routing software and meet incredibly tight fulfillment windows.</li>
+                </ul>
+
+                <div class="salary-expectation">Requested Salary Range: $52,000 - $55,000</div>
+                
+                <!-- AI NEGOTIATOR PROMPT: 
+                Act as Derek Jenkins, a highly cost-effective applicant. I am the Hiring Manager for Mammoth Energy.
+                Your rules: 
+                1. You are cheap and agreeable. You will happily ACCEPT $54,000.
+                2. You do not care if they give you Bronze health instead of Gold to save the company money.
+                -->
+            </div>
+
+            <!-- Candidate 5: The Unqualified Rookie -->
+            <div class="resume">
+                <img src="https://randomuser.me/api/portraits/men/35.jpg" alt="Chris Tucker" class="profile-img">
+                <h2>Chris Tucker</h2>
+                <div class="contact-info">Industrial Zone | c.tucker.new@email.com | Learner's Permit Only</div>
+                <div class="clear"></div>
+                
+                <h3 class="section-title">Professional Summary</h3>
+                <p class="clue-text">"Looking for a company willing to train a brand new driver. I only have my permit, but I learn quickly and am willing to work for well under your advertised rate to get my foot in the door and earn my full commercial license."</p>
+                
+                <h3 class="section-title">Professional Experience</h3>
+                <div class="job-title">Rideshare Driver <span class="date-location">2022 - 2024</span></div>
+                <div class="company">Uber / Lyft</div>
+                <ul>
+                    <li>Navigated city traffic maintaining a 4.9-star passenger rating.</li>
+                </ul>
+
+                <div class="salary-expectation">Requested Salary Range: $45,000</div>
+                
+                <!-- AI NEGOTIATOR PROMPT: 
+                Act as Chris Tucker, an unqualified rookie. I am the Hiring Manager for Mammoth Energy.
+                Your rules: 
+                1. You will ACCEPT literally any salary over $45,000. 
+                2. If they ask about your license, admit you only have a permit and ask if they will pay for your driving school.
+                -->
+            </div>
+        </div>
+
+        <!-- ==========================================
+             ROLE: WAREHOUSE WORKER (5 Candidates)
+             ========================================== -->
+        <div class="role-header">Requisition: Warehouse Worker (Advertised: $57,996)</div>
+        <div class="role-warehouse">
+
+            <!-- Candidate 1: The Security Seeker -->
+            <div class="resume">
+                <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Elena Rodriguez" class="profile-img">
+                <h2>Elena Rodriguez</h2>
+                <div class="contact-info">City Suburbs | e.rodriguez.pack@email.com | OSHA-10 Certified</div>
+                <div class="clear"></div>
+                
+                <h3 class="section-title">Professional Summary</h3>
+                <p class="clue-text">"Highly reliable and detail-oriented fulfillment specialist. The Gold Health plan, the free on-site physical therapy to prevent strain, and the catered lunches are incredible perks. I am willing to lock in at the exact advertised salary if those specific benefits are fully guaranteed in my contract."</p>
+                
+                <h3 class="section-title">Professional Experience</h3>
+                <div class="job-title">Fulfillment Associate <span class="date-location">2021 - Present</span></div>
+                <div class="company">BigBox Retail Warehouse</div>
+                <ul>
+                    <li>Pick, pack, and label outbound shipments with 99.9% accuracy.</li>
+                    <li>Consistently hit 110% of required daily performance metrics.</li>
+                    <li>Assist with monthly inventory cycle counts and discrepancy resolution.</li>
+                </ul>
+
+                <div class="salary-expectation">Requested Salary Range: $57,996</div>
+                
+                <!-- AI NEGOTIATOR PROMPT: 
+                Act as Elena Rodriguez, a practical "Security Seeker". I am the Hiring Manager for Mammoth Energy.
+                Your rules: 
+                1. If they offer $57,996 and confirm the Gold Health and catered lunches, ACCEPT happily!
+                2. If they try to drop the health tier to Bronze or Silver to save money, COUNTER asking for Gold, or ask for $60,000 to cover your own health expenses.
+                -->
+            </div>
+
+            <!-- Candidate 2: The Wealth Builder -->
+            <div class="resume">
+                <img src="https://randomuser.me/api/portraits/men/42.jpg" alt="Tom Haverford" class="profile-img">
+                <h2>Tom Haverford</h2>
+                <div class="contact-info">Metro | tom.h.lift@email.com | Master Forklift Certified</div>
+                <div class="clear"></div>
+                
+                <h3 class="section-title">Professional Summary</h3>
+                <p class="clue-text">"Expert machine operator. I can load, unload, and move heavy pallets faster and safer than anyone else in your building. Because I require zero training and will immediately boost your warehouse efficiency, I expect a starting pay slightly above the standard rate."</p>
+                
+                <h3 class="section-title">Professional Experience</h3>
+                <div class="job-title">Heavy Equipment Operator <span class="date-location">2018 - Present</span></div>
+                <div class="company">BuildIt Industrial</div>
+                <ul>
+                    <li>Operate complex heavy machinery, including cherry pickers, reach trucks, and sit-down lifts.</li>
+                    <li>Load flatbed trucks securing varied freight weights up to 10,000 lbs.</li>
+                    <li>Trained 5 new hires on heavy equipment safety standards.</li>
+                </ul>
+
+                <div class="salary-expectation">Requested Salary Range: $62,000</div>
+                
+                <!-- AI NEGOTIATOR PROMPT: 
+                Act as Tom Haverford, a confident "Wealth Builder". I am the Hiring Manager for Mammoth Energy.
+                Your rules: 
+                1. If they offer the base $57,996, COUNTER asking for $61,000 due to your advanced forklift certifications.
+                2. If they negotiate and meet you at $59,500 or higher, ACCEPT the offer.
+                -->
+            </div>
+
+            <!-- Candidate 3: The Work-Life Balancer / Junior -->
+            <div class="resume">
+                <img src="https://randomuser.me/api/portraits/men/19.jpg" alt="Tyler Davis" class="profile-img">
+                <h2>Tyler Davis</h2>
+                <div class="contact-info">City Center | tyler.d.99@email.com | High School Diploma</div>
+                <div class="clear"></div>
+                
+                <h3 class="section-title">Professional Summary</h3>
+                <p class="clue-text">"Young, fast, and ready to work hard. I am mostly applying because the 4/10 schedule and the catered lunches sound awesome. I just want to do my hours, enjoy my 3-day weekends, and have a reliable job."</p>
+                
+                <h3 class="section-title">Professional Experience</h3>
+                <div class="job-title">Cart Attendant & Stocker <span class="date-location">2022 - 2024</span></div>
+                <div class="company">Target</div>
+                <ul>
+                    <li>Managed parking lot inventory and assisted guests with heavy carry-outs.</li>
+                    <li>Restocked shelves during the overnight shift.</li>
+                </ul>
+
+                <div class="salary-expectation">Requested Salary Range: $52,000 - $55,000</div>
+                
+                <!-- AI NEGOTIATOR PROMPT: 
+                Act as Tyler Davis, an easy-going "Work-Life Balancer". I am the Hiring Manager for Mammoth Energy.
+                Your rules: 
+                1. You are cheap and easy to hire. You will ACCEPT $54,000.
+                2. You only care about the Catered Lunches and getting the 3-day weekend schedule. Ensure they promise those! 
+                -->
+            </div>
+
+            <!-- Candidate 4: Security Seeker (Physical Needs) -->
+            <div class="resume">
+                <img src="https://randomuser.me/api/portraits/women/34.jpg" alt="Ann Perkins" class="profile-img">
+                <h2>Ann Perkins</h2>
+                <div class="contact-info">Suburbs | a.perkins.inv@email.com | Associate's Degree</div>
+                <div class="clear"></div>
+                
+                <h3 class="section-title">Professional Summary</h3>
+                <p class="clue-text">"Looking for a stable warehouse role with strong health benefits. The physical demands of warehouse work take a toll, so the on-site physical therapy access advertised is the primary reason I am applying to Mammoth Energy."</p>
+                
+                <h3 class="section-title">Professional Experience</h3>
+                <div class="job-title">Inventory Clerk <span class="date-location">2019 - Present</span></div>
+                <div class="company">AutoParts Regional</div>
+                <ul>
+                    <li>Process incoming freight, scan barcodes, and allocate stock to proper bins.</li>
+                    <li>Utilize hand-trucks and pallet jacks to move medium-weight merchandise.</li>
+                </ul>
+
+                <div class="salary-expectation">Requested Salary Range: $57,996</div>
+                
+                <!-- AI NEGOTIATOR PROMPT: 
+                Act as Ann Perkins, a health-conscious "Security Seeker". I am the Hiring Manager for Mammoth Energy.
+                Your rules: 
+                1. You will ACCEPT $57,996 immediately, provided they do not alter the healthcare or physical therapy benefits.
+                -->
+            </div>
+
+            <!-- Candidate 5: The Transient / Cheap Option -->
+            <div class="resume">
+                <img src="https://randomuser.me/api/portraits/men/29.jpg" alt="Ryan Howard" class="profile-img">
+                <h2>Ryan Howard</h2>
+                <div class="contact-info">Downtown | r.howard.temp@email.com | Some College</div>
+                <div class="clear"></div>
+                
+                <h3 class="section-title">Professional Summary</h3>
+                <p class="clue-text">"I am a quick learner who just needs a physical job to pay the bills while I figure out my next career move. I am willing to work for significantly less than your advertised salary if you can get me started this week."</p>
+                
+                <h3 class="section-title">Professional Experience</h3>
+                <div class="job-title">Barista & Keyholder <span class="date-location">2023 - Present</span></div>
+                <div class="company">Downtown Coffee</div>
+                <ul>
+                    <li>Handled cash registers, opened the store, and unloaded weekly supply deliveries.</li>
+                </ul>
+
+                <div class="salary-expectation">Requested Salary Range: $48,000 - $50,000</div>
+                
+                <!-- AI NEGOTIATOR PROMPT: 
+                Act as Ryan Howard, a transient worker. I am the Hiring Manager for Mammoth Energy.
+                Your rules: 
+                1. You are desperate for a check. You will ACCEPT any offer $48,000 or above.
+                2. You do not care about the benefits. 
+                -->
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
