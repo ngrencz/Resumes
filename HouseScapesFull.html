@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATS: House Scapes - Candidate Portal</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f6f9; 
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+        .dashboard-header {
+            background-color: #1e293b; 
+            color: white;
+            padding: 30px;
+            border-radius: 8px;
+            margin-bottom: 40px;
+            text-align: center;
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+            border-bottom: 6px solid #3b82f6; 
+        }
+        .dashboard-header h1 { margin-top: 0; font-size: 2.2em; text-transform: uppercase; letter-spacing: 2px;}
+        .dashboard-header p { font-size: 1.1em; color: #cbd5e1; margin-bottom: 0;}
+        
+        .error-banner {
+            background-color: #fee2e2;
+            color: #991b1b;
+            padding: 15px;
+            margin: 20px auto;
+            max-width: 800px;
+            border-radius: 5px;
+            font-weight: bold;
+            border: 2px solid #ef4444;
+        }
+
+        .applicant-wrapper {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .role-header {
+            background-color: #e2e8f0;
+            color: #0f172a;
+            padding: 20px;
+            margin-top: 50px;
+            margin-bottom: 30px;
+            border-left: 8px solid #3b82f6;
+            font-size: 1.6em;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .resume {
+            margin-bottom: 50px;
+            padding: 40px;
+            background: white;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+            line-height: 1.6;
+            min-height: 900px;
+            position: relative;
+            border-top: 8px solid #94a3b8;
+        }
+        
+        .profile-img {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            object-fit: cover;
+            float: left;
+            margin-right: 30px;
+            margin-bottom: 20px;
+            border: 4px solid #f1f5f9;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .section-title {
+            text-transform: uppercase;
+            font-size: 1.05em;
+            letter-spacing: 1.5px;
+            color: #64748b;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 5px;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        .job-title { font-weight: bold; font-size: 1.1em; color: #0f172a;}
+        .date-location { float: right; color: #94a3b8; font-style: italic; font-size: 0.9em; }
+        .company { font-weight: 600; color: #3b82f6; }
+
+        h2 { color: #1e293b; margin-top: 0; margin-bottom: 5px; font-size: 2.4em; letter-spacing: -0.5px;}
+        .contact-info { color: #64748b; margin-bottom: 25px; font-size: 0.95em;}
+        .clear { clear: both; }
+        
+        ul { padding-left: 20px; margin-top: 8px;}
+        li { margin-bottom: 8px; }
+
+        .salary-expectation {
+            background-color: #eff6ff;
+            padding: 20px;
+            border-left: 5px solid #3b82f6;
+            margin-top: 35px;
+            font-size: 1.1em;
+            color: #1e3a8a;
+            font-weight: bold;
+            text-align: center;
+        }
+        
+        .clue-text {
+            font-style: italic;
+            color: #334155;
+            background: #f8fafc;
+            padding: 20px;
+            border-left: 4px solid #cbd5e1;
+            margin-bottom: 25px;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+        /* Distinct styling per role */
+        .role-construction .resume { border-top-color: #3b82f6; }
+        .role-electrician .resume { border-top-color: #f59e0b; }
+        .role-electrician .company { color: #d97706; }
+        .role-electrician .salary-expectation { border-left-color: #f59e0b; background-color: #fffbeb; color: #b45309; }
+        .role-hvac .resume { border-top-color: #0ea5e9; }
+        .role-hvac .company { color: #0284c7; }
+        .role-hvac .salary-expectation { border-left-color: #0ea5e9; background-color: #f0f9ff; color: #0369a1; }
+    </style>
+</head>
+<body>
+
+    <div class="dashboard-header">
+        <h1>House Scapes ATS</h1>
+        <p>Active Requisitions: Construction Worker | Electrician | HVAC Technician</p>
+        
+        <div class="error-banner">
+            CRITICAL HR WARNING: The hiring flyer contains glaring spelling errors ("Electricion", "renevation", "your at it"). Furthermore, the general Construction Worker salary ($85,000-$95,000) is advertised significantly higher than the highly-skilled trades (Electrician/HVAC at $60,000-$70,000). Expect skilled applicants to challenge this discrepancy aggressively.
+        </div>
+    </div>
+
+    <div class="applicant-wrapper">
+
+        <!-- ==========================================
+             ROLE: CONSTRUCTION WORKER (5 Candidates)
+             ========================================== -->
+        <div class="role-header">Requisition: Construction Worker (Advertised: $85,000 - $95,000)</div>
+        <div class="role-construction">
+
+            <!-- Candidate 1: The Wealth Builder / Foreman -->
+            <div class="resume">
+                <img src="https://randomuser.me/api/portraits/men/44.jpg" alt="Mark Thompson" class="profile-img">
+                <h2>Mark Thompson</h2>
+                <div class="contact-info">City Suburbs | m.thompson.build@email.com | (555) 441-9980</div>
+                <div class="clear"></div>
+                
+                <h3 class="section-title">Professional Objective</h3>
+                <p class="clue-text">"I am a highly experienced commercial construction foreman. When I saw the $95,000 salary posted for a general 'Construction Worker', I assumed this must actually be a Site Superintendent or Senior Foreman position, as general labor does not pay nearly that much. I am bringing 15 years of commercial site management experience to the table and expect the top end of that advertised salary range to manage your commercial property projects."</p>
+                
+                <h3 class="section-title">Core Competencies</h3>
+                <div class="skills-grid">
+                    <ul>
+                        <li>Commercial Site Management</li>
+                        <li>Blueprint & Schematic Reading</li>
+                        <li>OSHA 30 Safety Compliance</li>
+                    </ul>
+                    <ul>
+                        <li>Subcontractor Coordination</li>
+                        <li>Material Sourcing & Ordering</li>
+                        <li>Project Budget Adherence</li>
+                    </ul>
+                </div>
+
+                <h3 class="section-title">Professional Experience</h3>
+                <div class="job-title">Site Foreman <span class="date-location">2015 - Present</span></div>
+                <div class="company">Apex Commercial Builders</div>
+                <ul>
+                    <li>Oversee daily operations for multi-million dollar commercial renovations.</li>
+                    <li>Manage crews of 20+ laborers, coordinate with specialized subcontractors (electrical, plumbing, HVAC), and ensure strict adherence to OSHA safety regulations and local building codes.</li>
+                    <li>Successfully delivered 5 major office park renovations under budget in the last 3 years.</li>
+                </ul>
+
+                <div class="job-title">Lead Carpenter <span class="date-location">2008 - 2015</span></div>
+                <div class="company">Precision Contracting</div>
+                <ul>
+                    <li>Handled advanced framing, drywall installation, and structural repairs for high-end renovations.</li>
+                    <li>Mentored junior apprentices and managed daily material ordering logs.</li>
+                </ul>
+
+                <h3 class="section-title">Education & Certifications</h3>
+                <p>High School Diploma | OSHA 30 Certified | First Aid / CPR</p>
+
+                <div class="salary-expectation">Requested Salary Range: $95,000 (Expects a Management Role)</div>
+                
+                <!-- AI NEGOTIATOR PROMPT: 
+                Act as Mark Thompson, an experienced Foreman. I am the Hiring Manager for House Scapes.
+                Your rules: 
+                1. You assume this is a management job because of the high $95k salary.
+                2. If they offer $90k-$95k, ACCEPT, but ask how many guys will be on your crew and confirm the 4-day week.
+                3. If they offer less than $90k, DO NOT reject immediately. COUNTER aggressively: "I have 15 years of commercial management experience. If you want a site lead who can actually keep your projects on track and avoid OSHA fines, I need $95,000."
+                -->
+            </div>
+
+            <!-- Candidate 2: The Unqualified Opportunist -->
+            <div class="resume">
+                <img src="https://randomuser.me/api/portraits/men/22.jpg" alt="Jake Miller" class="profile-img">
+                <h2>Jake Miller</h2>
+                <div class="contact-info">Downtown | j.miller.cash@email.com | (555) 776-1122</div>
+                <div class="clear"></div>
+                
+                <h3 class="section-title">Professional Objective</h3>
+                <p class="clue-text">"I'm a young, hungry guy looking to make some serious cash. I've only done a few side gigs helping my uncle build a deck, but when I saw you were paying $85,000 to $95,000 for a construction worker with a 4-day work week, I knew I had to apply! I learn fast, I can lift heavy things, and I really want that 5% 401(k) match to start my retirement early."</p>
+                
+                <h3 class="section-title">Core Competencies</h3>
+                <div class="skills-grid">
+                    <ul>
+                        <li>Heavy Manual Labor</li>
+                        <li>Basic Power Tools</li>
+                        <li>Site Cleanup</li>
+                    </ul>
+                    <ul>
+                        <li>High Stamina</li>
+                        <li>Fast Learner</li>
+                        <li>Punctual & Reliable</li>
+                    </ul>
+                </div>
+
+                <h3 class="section-title">Professional Experience</h3>
+                <div class="job-title">Warehouse Loader <span class="date-location">2023 - Present</span></div>
+                <div class="company">Amazon DSP Fulfillment</div>
+                <ul>
+                    <li>Load and unload heavy freight onto delivery trucks.</li>
+                    <li>Consistently meet speed metrics and handle packages up to 80 lbs.</li>
+                    <li>Used to working long hours on my feet in extreme temperatures.</li>
+                </ul>
+
+                <div class="job-title">General Laborer <span class="date-location">Summers 2021 - 2022</span></div>
+                <div class="company">Miller Family Decks</div>
+                <ul>
+                    <li>Helped measure wood, carry materials, and clean up job sites.</li>
+                    <li>Gained basic experience using power tools like drills and circular saws.</li>
+                </ul>
+
+                <h3 class="section-title">Education</h3>
+                <p>High School Diploma</p>
+
+                <div class="salary-expectation">Requested Salary Range: $85,000</div>
+                
+                <!-- AI NEGOTIATOR PROMPT: 
+                Act as Jake Miller, a young, inexperienced laborer. I am the Hiring Manager for House Scapes.
+                Your rules: 
+                1. You are totally unqualified for $85k, but the ad offered it, so you want it.
+                2. If they offer $85,000, ACCEPT immediately and ask if you get a company truck.
+                3. If they try to lowball you (e.g., $50,000), DO NOT reject immediately. COUNTER: "Your ad literally said $85,000 minimum. I'm not taking a 40% pay cut from what was promised. Can we meet at $75,000?"
+                -->
+            </div>
+
+            <!-- Candidate 3: The Security Seeker -->
+            <div class="resume">
+                <img src="https://randomuser.me/api/portraits/men/51.jpg" alt="Carlos Ramirez" class="profile-img">
+                <h2>Carlos Ramirez</h2>
+                <div class="contact-info">Westside | c.ramirez.drywall@email.com | (555) 333-9118</div>
+                <div class="clear"></div>
+                
+                <h3 class="section-title">Professional Objective</h3>
+                <p class="clue-text">"I am a reliable, mid-level commercial drywaller and framer. I value steady work and solid benefits to take care of my family. I am very interested in the Silver Healthcare plan and the incredible PTO package (15 vacation + 5 sick days). Having a 4-day work week means I can spend three days a week with my kids. I am willing to negotiate on the base salary as long as those benefits are locked in."</p>
+                
+                <h3 class="section-title">Core Competencies</h3>
+                <div class="skills-grid">
+                    <ul>
+                        <li>Commercial Drywall Installation</li>
+                        <li>Metal Stud Framing</li>
+                        <li>Taping, Mudding & Finishing</li>
+                    </ul>
+                    <ul>
+                        <li>Blueprint Translation</li>
+                        <li>Workplace Safety</li>
+                        <li>Bilingual (English/Spanish)</li>
+                    </ul>
+                </div>
+
+                <h3 class="section-title">Professional Experience</h3>
+                <div class="job-title">Commercial Drywaller <span class="date-location">2018 - Present</span></div>
+                <div class="company">City Build Co.</div>
+                <ul>
+                    <li>Install metal stud framing and drywall in large commercial retail spaces and office buildings.</li>
+                    <li>Expert at taping, mudding, and finishing walls to a Level 5 standard.</li>
+                    <li>Reliable attendance record with zero safety infractions.</li>
+                </ul>
+
+                <div class="job-title">Apprentice Carpenter <span class="date-location">2015 - 2018</span></div>
+                <div class="company">Residential Homes LLC</div>
+                <ul>
+                    <li>Assisted in framing residential houses, reading blueprints, and ensuring exact measurements.</li>
+                </ul>
+
+                <h3 class="section-title">Education</h3>
+                <p>Trade School Certificate - Carpentry & Framing</p>
+
+                <div class="salary-expectation">Requested Salary Range: $80,000 - $85,000</div>
+                
+                <!-- AI NEGOTIATOR PROMPT: 
+                Act as Carlos Ramirez, a family-oriented commercial worker. I am the Hiring Manager for House Scapes.
+                Your rules: 
+                1. You want the Silver health plan, the 4-day work week, and the massive PTO package.
+                2. If they offer $80,000 to $85,000 WITH all those benefits, ACCEPT warmly.
+                3. If they try to take away the 4-day work week or cut your PTO, COUNTER asking for the full $95,000 to compensate for the lost time with your family.
+                -->
+            </div>
+
+            <!-- Candidate 4: The Job Hopper -->
+            <div class="resume">
+                <img src="https://randomuser.me/api/portraits/men/33.jpg" alt="Troy Baker" class="profile-img">
+                <h2>Troy Baker</h2>
+                <div class="contact-info">Metro Area | t.baker.demo@email.com | (555) 887-1244</div>
+                <div class="clear"></div>
+                
+                <h3 class="section-title">Professional Objective</h3>
+                <p class="clue-text">"I'm a heavy equipment operator looking for my next gig. I bounce around from site to site wherever the pay is highest. $95,000 is a great rate, and I can start next Monday. I don't really care about the 401(k) or the health insurance, I just want the maximum hourly/salary rate for the time I put in."</p>
+                
+                <h3 class="section-title">Core Competencies</h3>
+                <div class="skills-grid">
+                    <ul>
+                        <li>Heavy Excavation</li>
+                        <li>Commercial Demolition</li>
+                        <li>Concrete Pouring</li>
+                    </ul>
+                    <ul>
+                        <li>Skid Steer & Backhoe Operation</li>
+                        <li>Site Preparation</li>
+                        <li>Rapid Project Turnaround</li>
+                    </ul>
+                </div>
+
+                <h3 class="section-title">Professional Experience</h3>
+                <div class="job-title">Excavator Operator <span class="date-location">Jan 2025 - Present</span></div>
+                <div class="company">DigRight Services</div>
+                <ul>
+                    <li>Trenching for commercial foundations and utility lines. Left because of a dispute with the foreman regarding pay.</li>
+                </ul>
+
+                <div class="job-title">Concrete Laborer <span class="date-location">Mar 2024 - Dec 2024</span></div>
+                <div class="company">Solid Paving</div>
+                <ul>
+                    <li>Poured and smoothed commercial sidewalks and warehouse flooring.</li>
+                </ul>
+                
+                <div class="job-title">Demolition Crew <span class="date-location">2022 - 2023</span></div>
+                <div class="company">SmashIt Demo</div>
+                <ul>
+                    <li>Interior gutting for commercial renovations.</li>
+                </ul>
+
+                <h3 class="section-title">Education</h3>
+                <p>GED | Heavy Machinery Operations License</p>
+
+                <div class="salary-expectation">Requested Salary Range: $95,000</div>
+                
+                <!-- AI NEGOTIATOR PROMPT: 
+                Act as Troy Baker, a job-hopping heavy equipment operator. I am the Hiring Manager for House Scapes.
+                Your rules: 
+                1. You want maximum cash. You expect $95,000.
+                2. If they offer $95,000, ACCEPT.
+                3. If they offer $85,000, DO NOT reject immediately. COUNTER with $92,000. If they refuse, tell them you have another offer for $90k and they need to beat it.
+                -->
+            </div>
+
+            <!-- Candidate 5: The Work-Life Balancer -->
+            <div class="resume">
+                <img src="https://randomuser.me/api/portraits/women/48.jpg" alt="Sarah Connor" class="profile-img">
+                <h2>Sarah Connor</h2>
+                <div class="contact-info">Industrial Park | s.connor.manage@email.com | (555) 223-9988</div>
+                <div class="clear"></div>
+                
+                <h3 class="section-title">Professional Objective</h3>
+                <p class="clue-text">"I am a commercial project coordinator looking to get more field experience. I noticed your ad mentions 'renevation' [sic] and commercial property projects. I am excellent at reading blueprints, managing site deliveries, and ensuring the team has the materials they need. The 4-day work week is highly appealing as I manage a small real estate portfolio on the side."</p>
+                
+                <h3 class="section-title">Core Competencies</h3>
+                <div class="skills-grid">
+                    <ul>
+                        <li>Project Coordination</li>
+                        <li>Material Delivery Management</li>
+                        <li>Site Safety Audits</li>
+                    </ul>
+                    <ul>
+                        <li>Blueprint Comprehension</li>
+                        <li>Subcontractor Scheduling</li>
+                        <li>Budget Ledger Maintenance</li>
+                    </ul>
+                </div>
+
+                <h3 class="section-title">Professional Experience</h3>
+                <div class="job-title">Site Coordinator <span class="date-location">2019 - Present</span></div>
+                <div class="company">Vanguard Commercial Builds</div>
+                <ul>
+                    <li>Manage material deliveries, lumber orders, and equipment rentals for 3 concurrent commercial builds.</li>
+                    <li>Conduct weekly safety audits and maintain the daily site ledger for the general contractor.</li>
+                    <li>Act as the primary liaison between the construction crew and the architectural firm.</li>
+                </ul>
+
+                <div class="job-title">Laborer & Assistant <span class="date-location">2016 - 2019</span></div>
+                <div class="company">BuildTech Construct</div>
+                <ul>
+                    <li>General site cleanup, material hauling, and basic carpentry assistance.</li>
+                </ul>
+
+                <h3 class="section-title">Education</h3>
+                <p><strong>Associate's Degree</strong> | Construction Management</p>
+
+                <div class="salary-expectation">Requested Salary Range: $85,000</div>
+                
+                <!-- AI NEGOTIATOR PROMPT: 
+                Act as Sarah Connor, a smart, organized commercial worker. I am the Hiring Manager for House Scapes.
+                Your rules: 
+                1. You will ACCEPT the $85,000 base salary, but ONLY if the 4-day work week is explicitly guaranteed.
+                2. If they try to make you work 5 days, COUNTER: "I manage a side business on Fridays. I will only accept a 5-day schedule if you bump the pay to the full $95,000 to buy out my time."
+                -->
+            </div>
+        </div>
+
+        <!-- ==========================================
+             ROLE: ELECTRICIAN (5 Candidates)
+             ========================================== -->
+        <div class="role-header">Requisition: Electrician (Advertised: $60,000 - $70,000)</div>
+        <div class="role-electrician">
+
+            <!-- Candidate 1: The Insulted Master (Wealth Builder) -->
+            <div class="resume">
+                <img src="https://randomuser.me/api/portraits/men/59.jpg" alt="Frank Gallagher" class="profile-img">
+                <h2>Frank Gallagher, Master Electrician</h2>
+                <div class="contact-info">Regional Metro | frank.g.sparks@email.com | (555) 344-1182</div>
+                <div class="clear"></div>
+                
+                <h3 class="section-title">Professional Summary</h3>
+                <p class="clue-text">"I am a licensed Master Electrician with 22 years of commercial experience. I read your ad, and quite frankly, I am insulted. You are offering general un-licensed construction laborers up to $95,000, but you only want to pay a specialized, licensed 'Electricion' (which you misspelled) a maximum of $70,000? I can pull the commercial permits your company legally needs to operate, but I am not stepping onto a job site for less than $90,000."</p>
+                
+                <h3 class="section-title">Core Competencies</h3>
+                <div class="skills-grid">
+                    <ul>
+                        <li>Master Level Permitting</li>
+                        <li>3-Phase Commercial Wiring</li>
+                        <li>NEC Code Compliance</li>
+                    </ul>
+                    <ul>
+                        <li>Team Leadership & Mentorship</li>
+                        <li>High-Voltage Systems</li>
+                        <li>Blueprint Diagnostics</li>
+                    </ul>
+                </div>
+
+                <h3 class="section-title">Professional Experience</h3>
+                <div class="job-title">Lead Electrician & Permit Holder <span class="date-location">2010 - Present</span></div>
+                <div class="company">PowerLine Commercial Systems</div>
+                <ul>
+                    <li>Design and install complex 3-phase wiring systems for commercial warehouses, retail centers, and medical facilities.</li>
+                    <li>Supervise 4 journeymen and 6 apprentices, ensuring all work passes municipal inspection on the first walkthrough.</li>
+                    <li>Sign off on all municipal electrical permits. Ensure 100% compliance with the National Electrical Code (NEC).</li>
+                </ul>
+
+                <div class="job-title">Journeyman Electrician <span class="date-location">2002 - 2010</span></div>
+                <div class="company">Local IBEW Union</div>
+                <ul>
+                    <li>Commercial fit-outs, running conduit, and terminating high-voltage panels.</li>
+                </ul>
+
+                <h3 class="section-title">Education & Certifications</h3>
+                <p>State Licensed Master Electrician | OSHA 30 Certified</p>
+
+                <div class="salary-expectation">Requested Salary Range: $90,000+ (Refuses to make less than general labor)</div>
+                
+                <!-- AI NEGOTIATOR PROMPT: 
+                Act as Frank Gallagher, an insulted Master Electrician. I am the Hiring Manager for House Scapes.
+                Your rules: 
+                1. You are deeply offended that they pay general laborers $95k but only offered you $70k.
+                2. If they offer you the advertised $70k, DO NOT reject immediately. COUNTER aggressively: "You can't even spell Electrician right, and you think I'll make $25k less than the guy pushing a broom? You need my license to pull permits. My price is $90k."
+                3. If they offer $85k or above, begrudgingly ACCEPT.
+                -->
+            </div>
+
+            <!-- Candidate 2: The Eager Apprentice -->
+            <div class="resume">
+                <img src="https://randomuser.me/api/portraits/men/28.jpg" alt="Luis Silva" class="profile-img">
+                <h2>Luis Silva</h2>
+                <div class="contact-info">Suburbs | luis.silva.apprentice@email.com | (555) 774-3321</div>
+                <div class="clear"></div>
+                
+                <h3 class="section-title">Professional Summary</h3>
+                <p class="clue-text">"I am a hard-working 3rd-year electrical apprentice looking for a company to sponsor my journeyman test next year. $60,000 to $70,000 is a fantastic salary for an apprentice, and I am eager to assist your licensed guys on commercial projects. I have extensive experience running conduit and pulling wire, and I never complain about the heavy lifting."</p>
+                
+                <h3 class="section-title">Core Competencies</h3>
+                <div class="skills-grid">
+                    <ul>
+                        <li>EMT Conduit Bending</li>
+                        <li>Large Gauge Wire Pulling</li>
+                        <li>Fixture Installation</li>
+                    </ul>
+                    <ul>
+                        <li>Basic Blueprint Reading</li>
+                        <li>Job Site Cleanup</li>
+                        <li>Reliability & Safety</li>
+                    </ul>
+                </div>
+
+                <h3 class="section-title">Professional Experience</h3>
+                <div class="job-title">Electrical Apprentice (3rd Year) <span class="date-location">2022 - Present</span></div>
+                <div class="company">Sparky's Commercial Electric</div>
+                <ul>
+                    <li>Assist master electricians in bending EMT conduit, pulling large gauge wire, and installing commercial lighting fixtures.</li>
+                    <li>Highly knowledgeable in reading basic electrical schematics and identifying proper wire gauges.</li>
+                    <li>Organize the company vans and ensure all materials are stocked for the day's projects.</li>
+                </ul>
+
+                <h3 class="section-title">Education</h3>
+                <p>High School Diploma | Enrolled in State Apprenticeship Program</p>
+
+                <div class="salary-expectation">Requested Salary Range: $60,000 - $65,000</div>
+                
+                <!-- AI NEGOTIATOR PROMPT: 
+                Act as Luis Silva, an eager electrical apprentice. I am the Hiring Manager for House Scapes.
+                Your rules: 
+                1. You are NOT licensed to pull permits yourself, but you are a great worker.
+                2. You will happily ACCEPT any offer $60,000 or above.
+                3. Ask if they have a Master Electrician on staff who can sign your apprentice hours.
+                -->
+            </div>
+
+            <!-- Candidate 3: The Work-Life Balancer -->
+            <div class="resume">
+                <img src="https://randomuser.me/api/portraits/men/49.jpg" alt="Arthur Pendelton" class="profile-img">
+                <h2>Arthur Pendelton</h2>
+                <div class="contact-info">Downtown | a.pendelton.journeyman@email.com | (555) 211-9984</div>
+                <div class="clear"></div>
+                
+                <h3 class="section-title">Professional Summary</h3>
+                <p class="clue-text">"I am a licensed Journeyman looking to wind down my career. The 4-day work week and the massive PTO package (15 vacation + 5 sick + personal days) is exactly what I am looking for. I am willing to accept the $70,000 maximum salary, provided my 3-day weekends are strictly protected so I can rest my knees."</p>
+                
+                <h3 class="section-title">Core Competencies</h3>
+                <div class="skills-grid">
+                    <ul>
+                        <li>Commercial & Residential Wiring</li>
+                        <li>Panel Upgrades & Terminations</li>
+                        <li>System Diagnostics</li>
+                    </ul>
+                    <ul>
+                        <li>Code Compliance</li>
+                        <li>Independent Work Ethic</li>
+                        <li>Mentoring Apprentices</li>
+                    </ul>
+                </div>
+
+                <h3 class="section-title">Professional Experience</h3>
+                <div class="job-title">Journeyman Electrician <span class="date-location">2005 - Present</span></div>
+                <div class="company">Union Local 104</div>
+                <ul>
+                    <li>Extensive experience in both residential and commercial electrical installation.</li>
+                    <li>Capable of working entirely independently on complex commercial renovations, reading prints, and laying out entire floors.</li>
+                    <li>Excellent safety record over a two-decade career.</li>
+                </ul>
+
+                <h3 class="section-title">Education & Certifications</h3>
+                <p>Licensed Journeyman Electrician</p>
+
+                <div class="salary-expectation">Requested Salary Range: $70,000</div>
+                
+                <!-- AI NEGOTIATOR PROMPT: 
+                Act as Arthur Pendelton, an older journeyman who wants time off. I am the Hiring Manager for House Scapes.
+                Your rules: 
+                1. You want $70,000 and the 4-day work week.
+                2. If they offer $70,000 and confirm the 4-day week, ACCEPT.
+                3. If they try to force a 5-day week, COUNTER: "My body can't do 5 days on a site anymore. If you need me 5 days, you have to pay me $85,000 to make it worth the pain."
+                -->
+            </div>
+
+            <!-- Candidate 4: The 401(k) / Security Seeker -->
+            <div class="resume">
+                <img src="https://randomuser.me/api/portraits/women/36.jpg" alt="Bethany Cole" class="profile-img">
+                <h2>Bethany Cole</h2>
+                <div class="contact-info">City Arts District | b.cole.sparks@email.com | (555) 777-2234</div>
+                <div class="clear"></div>
+                
+                <h3 class="section-title">Professional Summary</h3>
+                <p class="clue-text">"I am a fast, efficient commercial electrician who thrives in a team environment. I noticed the ad promises a 5% 401(k) match and Silver Healthcare. I am heavily focused on building my retirement portfolio. I will accept a $65,000 salary if that 5% match is fully vested immediately."</p>
+                
+                <h3 class="section-title">Core Competencies</h3>
+                <div class="skills-grid">
+                    <ul>
+                        <li>Commercial LED Lighting Systems</li>
+                        <li>Data Cabling (Cat5/Cat6)</li>
+                        <li>Server Room Power Grids</li>
+                    </ul>
+                    <ul>
+                        <li>Fast-Paced Installations</li>
+                        <li>Team Collaboration</li>
+                        <li>Strict Code Adherence</li>
+                    </ul>
+                </div>
+
+                <h3 class="section-title">Professional Experience</h3>
+                <div class="job-title">Commercial Electrician <span class="date-location">2018 - Present</span></div>
+                <div class="company">BrightSpace Renovations</div>
+                <ul>
+                    <li>Specialized in commercial office build-outs and retail space renovations.</li>
+                    <li>Install data cables, server room power grids, and modern LED lighting systems.</li>
+                    <li>Consistently finish zones ahead of schedule, allowing drywallers to move in early.</li>
+                </ul>
+
+                <h3 class="section-title">Education & Certifications</h3>
+                <p>Licensed Journeyman Electrician | OSHA 10 Certified</p>
+
+                <div class="salary-expectation">Requested Salary Range: $65,000 - $70,000</div>
+                
+                <!-- AI NEGOTIATOR PROMPT: 
+                Act as Bethany Cole, a retirement-focused tradeswoman. I am the Hiring Manager for House Scapes.
+                Your rules: 
+                1. You are focused on the 5% match.
+                2. If they offer $65,000 WITH the 5% 401(k) match guaranteed, ACCEPT.
+                3. If they offer less than $65,000, or try to lower the match, COUNTER asking for $68,000 to compensate for your lost retirement funds.
+                -->
+            </div>
+
+            <!-- Candidate 5: The Unqualified Opportunist -->
+            <div class="resume">
+                <img src="https://randomuser.me/api/portraits/men/18.jpg" alt="Kyle Brooks" class="profile-img">
+                <h2>Kyle Brooks</h2>
+                <div class="contact-info">Rural Outskirts | k.brooks.fixit@email.com | (555) 991-0022</div>
+                <div class="clear"></div>
+                
+                <h3 class="section-title">Professional Summary</h3>
+                <p class="clue-text">"I don't have an official electrical license, but I watched a lot of YouTube videos and successfully re-wired my buddy's garage last summer. I saw the ad spelling it 'Electricion' and figured this was an entry-level gig where I could learn on the job. I am a very hard worker and willing to take $60,000!"</p>
+                
+                <h3 class="section-title">Core Competencies</h3>
+                <div class="skills-grid">
+                    <ul>
+                        <li>Basic Handyman Repairs</li>
+                        <li>Drywall Patching</li>
+                    </ul>
+                    <ul>
+                        <li>Replacing Light Switches</li>
+                        <li>Self-Taught Fast Learner</li>
+                    </ul>
+                </div>
+
+                <h3 class="section-title">Professional Experience</h3>
+                <div class="job-title">Handyman <span class="date-location">2023 - Present</span></div>
+                <div class="company">Self-Employed</div>
+                <ul>
+                    <li>Fixing drywall, painting, and replacing light switches/outlets for residential clients.</li>
+                    <li>Installed two ceiling fans without any major issues.</li>
+                </ul>
+
+                <h3 class="section-title">Education</h3>
+                <p>High School Diploma | YouTube DIY Tutorials</p>
+
+                <div class="salary-expectation">Requested Salary Range: $60,000</div>
+                
+                <!-- AI NEGOTIATOR PROMPT: 
+                Act as Kyle Brooks, an unlicensed, unqualified handyman. I am the Hiring Manager for House Scapes.
+                Your rules: 
+                1. You have no formal electrical training, but you are very confident.
+                2. If they offer $60,000, ACCEPT immediately.
+                3. If they ask for your license number or if you can pull permits, try to change the subject or say "I'm working on getting it soon!"
+                -->
+            </div>
+        </div>
+
+        <!-- ==========================================
+             ROLE: HVAC TECHNICIAN (5 Candidates)
+             ========================================== -->
+        <div class="role-header">Requisition: HVAC Technician (Advertised: $60,000 - $70,000)</div>
+        <div class="role-hvac">
+
+            <!-- Candidate 1: The Insulted Master -->
+            <div class="resume">
+                <img src="https://randomuser.me/api/portraits/men/60.jpg" alt="Richard 'Dick' Sterling" class="profile-img">
+                <h2>Richard Sterling</h2>
+                <div class="contact-info">Metro Suburbs | r.sterling.air@email.com | Master HVAC</div>
+                <div class="clear"></div>
+                
+                <h3 class="section-title">Professional Summary</h3>
+                <p class="clue-text">"I have been diagnosing and repairing massive commercial rooftop HVAC systems for 25 years. Like the electricians, I am baffled as to why you are paying general laborers $95,000, while offering specialized HVAC techs a maximum of $70,000. Commercial HVAC requires a deep knowledge of thermodynamics, complex electrical grids, and plumbing. If you want my EPA certification on your projects, you need to pay for it."</p>
+                
+                <h3 class="section-title">Core Competencies</h3>
+                <div class="skills-grid">
+                    <ul>
+                        <li>Commercial Chillers & RTUs</li>
+                        <li>Thermodynamics & Diagnostics</li>
+                        <li>EPA Universal Refrigerant Handling</li>
+                    </ul>
+                    <ul>
+                        <li>HVAC Electrical Systems</li>
+                        <li>Team Mentorship</li>
+                        <li>Commercial Ductwork & Ventilation</li>
+                    </ul>
+                </div>
+
+                <h3 class="section-title">Professional Experience</h3>
+                <div class="job-title">Lead Commercial Tech <span class="date-location">2005 - Present</span></div>
+                <div class="company">Climate Control Pros</div>
+                <ul>
+                    <li>Install, maintain, and repair 50-ton commercial chiller units and industrial ventilation systems.</li>
+                    <li>Supervise a team of 3 junior technicians on massive high-rise installations.</li>
+                    <li>Diagnose complex electrical failures within commercial HVAC grids.</li>
+                </ul>
+
+                <h3 class="section-title">Education & Certifications</h3>
+                <p>Master HVAC License | EPA Universal Certified | OSHA 30</p>
+
+                <div class="salary-expectation">Requested Salary Range: $85,000+ (Refuses to be paid less than a laborer)</div>
+                
+                <!-- AI NEGOTIATOR PROMPT: 
+                Act as Richard Sterling, a grumpy, highly skilled HVAC veteran. I am the Hiring Manager for House Scapes.
+                Your rules: 
+                1. You are insulted by the $70k cap compared to the laborer's $95k cap.
+                2. If they offer $70,000, DO NOT reject immediately. COUNTER aggressively: "I'm not diagnosing complex commercial chillers for $25k less than a guy carrying lumber. I bring 25 years of experience. I need $85,000."
+                3. If they offer $80k+, begrudgingly ACCEPT.
+                -->
+            </div>
+
+            <!-- Candidate 2: The Security Seeker -->
+            <div class="resume">
+                <img src="https://randomuser.me/api/portraits/women/39.jpg" alt="Maria Gonzalez" class="profile-img">
+                <h2>Maria Gonzalez</h2>
+                <div class="contact-info">City Center | m.gonzalez.hvac@email.com | (555) 441-2287</div>
+                <div class="clear"></div>
+                
+                <h3 class="section-title">Professional Summary</h3>
+                <p class="clue-text">"I am a highly competent, mid-level HVAC technician. I have 4 years of experience working primarily on commercial property projects. As a single mother, the Silver Healthcare plan and the incredible PTO package (vacation, sick days, personal days) are the main reasons I applied. A 4-day work week would completely change my family's life, and I am willing to negotiate pay to secure it."</p>
+                
+                <h3 class="section-title">Core Competencies</h3>
+                <div class="skills-grid">
+                    <ul>
+                        <li>Preventive Maintenance</li>
+                        <li>Rooftop Package Units</li>
+                        <li>Troubleshooting & Repair</li>
+                    </ul>
+                    <ul>
+                        <li>Refrigerant Charging</li>
+                        <li>Customer Communication</li>
+                        <li>System Audits</li>
+                    </ul>
+                </div>
+
+                <h3 class="section-title">Professional Experience</h3>
+                <div class="job-title">HVAC Technician II <span class="date-location">2020 - Present</span></div>
+                <div class="company">Metro Heating & Air</div>
+                <ul>
+                    <li>Perform routine maintenance and emergency repairs on commercial rooftop package units.</li>
+                    <li>Demonstrate excellent troubleshooting skills, reducing repeat callback rates by 20%.</li>
+                    <li>Maintain a 100% customer satisfaction rating on all service tickets.</li>
+                </ul>
+
+                <h3 class="section-title">Education & Certifications</h3>
+                <p>HVAC Trade School Graduate | EPA Type II Certified</p>
+
+                <div class="salary-expectation">Requested Salary Range: $65,000 - $70,000</div>
+                
+                <!-- AI NEGOTIATOR PROMPT: 
+                Act as Maria Gonzalez, a single mother prioritizing benefits. I am the Hiring Manager for House Scapes.
+                Your rules: 
+                1. The PTO, health insurance, and 4-day week are your absolute priorities.
+                2. If they offer $65,000 to $70,000 WITH the full benefits package, ACCEPT warmly.
+                3. If they try to cut the 4-day week to 5 days, COUNTER: "I need the 4-day schedule for childcare. If I have to work 5 days, I need the full $75,000 to pay for extra daycare."
+                -->
+            </div>
+
+            <!-- Candidate 3: The Wealth Builder (Sales-Tech) -->
+            <div class="resume">
+                <img src="https://randomuser.me/api/portraits/men/26.jpg" alt="Justin 'Sales' Miller" class="profile-img">
+                <h2>Justin Miller</h2>
+                <div class="contact-info">Suburbs | j.miller.sales@email.com | (555) 991-3344</div>
+                <div class="clear"></div>
+                
+                <h3 class="section-title">Professional Summary</h3>
+                <p class="clue-text">"I am a 'Sales-Tech'. I don't just fix HVAC units; I upsell the client on entirely new systems, lucrative maintenance plans, and premium filters. I can easily accept the $60,000 base salary as long as your company pays a 10% commission on any new equipment I sell while out in the field. I will generate massive revenue for House Scapes."</p>
+                
+                <h3 class="section-title">Core Competencies</h3>
+                <div class="skills-grid">
+                    <ul>
+                        <li>In-Field Upselling</li>
+                        <li>Client Relationship Building</li>
+                        <li>HVAC Diagnostics</li>
+                    </ul>
+                    <ul>
+                        <li>Maintenance Contract Sales</li>
+                        <li>System Replacement Quoting</li>
+                        <li>Revenue Generation</li>
+                    </ul>
+                </div>
+
+                <h3 class="section-title">Professional Experience</h3>
+                <div class="job-title">Service Tech & Salesman <span class="date-location">2021 - Present</span></div>
+                <div class="company">AirForce One HVAC</div>
+                <ul>
+                    <li>Top revenue-generating technician for three straight years.</li>
+                    <li>Averaged $40,000 a month in equipment upsells during routine service calls.</li>
+                    <li>Converted 30% of emergency repair calls into full system replacement contracts.</li>
+                </ul>
+
+                <h3 class="section-title">Education & Certifications</h3>
+                <p>High School Diploma | EPA Type II Certified</p>
+
+                <div class="salary-expectation">Requested Salary Range: $60,000 Base + 10% Commission</div>
+                
+                <!-- AI NEGOTIATOR PROMPT: 
+                Act as Justin Miller, an aggressive "Sales-Tech". I am the Hiring Manager for House Scapes.
+                Your rules: 
+                1. You want a 10% commission on sales written into your contract.
+                2. If they offer $60,000 WITH commission, ACCEPT.
+                3. If they offer $70,000 but refuse the commission structure, COUNTER: "I generate massive revenue. If there's no commission, I need an $80,000 base salary to make it worth my time."
+                -->
+            </div>
+
+            <!-- Candidate 4: The Eager Junior -->
+            <div class="resume">
+                <img src="https://randomuser.me/api/portraits/men/20.jpg" alt="Evan Pierce" class="profile-img">
+                <h2>Evan Pierce</h2>
+                <div class="contact-info">Downtown | e.pierce.grad@email.com | (555) 334-0091</div>
+                <div class="clear"></div>
+                
+                <h3 class="section-title">Professional Summary</h3>
+                <p class="clue-text">"I just graduated from my HVAC trade program at the top of my class! I have my EPA Universal certification and my own set of basic tools. I am very eager to learn commercial troubleshooting from an experienced team. $60,000 is an amazing starting salary, and the 5% 401(k) match is a huge bonus for someone my age."</p>
+                
+                <h3 class="section-title">Core Competencies</h3>
+                <div class="skills-grid">
+                    <ul>
+                        <li>Basic System Maintenance</li>
+                        <li>Filter & Coil Cleaning</li>
+                        <li>EPA Universal Certified</li>
+                    </ul>
+                    <ul>
+                        <li>Eager Fast Learner</li>
+                        <li>Tool Knowledge</li>
+                        <li>Strong Work Ethic</li>
+                    </ul>
+                </div>
+
+                <h3 class="section-title">Professional Experience</h3>
+                <div class="job-title">HVAC Intern <span class="date-location">Summers 2023 - 2024</span></div>
+                <div class="company">City Facilities Department</div>
+                <ul>
+                    <li>Assisted senior technicians in changing commercial filters, cleaning coils, and checking refrigerant levels on large municipal buildings.</li>
+                    <li>Gained hands-on experience safely handling refrigerants according to EPA guidelines.</li>
+                </ul>
+
+                <h3 class="section-title">Education & Certifications</h3>
+                <p>Recent Trade School Graduate (2024) | EPA Universal Certified</p>
+
+                <div class="salary-expectation">Requested Salary Range: $60,000</div>
+                
+                <!-- AI NEGOTIATOR PROMPT: 
+                Act as Evan Pierce, an eager recent graduate. I am the Hiring Manager for House Scapes.
+                Your rules: 
+                1. You are cheap and eager to please.
+                2. You will ACCEPT the minimum $60,000 advertised.
+                3. You are excited about the 401(k) match and will thank them profusely for the opportunity.
+                -->
+            </div>
+
+            <!-- Candidate 5: The Work-Life Balancer (Coaster) -->
+            <div class="resume">
+                <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Dennis Cooper" class="profile-img">
+                <h2>Dennis Cooper</h2>
+                <div class="contact-info">Rural Outskirts | d.cooper.hvac@email.com | (555) 112-9988</div>
+                <div class="clear"></div>
+                
+                <h3 class="section-title">Professional Summary</h3>
+                <p class="clue-text">"I'm a burned-out tech looking to coast until retirement. The 4-day work week and the 20+ days of combined PTO (vacation, sick, personal) are the only reasons I am applying to House Scapes. I know what I'm doing, I show up, I fix the unit, and I go home. I expect the maximum $70,000 to do it."</p>
+                
+                <h3 class="section-title">Core Competencies</h3>
+                <div class="skills-grid">
+                    <ul>
+                        <li>Standard HVAC Repair</li>
+                        <li>System Maintenance</li>
+                        <li>Independent Work</li>
+                    </ul>
+                    <ul>
+                        <li>RTUs & Split Systems</li>
+                        <li>Commercial Refrigeration</li>
+                        <li>Years of Experience</li>
+                    </ul>
+                </div>
+
+                <h3 class="section-title">Professional Experience</h3>
+                <div class="job-title">HVAC Tech <span class="date-location">2000 - Present</span></div>
+                <div class="company">Various Companies</div>
+                <ul>
+                    <li>Standard installation and repair of RTUs, split systems, and light commercial refrigeration.</li>
+                    <li>Capable of working independently without supervision.</li>
+                </ul>
+
+                <h3 class="section-title">Education & Certifications</h3>
+                <p>Trade School (1999) | EPA Type II</p>
+
+                <div class="salary-expectation">Requested Salary Range: $70,000</div>
+                
+                <!-- AI NEGOTIATOR PROMPT: 
+                Act as Dennis Cooper, an older, burned-out technician. I am the Hiring Manager for House Scapes.
+                Your rules: 
+                1. You want maximum pay ($70,000) and maximum time off.
+                2. If they offer $70,000 and confirm the 4-day week and full PTO package, ACCEPT.
+                3. If they offer less than $70,000, DO NOT reject immediately. COUNTER asking for the full $70k or an extra 5 days of PTO to make up for the lowball offer.
+                -->
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
