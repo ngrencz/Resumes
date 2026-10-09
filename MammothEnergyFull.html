@@ -17,10 +17,10 @@
             color: #f8f9fa;
             padding: 30px;
             border-radius: 8px;
-            margin-bottom: 30px;
+            margin-bottom: 40px;
             text-align: center;
             box-shadow: 0 6px 12px rgba(0,0,0,0.15);
-            border-bottom: 5px solid #fd7e14; 
+            border-bottom: 6px solid #fd7e14; 
         }
         .dashboard-header h1 { margin-top: 0; font-size: 2.2em; text-transform: uppercase; letter-spacing: 2px;}
         .dashboard-header p { font-size: 1.1em; color: #ced4da; margin-bottom: 0;}
@@ -50,6 +50,8 @@
             background: white;
             box-shadow: 0 10px 25px rgba(0,0,0,0.08);
             line-height: 1.6;
+            min-height: 900px;
+            position: relative;
             border-top: 8px solid #ced4da;
         }
         
@@ -107,7 +109,13 @@
             margin-bottom: 25px;
         }
 
-        /* Distinct styling per role for visual variety */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+        /* Distinct styling per role */
         .role-supervisor .resume { border-top-color: #343a40; }
         .role-driver .resume { border-top-color: #17a2b8; }
         .role-driver .company { color: #17a2b8; }
@@ -139,19 +147,40 @@
                 <div class="clear"></div>
                 
                 <h3 class="section-title">Professional Summary</h3>
-                <p class="clue-text">"I am a highly seasoned logistics director. I noted your advertisement stated the salary is '$72,500 (or your preferred figure)' and that you offer paid Management Certifications. As a certified Lean Six Sigma Black Belt, I already possess these credentials. I expect a premium base salary to offset the educational perks I will not be utilizing, and I am enforcing the 'preferred figure' clause."</p>
+                <p class="clue-text">"I am a highly seasoned logistics director with over 15 years of supply chain optimization. I noted your advertisement stated the salary is '$72,500 (or your preferred figure)' and that you offer paid Management Certifications. As a certified Lean Six Sigma Black Belt, I already possess these credentials. I expect a premium base salary to offset the educational perks I will not be utilizing, and I am enforcing the 'preferred figure' clause to reflect my true market value."</p>
                 
+                <h3 class="section-title">Core Competencies</h3>
+                <div class="skills-grid">
+                    <ul>
+                        <li>Lean Six Sigma Methodologies</li>
+                        <li>Supply Chain Optimization</li>
+                        <li>High-Level Budget Management</li>
+                    </ul>
+                    <ul>
+                        <li>Cross-Functional Team Leadership</li>
+                        <li>Enterprise ERP Systems (SAP, Oracle)</li>
+                        <li>Vendor & Contract Negotiation</li>
+                    </ul>
+                </div>
+
                 <h3 class="section-title">Professional Experience</h3>
                 <div class="job-title">Operations Director <span class="date-location">2018 - Present</span></div>
                 <div class="company">National Freight Co.</div>
                 <ul>
-                    <li>Manage a $4.2M operational budget and oversee a daily facility staff of 120 employees.</li>
-                    <li>Reduced overhead waste by 22% using advanced Six Sigma methodologies.</li>
+                    <li>Manage a $4.2M operational budget and oversee a daily facility staff of 120 employees across three 24/7 shifts.</li>
+                    <li>Reduced overhead waste by 22% and decreased loading dock idle times by 15% using advanced Six Sigma methodologies.</li>
                     <li>Negotiated new vendor logistics contracts, saving the company $150k annually.</li>
                 </ul>
 
+                <div class="job-title">Regional Supply Chain Manager <span class="date-location">2012 - 2018</span></div>
+                <div class="company">Global Logistics Inc.</div>
+                <ul>
+                    <li>Directed logistics flow for 4 regional hubs, ensuring 99.9% on-time delivery metrics.</li>
+                    <li>Spearheaded the integration of a new automated sorting system, reducing labor costs by 12%.</li>
+                </ul>
+
                 <h3 class="section-title">Education & Certifications</h3>
-                <p><strong>B.S. Supply Chain Management</strong> | State University</p>
+                <p><strong>B.S. Supply Chain Management</strong> | State University (2010)</p>
                 <p><strong>Certifications:</strong> Lean Six Sigma Black Belt (LSSBB), OSHA 30-Hour General Industry.</p>
 
                 <div class="salary-expectation">Requested Salary Range: $85,000 ("My Preferred Figure")</div>
@@ -160,7 +189,7 @@
                 Act as Robert Vance, a firm, highly confident "Wealth Builder" negotiator. I am the Hiring Manager for Mammoth Energy.
                 Your rules: 
                 1. You want $85,000, citing the "preferred figure" typo in their job ad.
-                2. If they offer the base $72,500, COUNTER with $80,000, reminding them you don't need the training perks they advertised and want that value added to your base pay.
+                2. If they offer the base $72,500, DO NOT reject immediately. COUNTER with $80,000, reminding them you don't need the training perks they advertised and want that value added to your base pay.
                 3. If they push back hard but offer at least $76,000, you will begrudgingly ACCEPT, stating you appreciate their directness.
                 -->
             </div>
@@ -175,13 +204,35 @@
                 <h3 class="section-title">Professional Summary</h3>
                 <p class="clue-text">"I am a highly effective warehouse manager currently burning out due to mandated 60-hour work weeks. The 'Mental Health Days' and 'Leadership Sabbatical' listed in your posting are exactly what I need for long-term sustainability. I am willing to accept a slightly lower base salary in exchange for iron-clad guarantees regarding PTO and a strict 40-hour schedule."</p>
                 
+                <h3 class="section-title">Core Competencies</h3>
+                <div class="skills-grid">
+                    <ul>
+                        <li>Fulfillment Center Management</li>
+                        <li>High-Volume Inventory Control</li>
+                        <li>Workplace Safety (OSHA 10)</li>
+                    </ul>
+                    <ul>
+                        <li>Conflict Resolution & De-escalation</li>
+                        <li>WMS (Warehouse Management Systems)</li>
+                        <li>Shift Scheduling & Payroll</li>
+                    </ul>
+                </div>
+
                 <h3 class="section-title">Professional Experience</h3>
                 <div class="job-title">Shift Manager <span class="date-location">2019 - Present</span></div>
                 <div class="company">E-Commerce Giant Distribution</div>
                 <ul>
                     <li>Direct daily workflows for 60 fulfillment employees in a high-pressure, fast-paced environment.</li>
-                    <li>Maintain top 10% facility fulfillment speed metrics nationwide.</li>
-                    <li>Enforce stringent safety protocols, resulting in a zero-incident record for 18 months.</li>
+                    <li>Maintain top 10% facility fulfillment speed metrics nationwide, processing up to 15,000 units per shift.</li>
+                    <li>Enforce stringent safety protocols, resulting in a zero-incident record for 18 consecutive months.</li>
+                    <li>Handle all disciplinary actions, performance reviews, and PTO approvals for my shift.</li>
+                </ul>
+
+                <div class="job-title">Fulfillment Supervisor <span class="date-location">2015 - 2019</span></div>
+                <div class="company">NextDay Delivery Services</div>
+                <ul>
+                    <li>Supervised a team of 25 pickers and packers.</li>
+                    <li>Reduced order defect rates from 3% to 0.5% through targeted retraining programs.</li>
                 </ul>
 
                 <h3 class="section-title">Education</h3>
@@ -206,16 +257,38 @@
                 <div class="clear"></div>
                 
                 <h3 class="section-title">Professional Summary</h3>
-                <p class="clue-text">"Solid, dependable floor supervisor with a decade of on-the-ground experience. I am looking to move my career to Mammoth Energy specifically for the Gold Tier Healthcare and the 6% 401(k) match. I believe in putting in an honest day's work for an honest wage, and I manage my teams with respect and clarity."</p>
+                <p class="clue-text">"Solid, dependable floor supervisor with over a decade of on-the-ground experience. I am looking to move my career to Mammoth Energy specifically for the Gold Tier Healthcare and the 6% 401(k) match. I believe in putting in an honest day's work for an honest wage, and I manage my teams with respect, clarity, and consistency."</p>
                 
+                <h3 class="section-title">Core Competencies</h3>
+                <div class="skills-grid">
+                    <ul>
+                        <li>Team Motivation & Coaching</li>
+                        <li>Dock Logistics & Loading</li>
+                    </ul>
+                    <ul>
+                        <li>Forklift & Machinery Operation</li>
+                        <li>Daily Reporting & Metrics</li>
+                    </ul>
+                </div>
+
                 <h3 class="section-title">Professional Experience</h3>
                 <div class="job-title">Floor Lead / Warehouse Supervisor <span class="date-location">2015 - Present</span></div>
                 <div class="company">BigBox Distribution Center</div>
                 <ul>
                     <li>Oversee 20 warehouse workers daily, assigning zones and monitoring pick-rates.</li>
-                    <li>Conduct daily safety briefings and forklift operational checks.</li>
+                    <li>Conduct daily morning safety briefings and manage forklift operational checklists.</li>
                     <li>Resolve scheduling conflicts and manage bi-weekly payroll submission for my shift.</li>
                 </ul>
+
+                <div class="job-title">Warehouse Associate <span class="date-location">2008 - 2015</span></div>
+                <div class="company">BigBox Distribution Center</div>
+                <ul>
+                    <li>Operated pallet jacks and reach trucks to stage outbound shipments.</li>
+                    <li>Promoted to Floor Lead due to perfect attendance and leadership qualities.</li>
+                </ul>
+
+                <h3 class="section-title">Education</h3>
+                <p>High School Diploma | First Aid & CPR Certified</p>
 
                 <div class="salary-expectation">Requested Salary Range: $72,500</div>
                 
@@ -235,16 +308,41 @@
                 <div class="clear"></div>
                 
                 <h3 class="section-title">Professional Summary</h3>
-                <p class="clue-text">"I am a compliance and safety stickler. I ensure warehouses run flawlessly to prevent injuries and avoid costly OSHA fines. I applied for this role because the Executive Wellness Stipend and Gold Healthcare align with my personal focus on proactive health and fitness."</p>
+                <p class="clue-text">"I am a compliance and safety stickler. I ensure warehouses run flawlessly to prevent injuries, reduce workers' compensation claims, and avoid costly OSHA fines. I applied for this role because the Executive Wellness Stipend and Gold Healthcare align perfectly with my personal focus on proactive health and fitness."</p>
                 
+                <h3 class="section-title">Core Competencies</h3>
+                <div class="skills-grid">
+                    <ul>
+                        <li>OSHA Regulations & Compliance</li>
+                        <li>Facility Safety Auditing</li>
+                        <li>Workers' Comp Administration</li>
+                    </ul>
+                    <ul>
+                        <li>Training & Development</li>
+                        <li>Hazard Identification</li>
+                        <li>Labor Law & Union Compliance</li>
+                    </ul>
+                </div>
+
                 <h3 class="section-title">Professional Experience</h3>
                 <div class="job-title">Safety Coordinator & Supervisor <span class="date-location">2018 - Present</span></div>
                 <div class="company">Industrial Supply Co.</div>
                 <ul>
                     <li>Lead comprehensive safety onboarding and monthly compliance training for 100+ staff members.</li>
                     <li>Perform weekly facility audits to identify and resolve hazards before they cause production delays.</li>
-                    <li>Manage the shift schedule to ensure compliance with union labor hours.</li>
+                    <li>Manage the shift schedule to ensure compliance with union labor hours and mandatory break times.</li>
+                    <li>Reduced reportable workplace incidents by 40% over three years.</li>
                 </ul>
+
+                <div class="job-title">HR & Safety Assistant <span class="date-location">2014 - 2018</span></div>
+                <div class="company">Manufacturing Partners</div>
+                <ul>
+                    <li>Processed incident reports and maintained all MSDS (Material Safety Data Sheets) binders.</li>
+                </ul>
+
+                <h3 class="section-title">Education</h3>
+                <p><strong>B.A. Human Resources Management</strong> | State College</p>
+                <p>OSHA-30 Certified</p>
 
                 <div class="salary-expectation">Requested Salary Range: $72,000 - $75,000</div>
                 
@@ -265,15 +363,34 @@
                 <div class="clear"></div>
                 
                 <h3 class="section-title">Professional Summary</h3>
-                <p class="clue-text">"I am a proven retail leader looking to transition my management skills into the logistics sector. I learn incredibly fast, I manage people with high emotional intelligence, and I am highly motivated to earn the Supply Chain Logistics certifications Mammoth Energy offers to close my knowledge gap."</p>
+                <p class="clue-text">"I am a proven retail leader looking to transition my management skills into the logistics and warehouse sector. I learn incredibly fast, I manage people with high emotional intelligence, and I am highly motivated to earn the Supply Chain Logistics certifications Mammoth Energy offers to close my knowledge gap and grow with the company."</p>
                 
+                <h3 class="section-title">Core Competencies</h3>
+                <div class="skills-grid">
+                    <ul>
+                        <li>Team Building & Motivation</li>
+                        <li>Retail Inventory Management</li>
+                    </ul>
+                    <ul>
+                        <li>Customer De-escalation</li>
+                        <li>Sales Forecasting</li>
+                    </ul>
+                </div>
+
                 <h3 class="section-title">Professional Experience</h3>
                 <div class="job-title">Store Manager <span class="date-location">2020 - Present</span></div>
                 <div class="company">Foot Locker Pro</div>
                 <ul>
-                    <li>Manage a retail team of 15, handling all hiring, training, and scheduling.</li>
+                    <li>Manage a retail team of 15, handling all hiring, training, and weekly scheduling.</li>
                     <li>Oversee complex back-room inventory audits, maintaining 99.8% stock accuracy.</li>
-                    <li>Awarded District Manager of the Quarter in Q3 2023 for exceeding sales goals.</li>
+                    <li>Awarded District Manager of the Quarter in Q3 2023 for exceeding store sales goals by 18%.</li>
+                    <li>Handle all nightly bank deposits and P&L reporting.</li>
+                </ul>
+
+                <div class="job-title">Assistant Store Manager <span class="date-location">2017 - 2020</span></div>
+                <div class="company">Athletic Supply Co.</div>
+                <ul>
+                    <li>Supervised the sales floor and managed the visual merchandising displays.</li>
                 </ul>
 
                 <h3 class="section-title">Education</h3>
@@ -305,16 +422,26 @@
                 <div class="clear"></div>
                 
                 <h3 class="section-title">Professional Summary</h3>
-                <p class="clue-text">"15 years on the road with zero accidents. I applied specifically for the Gold Tier healthcare and the $1,200 HSA contribution. At my age, the physical therapy coverage and the ability to rest on a 4/10 schedule are worth their weight in gold. I am looking for my final company to retire from."</p>
+                <p class="clue-text">"15 years on the road with zero accidents. I applied specifically for the Gold Tier healthcare and the $1,200 HSA contribution. At my age, the physical therapy coverage and the ability to rest my back on a 4/10 schedule are worth their weight in gold. I am looking for my final company to retire from."</p>
                 
                 <h3 class="section-title">Professional Experience</h3>
                 <div class="job-title">Senior Route Driver <span class="date-location">2015 - Present</span></div>
                 <div class="company">Interstate Supply Co.</div>
                 <ul>
-                    <li>Operate 26-foot box trucks navigating tight urban centers and suburban routes.</li>
-                    <li>Perform heavy physical labor, unloading pallets of construction materials by hand or pallet jack.</li>
-                    <li>Awarded 'Safe Driver of the Year' three times.</li>
+                    <li>Operate 26-foot box trucks and flatbeds navigating tight urban centers and suburban routes.</li>
+                    <li>Perform heavy physical labor, unloading pallets of construction materials by hand or manual pallet jack.</li>
+                    <li>Awarded 'Safe Driver of the Year' three times for maintaining a flawless DOT record.</li>
+                    <li>Train new drivers on vehicle maintenance and pre-trip DOT inspections.</li>
                 </ul>
+
+                <div class="job-title">Freight Hauler (OTR) <span class="date-location">2005 - 2015</span></div>
+                <div class="company">National Logistics</div>
+                <ul>
+                    <li>Drove cross-country routes, managing long hours and strict delivery windows.</li>
+                </ul>
+
+                <h3 class="section-title">Education & Certifications</h3>
+                <p>Commercial Driver's License (CDL) Class A | Clean MVR</p>
 
                 <div class="salary-expectation">Requested Salary Range: $57,996</div>
                 
@@ -322,7 +449,8 @@
                 Act as Michael Sullivan, an aging "Security Seeker" driver. I am the Hiring Manager for Mammoth Energy.
                 Your rules: 
                 1. You will ACCEPT the $57,996 salary, BUT ONLY IF they explicitly guarantee the Gold Tier Health Plan and the HSA.
-                2. If they attempt to downgrade your health plan to save overhead, firmly push back. State that physical therapy is a dealbreaker. If they refuse to budge, walk away.
+                2. If they attempt to downgrade your health plan to save overhead, firmly push back. State that physical therapy is a dealbreaker. 
+                3. If they refuse to offer the Gold plan, tell them you require $62,000 to cover your own medical bills.
                 -->
             </div>
 
@@ -334,16 +462,25 @@
                 <div class="clear"></div>
                 
                 <h3 class="section-title">Professional Summary</h3>
-                <p class="clue-text">"Young, hungry, and dual-certified logistics worker. Put me in the warehouse on a forklift, or behind the wheel of a delivery truck. Because I can fill either role and act as an emergency floater for your operations, I expect a premium salary above your advertised base."</p>
+                <p class="clue-text">"Young, hungry, and dual-certified logistics worker. Put me in the warehouse on a forklift, or put me behind the wheel of a delivery truck. Because I can fill either role and act as an emergency floater for your operations, I expect a premium salary above your advertised base."</p>
                 
                 <h3 class="section-title">Professional Experience</h3>
                 <div class="job-title">Delivery & Logistics Floater <span class="date-location">2022 - Present</span></div>
                 <div class="company">Regional Builders Supply</div>
                 <ul>
-                    <li>Drive commercial delivery routes 3 days a week, ensuring on-time material drop-offs.</li>
-                    <li>Operate sit-down and stand-up forklifts in the warehouse 2 days a week to stage outgoing loads.</li>
-                    <li>Maintain flawless delivery logs and DOT compliance records.</li>
+                    <li>Drive commercial delivery routes 3 days a week, ensuring on-time material drop-offs to active construction sites.</li>
+                    <li>Operate sit-down and stand-up forklifts in the warehouse 2 days a week to stage outgoing loads and unload incoming freight.</li>
+                    <li>Maintain flawless delivery logs, customer signatures, and DOT compliance records.</li>
                 </ul>
+                
+                <div class="job-title">Dock Worker <span class="date-location">2020 - 2022</span></div>
+                <div class="company">FastFreight</div>
+                <ul>
+                    <li>Loaded outbound trailers efficiently to maximize cubic space.</li>
+                </ul>
+
+                <h3 class="section-title">Certifications</h3>
+                <p>CDL Class B | OSHA Forklift Certification (Sit-down & Stand-up)</p>
 
                 <div class="salary-expectation">Requested Salary Range: $62,000</div>
                 
@@ -351,7 +488,7 @@
                 Act as Jason Kincaid, a confident "Wealth Builder". I am the Hiring Manager for Mammoth Energy.
                 Your rules: 
                 1. If they offer the base $57,996, COUNTER asking for $61,500, reminding them that your forklift certification makes you twice as valuable to the warehouse.
-                2. If they negotiate and offer anything above $59,500, ACCEPT the offer.
+                2. If they negotiate and meet you at $59,500 or higher, ACCEPT the offer.
                 -->
             </div>
 
@@ -363,16 +500,25 @@
                 <div class="clear"></div>
                 
                 <h3 class="section-title">Professional Summary</h3>
-                <p class="clue-text">"Highly experienced delivery driver looking specifically for the advertised 4-day work week (4/10 schedule). The base pay is acceptable, but I want my guaranteed three-day weekends so I can spend consistent time with my family and grandchildren."</p>
+                <p class="clue-text">"Highly experienced delivery driver looking specifically for the advertised 4-day work week (4/10 schedule). The base pay is acceptable, but I want my guaranteed three-day weekends so I can spend consistent time with my family and grandchildren. I am reliable and professional."</p>
                 
                 <h3 class="section-title">Professional Experience</h3>
                 <div class="job-title">Delivery Driver <span class="date-location">2015 - Present</span></div>
                 <div class="company">Medical Supply Co.</div>
                 <ul>
-                    <li>Deliver oxygen tanks and sensitive medical equipment to residential patients.</li>
-                    <li>Maintain strict delivery schedules while providing excellent, compassionate customer service.</li>
-                    <li>Perform daily pre-trip and post-trip vehicle inspections.</li>
+                    <li>Deliver oxygen tanks, CPAP machines, and sensitive medical equipment to residential patients.</li>
+                    <li>Maintain strict delivery schedules while providing excellent, compassionate customer service to elderly clients.</li>
+                    <li>Perform daily pre-trip and post-trip vehicle inspections, reporting any maintenance issues immediately.</li>
                 </ul>
+
+                <div class="job-title">Courier <span class="date-location">2010 - 2015</span></div>
+                <div class="company">City Express</div>
+                <ul>
+                    <li>Delivered legal documents and small parcels across the downtown metro area.</li>
+                </ul>
+
+                <h3 class="section-title">Certifications</h3>
+                <p>CDL Class B | HAZMAT Endorsement</p>
 
                 <div class="salary-expectation">Requested Salary Range: $57,996</div>
                 
@@ -380,7 +526,7 @@
                 Act as Teresa Ruiz, a "Work-Life Balancer". I am the Hiring Manager for Mammoth Energy.
                 Your rules: 
                 1. You will ACCEPT the $57,996 as long as the 4/10 schedule (3-day weekends) is explicitly guaranteed in the offer.
-                2. If they attempt to put you on a 5-day schedule, REJECT the offer.
+                2. If they attempt to put you on a 5-day schedule, REJECT the offer, stating you will just stay at your current job.
                 -->
             </div>
 
@@ -392,7 +538,7 @@
                 <div class="clear"></div>
                 
                 <h3 class="section-title">Professional Summary</h3>
-                <p class="clue-text">"Fast, energetic, and ready to drive hard. I don't care about retirement matching or physical therapy, I just want a solid paycheck and the quarterly safe driving bonuses. I am willing to work standard 5-day weeks."</p>
+                <p class="clue-text">"Fast, energetic, and ready to drive hard. I don't care about retirement matching or physical therapy, I just want a solid paycheck and the quarterly safe driving bonuses. I am used to intense delivery quotas and I am willing to work standard 5-day weeks if needed."</p>
                 
                 <h3 class="section-title">Professional Experience</h3>
                 <div class="job-title">Delivery Driver <span class="date-location">Jan 2024 - Present</span></div>
@@ -400,7 +546,17 @@
                 <ul>
                     <li>Deliver 200+ packages a day in high-density residential and commercial areas.</li>
                     <li>Navigate complex routing software and meet incredibly tight fulfillment windows.</li>
+                    <li>Maintain delivery vehicle cleanliness and fuel levels.</li>
                 </ul>
+
+                <div class="job-title">Pizza Delivery <span class="date-location">2021 - 2023</span></div>
+                <div class="company">Domino's</div>
+                <ul>
+                    <li>Managed cash drops and provided fast local delivery.</li>
+                </ul>
+
+                <h3 class="section-title">Education</h3>
+                <p>High School Diploma | Standard Driver's License</p>
 
                 <div class="salary-expectation">Requested Salary Range: $52,000 - $55,000</div>
                 
@@ -420,14 +576,24 @@
                 <div class="clear"></div>
                 
                 <h3 class="section-title">Professional Summary</h3>
-                <p class="clue-text">"Looking for a company willing to train a brand new driver. I only have my permit, but I learn quickly and am willing to work for well under your advertised rate to get my foot in the door and earn my full commercial license."</p>
+                <p class="clue-text">"Looking for a company willing to train a brand new delivery driver. I currently only have my commercial learner's permit, but I learn quickly, I know the city streets well, and I am willing to work for well under your advertised rate to get my foot in the door and earn my full commercial license."</p>
                 
                 <h3 class="section-title">Professional Experience</h3>
                 <div class="job-title">Rideshare Driver <span class="date-location">2022 - 2024</span></div>
                 <div class="company">Uber / Lyft</div>
                 <ul>
-                    <li>Navigated city traffic maintaining a 4.9-star passenger rating.</li>
+                    <li>Navigated city traffic maintaining a 4.9-star passenger rating over 1,000 trips.</li>
+                    <li>Kept vehicle immaculately clean and performed routine maintenance.</li>
                 </ul>
+
+                <div class="job-title">Valet Attendant <span class="date-location">2020 - 2022</span></div>
+                <div class="company">Grand Hotel</div>
+                <ul>
+                    <li>Safely parked and retrieved luxury vehicles.</li>
+                </ul>
+
+                <h3 class="section-title">Education</h3>
+                <p>High School Diploma | CDL Learner's Permit</p>
 
                 <div class="salary-expectation">Requested Salary Range: $45,000</div>
                 
@@ -460,10 +626,19 @@
                 <div class="job-title">Fulfillment Associate <span class="date-location">2021 - Present</span></div>
                 <div class="company">BigBox Retail Warehouse</div>
                 <ul>
-                    <li>Pick, pack, and label outbound shipments with 99.9% accuracy.</li>
+                    <li>Pick, pack, and label outbound shipments with 99.9% accuracy using RF scanners.</li>
                     <li>Consistently hit 110% of required daily performance metrics.</li>
                     <li>Assist with monthly inventory cycle counts and discrepancy resolution.</li>
                 </ul>
+
+                <div class="job-title">Packer <span class="date-location">2018 - 2021</span></div>
+                <div class="company">FreshFoods Distribution</div>
+                <ul>
+                    <li>Packed perishable goods in a cold-storage environment, maintaining strict quality control.</li>
+                </ul>
+
+                <h3 class="section-title">Education</h3>
+                <p>High School Diploma | OSHA-10 Certified</p>
 
                 <div class="salary-expectation">Requested Salary Range: $57,996</div>
                 
@@ -491,8 +666,17 @@
                 <ul>
                     <li>Operate complex heavy machinery, including cherry pickers, reach trucks, and sit-down lifts.</li>
                     <li>Load flatbed trucks securing varied freight weights up to 10,000 lbs.</li>
-                    <li>Trained 5 new hires on heavy equipment safety standards.</li>
+                    <li>Trained 5 new hires on heavy equipment safety standards and daily maintenance checks.</li>
                 </ul>
+
+                <div class="job-title">Construction Laborer <span class="date-location">2015 - 2018</span></div>
+                <div class="company">City Contractors</div>
+                <ul>
+                    <li>Performed heavy physical labor, moving materials and clearing sites.</li>
+                </ul>
+
+                <h3 class="section-title">Certifications</h3>
+                <p>Master Forklift Certified (All Classes)</p>
 
                 <div class="salary-expectation">Requested Salary Range: $62,000</div>
                 
@@ -519,8 +703,17 @@
                 <div class="company">Target</div>
                 <ul>
                     <li>Managed parking lot inventory and assisted guests with heavy carry-outs.</li>
-                    <li>Restocked shelves during the overnight shift.</li>
+                    <li>Restocked shelves during the overnight shift, breaking down cardboard boxes.</li>
                 </ul>
+
+                <div class="job-title">Fast Food Worker <span class="date-location">2020 - 2022</span></div>
+                <div class="company">Burger King</div>
+                <ul>
+                    <li>Worked the fry station and cleaned the lobby.</li>
+                </ul>
+
+                <h3 class="section-title">Education</h3>
+                <p>High School Diploma</p>
 
                 <div class="salary-expectation">Requested Salary Range: $52,000 - $55,000</div>
                 
@@ -540,15 +733,25 @@
                 <div class="clear"></div>
                 
                 <h3 class="section-title">Professional Summary</h3>
-                <p class="clue-text">"Looking for a stable warehouse role with strong health benefits. The physical demands of warehouse work take a toll, so the on-site physical therapy access advertised is the primary reason I am applying to Mammoth Energy."</p>
+                <p class="clue-text">"Looking for a stable warehouse role with strong health benefits. The physical demands of warehouse work take a toll over the years, so the on-site physical therapy access advertised is the primary reason I am applying to Mammoth Energy."</p>
                 
                 <h3 class="section-title">Professional Experience</h3>
                 <div class="job-title">Inventory Clerk <span class="date-location">2019 - Present</span></div>
                 <div class="company">AutoParts Regional</div>
                 <ul>
                     <li>Process incoming freight, scan barcodes, and allocate stock to proper bins.</li>
-                    <li>Utilize hand-trucks and pallet jacks to move medium-weight merchandise.</li>
+                    <li>Utilize hand-trucks and pallet jacks to move medium-weight merchandise across the floor.</li>
+                    <li>Perform weekly audits of high-theft items.</li>
                 </ul>
+
+                <div class="job-title">Stock Room Associate <span class="date-location">2015 - 2019</span></div>
+                <div class="company">Macy's</div>
+                <ul>
+                    <li>Organized the back room and prepared clothing for the sales floor.</li>
+                </ul>
+
+                <h3 class="section-title">Education</h3>
+                <p>Associate's Degree | Business Administration</p>
 
                 <div class="salary-expectation">Requested Salary Range: $57,996</div>
                 
@@ -575,6 +778,15 @@
                 <ul>
                     <li>Handled cash registers, opened the store, and unloaded weekly supply deliveries.</li>
                 </ul>
+
+                <div class="job-title">Temp Office Worker <span class="date-location">2021 - 2023</span></div>
+                <div class="company">Various Agencies</div>
+                <ul>
+                    <li>Performed data entry, filing, and basic admin tasks on short-term contracts.</li>
+                </ul>
+
+                <h3 class="section-title">Education</h3>
+                <p>Some College - Business Major (Incomplete)</p>
 
                 <div class="salary-expectation">Requested Salary Range: $48,000 - $50,000</div>
                 
