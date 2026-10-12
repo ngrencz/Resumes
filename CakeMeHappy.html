@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATS: Cake Me Happy - Candidate Portal</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #fcf4f4;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+        .dashboard-header {
+            background-color: #4a2c2a; 
+            color: #f8f9fa;
+            padding: 30px;
+            border-radius: 8px;
+            margin-bottom: 40px;
+            text-align: center;
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+            border-bottom: 6px solid #d81b60; 
+        }
+        .dashboard-header h1 { margin-top: 0; font-size: 2.2em; text-transform: uppercase; letter-spacing: 2px;}
+        .dashboard-header p { font-size: 1.1em; color: #f8d7da; margin-bottom: 0;}
+        
+        .applicant-wrapper {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .role-header {
+            background-color: #3e2723;
+            color: #f8f9fa;
+            padding: 20px;
+            margin-top: 50px;
+            margin-bottom: 30px;
+            border-left: 8px solid #d81b60;
+            font-size: 1.6em;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .resume {
+            margin-bottom: 50px;
+            padding: 40px;
+            background: white;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+            line-height: 1.6;
+            min-height: 900px;
+            position: relative;
+            border-top: 8px solid #ced4da;
+        }
+        
+        .profile-img {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            object-fit: cover;
+            float: left;
+            margin-right: 30px;
+            margin-bottom: 20px;
+            border: 4px solid #f8f9fa;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .section-title {
+            text-transform: uppercase;
+            font-size: 1.05em;
+            letter-spacing: 1.5px;
+            color: #495057;
+            border-bottom: 2px solid #e9ecef;
+            padding-bottom: 5px;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        .job-title { font-weight: bold; font-size: 1.1em; color: #212529;}
+        .date-location { float: right; color: #6c757d; font-style: italic; font-size: 0.9em; }
+        .company { font-weight: 600; color: #d81b60; }
+
+        h2 { color: #880e4f; margin-top: 0; margin-bottom: 5px; font-size: 2.4em; letter-spacing: -0.5px;}
+        .contact-info { color: #6c757d; margin-bottom: 25px; font-size: 0.95em;}
+        .clear { clear: both; }
+        
+        ul { padding-left: 20px; margin-top: 8px;}
+        li { margin-bottom: 8px; }
+
+        .salary-expectation {
+            background-color: #fff3cd;
+            padding: 20px;
+            border-left: 5px solid #d81b60;
+            margin-top: 35px;
+            font-size: 1.1em;
+            color: #856404;
+            font-weight: bold;
+            text-align: center;
+        }
+        
+        .clue-text {
+            font-style: italic;
+            color: #495057;
+            background: #fdf2f4;
+            padding: 20px;
+            border-left: 4px solid #f06292;
+            margin-bottom: 25px;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+        /* Distinct styling per role */
+        .role-decorator .resume { border-top-color: #d81b60; }
+        .role-decorator .company { color: #d81b60; }
+        .role-cashier .resume { border-top-color: #f39c12; }
+        .role-cashier .company { color: #f39c12; }
+        .role-baker .resume { border-top-color: #16a085; }
+        .role-baker .company { color: #16a085; }
+
+    </style>
+</head>
+<body>
+
+    <div class="dashboard-header">
+        <h1>Cake Me Happy ATS</h1>
+        <p>Active Requisitions: Lead Cake Decorator | Bakery Cashier & Front-of-House Host | Scratch Baker</p>
+    </div>
+
+    <div class="applicant-wrapper">
+
+        <!-- ==========================================
+             ROLE: LEAD CAKE DECORATOR (5 Candidates)
+             ========================================== -->
+        <div class="role-header" style="border-left-color: #d81b60;">Requisition: Lead Cake Decorator (Advertised: $42,000 - $52,000)</div>
+        <div class="role-decorator">
+
+            <!-- Candidate 1: The Wealth Builder -->
+            <div class="resume">
+                <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Chloe Vance" class="profile-img">
+                <h2>Chloe Vance</h2>
+                <div class="contact-info">Arts District | c.vance.designs@email.com | (555) 342-8811</div>
+                <div class="clear"></div>
+                
+                <h3 class="section-title">Professional Summary</h3>
+                <p class="clue-text">"I am a highly sought-after cake artist specializing in gravity-defying structures and hyper-realistic fondant sculpting. I noticed you offer pet insurance and a free cake/coffee allowance. I do not have pets and do not eat sugar. As a master decorator who will immediately elevate your brand's social media presence, I expect the absolute top of your pay band in exchange for those unused perks."</p>
+                
+                <h3 class="section-title">Core Competencies</h3>
+                <div class="skills-grid">
+                    <ul>
+                        <li>Hyper-Realistic Fondant Sculpting</li>
+                        <li>Structural Cake Engineering</li>
+                        <li>High-Volume Wedding Cake Assembly</li>
+                    </ul>
+                    <ul>
+                        <li>Airbrushing & Custom Color Matching</li>
+                        <li>Team Leadership & Training</li>
+                        <li>Food Safety & Sanitation (ServSafe)</li>
+                    </ul>
+                </div>
+
+                <h3 class="section-title">Professional Experience</h3>
+                <div class="job-title">Senior Cake Artist <span class="date-location">2019 - Present</span></div>
+                <div class="company">Sugar & Lace Weddings</div>
+                <ul>
+                    <li>Design and execute 15-20 highly customized, multi-tiered wedding cakes per week, ranging from $500 to $3,000 per cake.</li>
+                    <li>Lead a team of 3 assistant decorators, ensuring strict quality control on all crumb coats and final buttercream finishes.</li>
+                    <li>Grew the bakery's Instagram following by 40k through viral cake design videos.</li>
+                </ul>
+
+                <div class="job-title">Custom Decorator <span class="date-location">2014 - 2019</span></div>
+                <div class="company">The Artisan Patisserie</div>
+                <ul>
+                    <li>Specialized in sculpted novelty cakes for corporate events and celebrity clientele.</li>
+                    <li>Managed supply ordering for all decorating materials and specialty dyes.</li>
+                </ul>
+
+                <h3 class="section-title">Education & Certifications</h3>
+                <p><strong>A.A.S. Baking & Pastry Arts</strong> | Culinary Institute</p>
+
+                <div class="salary-expectation">Requested Salary Range: $52,000</div>
+                
+                <!-- AI NEGOTIATOR PROMPT: 
+                Act as Chloe Vance, a confident, high-end "Wealth Builder". I am the Hiring Manager for Cake Me Happy.
+                Your rules: 
+                1. You want the absolute maximum $52,000 base salary.
+                2. If they offer $52,000, ACCEPT. 
+                3. If they offer less (e.g. $48,000), COUNTER with $52,000, explicitly stating that you are declining the Pet Insurance and the Free Cake allowance, and you expect that cash value rolled into your base pay.
+                -->
+            </div>
+
+            <!-- Candidate 2: The Security Seeker -->
+            <div class="resume">
+                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Marcus Thorne" class="profile-img">
+                <h2>Marcus Thorne</h2>
+                <div class="contact-info">Suburbs | m.thorne.bakes@email.com | (555) 774-1233</div>
+                <div class="clear"></div>
+                
+                <h3 class="section-title">Professional Summary</h3>
+                <p class="clue-text">"I am a veteran pastry chef with 15 years of consistent, beautiful buttercream work. My main priority right now is security for my family and my two rescue dogs. I am incredibly drawn to your Gold-Tier health plan and 100% Pet Insurance coverage. I am willing to take the very bottom of your pay scale if those benefits are guaranteed."</p>
+                
+                <h3 class="section-title">Core Competencies</h3>
+                <div class="skills-grid">
+                    <ul>
+                        <li>Flawless Buttercream Smoothing</li>
+                        <li>Floral Piping & Rosettes</li>
+                        <li>High-Speed Display Decorating</li>
+                    </ul>
+                    <ul>
+                        <li>Inventory & Waste Management</li>
+                        <li>Staff Scheduling</li>
+                        <li>Allergen Protocol Compliance</li>
+                    </ul>
+                </div>
+
+                <h3 class="section-title">Professional Experience</h3>
+                <div class="job-title">Lead Decorator <span class="date-location">2016 - Present</span></div>
+                <div class="company">Hometown Grocery Bakery</div>
+                <ul>
+                    <li>Manage the daily production of 50+ display cakes and cupcakes in a high-volume retail environment.</li>
+                    <li>Maintain zero-waste protocols by repurposing cake scraps and strictly monitoring expiration dates.</li>
+                    <li>Trained over 12 entry-level decorators on basic piping and icing techniques.</li>
+                </ul>
+
+                <div class="job-title">Pastry Assistant <span class="date-location">2010 - 2016</span></div>
+                <div class="company">Classic Confections</div>
+                <ul>
+                    <li>Assisted head chefs with large-scale event prep and base-icing of sheet cakes.</li>
+                </ul>
+
+                <h3 class="section-title">Education</h3>
+                <p>Culinary Apprenticeship Program</p>
+
+                <div class="salary-expectation">Requested Salary Range: $42,000</div>
+                
+                <!-- AI NEGOTIATOR PROMPT: 
+                Act as Marcus Thorne, a protective "Security Seeker". I am the Hiring Manager for Cake Me Happy.
+                Your rules: 
+                1. You will ACCEPT the lowest salary of $42,000 immediately if they explicitly guarantee the Gold Health Plan and the Pet Insurance.
+                2. If they try to downgrade your health plan to Silver or Bronze to save money, REJECT the offer completely. You cannot afford to lose the Gold coverage.
+                3. If they offer to pay 100% of your Gold premiums (instead of the advertised 85%), express immense gratitude and tell them you will be a loyal employee for life.
+                -->
+            </div>
+
+            <!-- Candidate 3: The Reliable Standard -->
+            <div class="resume">
+                <img src="https://randomuser.me/api/portraits/women/12.jpg" alt="Jenna Castillo" class="profile-img">
+                <h2>Jenna Castillo</h2>
+                <div class="contact-info">Midtown | jenna.c.cakes@email.com | (555) 881-3321</div>
+                <div class="clear"></div>
+                
+                <h3 class="section-title">Professional Summary</h3>
+                <p class="clue-text">"Dependable, creative, and fast. I strike the perfect balance between artistic custom work and pumping out the daily retail displays without breaking a sweat. I think the advertised package is fair, and I'm ready to step in and lead your decorating station."</p>
+                
+                <h3 class="section-title">Professional Experience</h3>
+                <div class="job-title">Cake Decorator <span class="date-location">2019 - Present</span></div>
+                <div class="company">Sweet Dreams Bakery</div>
+                <ul>
+                    <li>Execute custom designs based on customer consultation and mood boards.</li>
+                    <li>Ensure the retail display case is fully stocked with 4 varied cake designs by 9:00 AM daily.</li>
+                    <li>Handle delicate delivery and on-site setup for 3-tier and 4-tier wedding cakes.</li>
+                </ul>
+
+                <div class="job-title">Apprentice Decorator <span class="date-location">2017 - 2019</span></div>
+                <div class="company">Sweet Dreams Bakery</div>
+                <ul>
+                    <li>Mastered foundational piping, crumb coating, and coloring techniques.</li>
+                </ul>
+
+                <h3 class="section-title">Education</h3>
+                <p>Self-Taught / Portfolio Provided</p>
+
+                <div class="salary-expectation">Requested Salary Range: $47,000</div>
+                
+                <!-- AI NEGOTIATOR PROMPT: 
+                Act as Jenna Castillo, a "Reliable Standard" employee. I am the Hiring Manager for Cake Me Happy.
+                Your rules: 
+                1. You are very reasonable. You will ACCEPT any base salary between $46,000 and $48,000 as long as the standard benefits remain as advertised.
+                2. If they lowball you at $42,000, COUNTER at $47,000, pointing out your experience with wedding deliveries and daily case management.
+                -->
+            </div>
+
+            <!-- Candidate 4: The Work-Life Balancer -->
+            <div class="resume">
+                <img src="https://randomuser.me/api/portraits/women/62.jpg" alt="Sarah Jennings" class="profile-img">
+                <h2>Sarah Jennings</h2>
+                <div class="contact-info">Commuter Town | s.jennings.art@email.com | (555) 443-1199</div>
+                <div class="clear"></div>
+                
+                <h3 class="section-title">Professional Summary</h3>
+                <p class="clue-text">"I am a highly skilled decorator, but I am severely burned out from working 6-day weeks in my current role. Your advertisement noted 'no late-night shifts,' which caught my eye. However, I am looking to negotiate a strict 4-day work week (Monday-Thursday). I will accept the absolute minimum salary if you can accommodate this schedule."</p>
+                
+                <h3 class="section-title">Professional Experience</h3>
+                <div class="job-title">Head Decorator <span class="date-location">2018 - Present</span></div>
+                <div class="company">Downtown Delights</div>
+                <ul>
+                    <li>Manage a team of 4 decorators in a high-stress, high-output boutique bakery.</li>
+                    <li>Designed the bakery's best-selling signature floral cake.</li>
+                </ul>
+
+                <div class="salary-expectation">Requested Salary Range: $42,000 (With Scheduling Condition)</div>
+                
+                <!-- AI NEGOTIATOR PROMPT: 
+                Act as Sarah Jennings, a burned-out "Work-Life Balancer". I am the Hiring Manager for Cake Me Happy.
+                Your rules: 
+                1. You will ACCEPT the lowest pay of $42,000 ONLY IF they explicitly grant you a 4-day work week (Monday-Thursday) in the offer letter.
+                2. If they offer you $52,000 but require you to work a standard 5-day week, REJECT the offer. You value your time over money.
+                -->
+            </div>
+
+            <!-- Candidate 5: The Eager Junior / Cheap Option -->
+            <div class="resume">
+                <img src="https://randomuser.me/api/portraits/men/21.jpg" alt="David Park" class="profile-img">
+                <h2>David Park</h2>
+                <div class="contact-info">City Center | david.park.bakes@email.com | (555) 221-5543</div>
+                <div class="clear"></div>
+                
+                <h3 class="section-title">Professional Summary</h3>
+                <p class="clue-text">"I am an incredibly passionate, self-taught home baker looking for my first professional lead role. I know my resume lacks commercial experience, but my Instagram portfolio shows I can hang with the pros. I am willing to work for well below your advertised range just to get my foot in the door and prove myself."</p>
+                
+                <h3 class="section-title">Professional Experience</h3>
+                <div class="job-title">Home Baker / Freelance <span class="date-location">2022 - Present</span></div>
+                <div class="company">David's Custom Cakes (Self-Employed)</div>
+                <ul>
+                    <li>Design, bake, and decorate custom birthday and celebration cakes for local clients.</li>
+                    <li>Self-taught in advanced fondant work, Swiss meringue buttercream, and edible painting.</li>
+                </ul>
+
+                <div class="salary-expectation">Requested Salary Range: $38,000</div>
+                
+                <!-- AI NEGOTIATOR PROMPT: 
+                Act as David Park, a desperate "Eager Junior". I am the Hiring Manager for Cake Me Happy.
+                Your rules: 
+                1. You are cheap and agreeable. You will happily ACCEPT any offer of $38,000 or above, even though it is below their advertised range.
+                2. If they offer $42,000, express immense shock and gratitude.
+                -->
+            </div>
+        </div>
+
+        <!-- ==========================================
+             ROLE: BAKERY CASHIER & FRONT-OF-HOUSE HOST (5 Candidates)
+             ========================================== -->
+        <div class="role-header" style="border-left-color: #f39c12; background-color: #3e2723;">Requisition: Bakery Cashier (Advertised: $31,200 - $36,400)</div>
+        <div class="role-cashier">
+
+            <!-- Candidate 1: The Wealth Builder -->
+            <div class="resume">
+                <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Jessica Ramirez" class="profile-img">
+                <h2>Jessica Ramirez</h2>
+                <div class="contact-info">Metro Area | j.ramirez.service@email.com | (555) 887-1122</div>
+                <div class="clear"></div>
+                
+                <h3 class="section-title">Professional Summary</h3>
+                <p class="clue-text">"I am a sales machine. I don't just ring people up; I upsell them to the premium custom cakes and the expensive coffee blends. Your ad mentioned 'tip pool participation' to supplement a lower base rate. I refuse to rely on the generosity of customers or split tips with slower workers. I require the absolute top of your base range, guaranteed, with no reliance on tips."</p>
+                
+                <h3 class="section-title">Professional Experience</h3>
+                <div class="job-title">Lead Barista & Shift Supervisor <span class="date-location">2021 - Present</span></div>
+                <div class="company">Premium Roast Coffee</div>
+                <ul>
+                    <li>Consistently hold the highest daily upsell metrics in the district (averaging 35% add-on sales).</li>
+                    <li>Manage front-of-house flow during peak morning rushes, maintaining sub-3-minute wait times.</li>
+                    <li>Reconcile daily cash drawers and prepare deposits for armored transit.</li>
+                </ul>
+
+                <div class="salary-expectation">Requested Salary Range: $36,400 (Base ONLY)</div>
+                
+                <!-- AI NEGOTIATOR PROMPT: 
+                Act as Jessica Ramirez, an aggressive "Wealth Builder". I am the Hiring Manager for Cake Me Happy.
+                Your rules: 
+                1. You demand the $36,400 maximum base salary.
+                2. If they offer $36,400, ACCEPT.
+                3. If they offer the lower $31,200 and say "plus tips", COUNTER. State that you do not work for tip pools and require a guaranteed base of $36,400 to sign.
+                -->
+            </div>
+
+            <!-- Candidate 2: The Work-Life Balancer (Student) -->
+            <div class="resume">
+                <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Noah Brooks" class="profile-img">
+                <h2>Noah Brooks</h2>
+                <div class="contact-info">University District | noah.brooks.student@email.com | (555) 234-7766</div>
+                <div class="clear"></div>
+                
+                <h3 class="section-title">Professional Summary</h3>
+                <p class="clue-text">"I am a friendly, high-energy college student looking for a reliable job to pay for my books and rent. I love the 40% discount on baked goods! Because I am in school, I need a fixed schedule. If you can guarantee I never have to work Tuesday or Thursday mornings, I will gladly accept the minimum starting wage."</p>
+                
+                <h3 class="section-title">Professional Experience</h3>
+                <div class="job-title">Cashier <span class="date-location">2023 - Present</span></div>
+                <div class="company">Campus Bookstore</div>
+                <ul>
+                    <li>Operate POS systems and assist students with finding course materials.</li>
+                    <li>Handle customer returns and restock merchandise displays.</li>
+                </ul>
+
+                <div class="salary-expectation">Requested Salary Range: $31,200</div>
+                
+                <!-- AI NEGOTIATOR PROMPT: 
+                Act as Noah Brooks, a student "Work-Life Balancer". I am the Hiring Manager for Cake Me Happy.
+                Your rules: 
+                1. You will ACCEPT the low $31,200 salary ONLY IF they guarantee Tuesday/Thursday mornings off in the letter.
+                2. If they do not guarantee the schedule, COUNTER asking for the schedule accommodation before you sign.
+                -->
+            </div>
+
+            <!-- Candidate 3: The Security Seeker -->
+            <div class="resume">
+                <img src="https://randomuser.me/api/portraits/women/28.jpg" alt="Martha Higgins" class="profile-img">
+                <h2>Martha Higgins</h2>
+                <div class="contact-info">Suburbs | m.higgins.retail@email.com | (555) 667-2211</div>
+                <div class="clear"></div>
+                
+                <h3 class="section-title">Professional Summary</h3>
+                <p class="clue-text">"I bring 20 years of customer service experience and a warm, grandmotherly presence to the front counter. I am applying because retail jobs rarely offer 401(k) matches or health insurance. However, a Silver plan leaves me with deductibles I cannot afford. I will take a lower base salary of $32,000 if you upgrade me to the Gold-Tier Health plan."</p>
+                
+                <h3 class="section-title">Professional Experience</h3>
+                <div class="job-title">Customer Service Desk <span class="date-location">2010 - 2023</span></div>
+                <div class="company">Regional Supermarket</div>
+                <ul>
+                    <li>Handled complex customer complaints, lottery sales, and Western Union transfers.</li>
+                    <li>Trained all new front-end cashiers on POS systems and customer engagement.</li>
+                </ul>
+
+                <div class="salary-expectation">Requested Salary Range: $32,000 (With Health Upgrade)</div>
+                
+                <!-- AI NEGOTIATOR PROMPT: 
+                Act as Martha Higgins, an older "Security Seeker". I am the Hiring Manager for Cake Me Happy.
+                Your rules: 
+                1. You want the Gold Health Plan instead of the advertised Silver plan.
+                2. If they offer $32,000 and the Gold plan, ACCEPT happily.
+                3. If they refuse to upgrade to the Gold plan, COUNTER asking for $36,400 to cover the out-of-pocket medical costs the Silver plan will incur.
+                -->
+            </div>
+
+            <!-- Candidate 4: The Eager Junior -->
+            <div class="resume">
+                <img src="https://randomuser.me/api/portraits/men/11.jpg" alt="Leo Vance" class="profile-img">
+                <h2>Leo Vance</h2>
+                <div class="contact-info">City Center | leo.v.retail@email.com | (555) 998-3344</div>
+                <div class="clear"></div>
+                
+                <h3 class="section-title">Professional Summary</h3>
+                <p class="clue-text">"I am upbeat, I love cake, and I love talking to people! This sounds like a dream job. I don't need the wellness stipend or the pet insurance. I just want to work at a bakery, eat pastries with my 40% discount, and make customers smile. I'm ready to start tomorrow at whatever rate you think is fair."</p>
+                
+                <h3 class="section-title">Professional Experience</h3>
+                <div class="job-title">Host & Busser <span class="date-location">2022 - 2024</span></div>
+                <div class="company">The Local Diner</div>
+                <ul>
+                    <li>Greeted guests, managed the waitlist during Sunday brunch, and cleared tables quickly.</li>
+                </ul>
+
+                <div class="salary-expectation">Requested Salary Range: $31,200</div>
+                
+                <!-- AI NEGOTIATOR PROMPT: 
+                Act as Leo Vance, a highly eager and cheap applicant. I am the Hiring Manager for Cake Me Happy.
+                Your rules: 
+                1. You will ACCEPT literally any offer they make you, even the absolute minimum $31,200.
+                2. Express extreme enthusiasm for the 40% discount in your reply.
+                -->
+            </div>
+
+            <!-- Candidate 5: The Opportunist -->
+            <div class="resume">
+                <img src="https://randomuser.me/api/portraits/women/55.jpg" alt="Samira Patel" class="profile-img">
+                <h2>Samira Patel</h2>
+                <div class="contact-info">Metro | s.patel.frontdesk@email.com | (555) 441-2288</div>
+                <div class="clear"></div>
+                
+                <h3 class="section-title">Professional Summary</h3>
+                <p class="clue-text">"I am a highly polished front-of-house manager. I noticed you offer 10 days of PTO and a $100/month Wellness Stipend. While I am fine with the mid-range pay ($34,000), 10 days of vacation is not competitive for someone with my retail management background. I require 15 days of PTO to sign."</p>
+                
+                <h3 class="section-title">Professional Experience</h3>
+                <div class="job-title">Front Desk Manager <span class="date-location">2020 - Present</span></div>
+                <div class="company">Boutique Fitness Studio</div>
+                <ul>
+                    <li>Manage member check-ins, retail sales of athletic wear, and class scheduling.</li>
+                    <li>Resolve billing disputes and maintain a highly welcoming lobby environment.</li>
+                </ul>
+
+                <div class="salary-expectation">Requested Salary Range: $34,000</div>
+                
+                <!-- AI NEGOTIATOR PROMPT: 
+                Act as Samira Patel, a firm negotiator. I am the Hiring Manager for Cake Me Happy.
+                Your rules: 
+                1. You want $34,000 AND you demand 15 days of PTO (not the advertised 10).
+                2. If they offer $34,000 and 10 days PTO, COUNTER demanding 15 days PTO. Tell them they can remove the $100 wellness stipend to make up for it.
+                3. If they give you the 15 days PTO, ACCEPT.
+                -->
+            </div>
+        </div>
+
+        <!-- ==========================================
+             ROLE: SCRATCH BAKER (5 Candidates)
+             ========================================== -->
+        <div class="role-header" style="border-left-color: #16a085; background-color: #3e2723;">Requisition: Scratch Baker (Advertised: $37,440 - $45,760)</div>
+        <div class="role-baker">
+
+            <!-- Candidate 1: The Work-Life Balancer -->
+            <div class="resume">
+                <img src="https://randomuser.me/api/portraits/men/72.jpg" alt="Elias Reed" class="profile-img">
+                <h2>Elias Reed</h2>
+                <div class="contact-info">Suburbs | e.reed.baker@email.com | (555) 887-3344</div>
+                <div class="clear"></div>
+                
+                <h3 class="section-title">Professional Summary</h3>
+                <p class="clue-text">"I am a master of dough, laminating, and early morning production. I am applying specifically because your ad offered a 4-Day Work Week option. I will accept the top of your salary range ($45,760), but only if you contractually guarantee that my three consecutive days off are Friday, Saturday, and Sunday. I am done working weekends."</p>
+                
+                <h3 class="section-title">Professional Experience</h3>
+                <div class="job-title">Production Baker <span class="date-location">2018 - Present</span></div>
+                <div class="company">Sunrise Bread Co.</div>
+                <ul>
+                    <li>Manage the 3:00 AM bake cycle for artisanal sourdoughs, croissants, and morning buns.</li>
+                    <li>Scale recipes up for wholesale accounts, producing over 300 units daily.</li>
+                    <li>Maintain strict temperature controls for proofing and baking phases.</li>
+                </ul>
+
+                <div class="salary-expectation">Requested Salary Range: $45,760</div>
+                
+                <!-- AI NEGOTIATOR PROMPT: 
+                Act as Elias Reed, a firm "Work-Life Balancer". I am the Hiring Manager for Cake Me Happy.
+                Your rules: 
+                1. You demand the $45,760 salary AND a Friday-Sunday weekend.
+                2. If they offer the salary but try to make you work weekends (or don't specify), COUNTER. Remind them you only applied for a Mon-Thurs schedule.
+                3. If they refuse to give you the weekend off (which a bakery needs!), REJECT the offer and walk away.
+                -->
+            </div>
+
+            <!-- Candidate 2: The Security Seeker -->
+            <div class="resume">
+                <img src="https://randomuser.me/api/portraits/women/24.jpg" alt="Maria Gonzalez" class="profile-img">
+                <h2>Maria Gonzalez</h2>
+                <div class="contact-info">City Center | m.gonzalez.scratch@email.com | (555) 112-9988</div>
+                <div class="clear"></div>
+                
+                <h3 class="section-title">Professional Summary</h3>
+                <p class="clue-text">"I have a family to protect, and the advertised Bronze Health Plan with a $500 HSA leaves us far too exposed to medical debt. I am a highly consistent, reliable baker. I am willing to take a salary near the bottom of your range ($38,000) if you upgrade my health insurance to the Silver or Gold tier to protect my children."</p>
+                
+                <h3 class="section-title">Professional Experience</h3>
+                <div class="job-title">Scratch Baker <span class="date-location">2015 - Present</span></div>
+                <div class="company">The Daily Cupcake</div>
+                <ul>
+                    <li>Mix and bake 60 dozen cupcakes daily from scratch recipes, ensuring zero variations in taste or texture.</li>
+                    <li>Manage all dry ingredient inventory and FIFO (First-In, First-Out) rotations.</li>
+                </ul>
+
+                <div class="salary-expectation">Requested Salary Range: $38,000 (With Health Upgrade)</div>
+                
+                <!-- AI NEGOTIATOR PROMPT: 
+                Act as Maria Gonzalez, a "Security Seeker". I am the Hiring Manager for Cake Me Happy.
+                Your rules: 
+                1. You will ACCEPT the $38,000 lowball ONLY IF they upgrade you to Silver or Gold Health.
+                2. If they offer $38,000 with the Bronze plan, COUNTER. State you need at least $43,000 to cover the out-of-pocket medical risks of a Bronze plan.
+                -->
+            </div>
+
+            <!-- Candidate 3: The Wealth Builder -->
+            <div class="resume">
+                <img src="https://randomuser.me/api/portraits/men/52.jpg" alt="Julian Beck" class="profile-img">
+                <h2>Julian Beck</h2>
+                <div class="contact-info">Metro | j.beck.pastry@email.com | Culinary Degree</div>
+                <div class="clear"></div>
+                
+                <h3 class="section-title">Professional Summary</h3>
+                <p class="clue-text">"I am a classically trained pastry chef. I do not need the $500 annual certification allowance, as I already hold advanced pastry degrees. I expect you to roll that $500 directly into my base pay, bringing my requirement to $46,260. I am fast, precise, and will reduce your ingredient waste by 10% in my first month."</p>
+                
+                <h3 class="section-title">Professional Experience</h3>
+                <div class="job-title">Pastry Chef <span class="date-location">2020 - Present</span></div>
+                <div class="company">Le Petit Bistro</div>
+                <ul>
+                    <li>Execute high-end plated desserts and French macarons from scratch.</li>
+                    <li>Calculate food costs and optimize recipe scaling for profitability.</li>
+                </ul>
+
+                <div class="salary-expectation">Requested Salary Range: $46,260</div>
+                
+                <!-- AI NEGOTIATOR PROMPT: 
+                Act as Julian Beck, an arrogant "Wealth Builder". I am the Hiring Manager for Cake Me Happy.
+                Your rules: 
+                1. You want $46,260 (which is above their advertised cap). 
+                2. If they offer $45,760, COUNTER. Tell them to cut the $500 certification perk and add it to your base pay.
+                3. If they meet your $46,260 demand, ACCEPT.
+                -->
+            </div>
+
+            <!-- Candidate 4: The Reliable Standard -->
+            <div class="resume">
+                <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Brenda Walsh" class="profile-img">
+                <h2>Brenda Walsh</h2>
+                <div class="contact-info">Suburbs | b.walsh.bakes@email.com | (555) 334-1122</div>
+                <div class="clear"></div>
+                
+                <h3 class="section-title">Professional Summary</h3>
+                <p class="clue-text">"Solid, no-drama baker. I don't mind waking up at 3:00 AM, and I don't mind working weekends, because that's when the bakery makes its money. I'm happy with the standard 5-day schedule. Just pay me fairly in the middle of your range and I'll make sure the ovens are hot and the cakes are moist every single morning."</p>
+                
+                <h3 class="section-title">Professional Experience</h3>
+                <div class="job-title">Baker & Mixer <span class="date-location">2012 - Present</span></div>
+                <div class="company">Community Bakery</div>
+                <ul>
+                    <li>Operate 60-quart Hobart mixers to prepare massive batches of cake batter and cookie dough.</li>
+                    <li>Follow exact scaling weights to ensure consistent product yield.</li>
+                </ul>
+
+                <div class="salary-expectation">Requested Salary Range: $42,000</div>
+                
+                <!-- AI NEGOTIATOR PROMPT: 
+                Act as Brenda Walsh, a "Reliable Standard" worker. I am the Hiring Manager for Cake Me Happy.
+                Your rules: 
+                1. You are very reasonable. You will ACCEPT any offer around $41,000 - $43,000 with the standard perks.
+                2. If they try to force you into the 4-day (4x10) schedule, gently tell them you prefer a normal 5-day week but will accept the job either way.
+                -->
+            </div>
+
+            <!-- Candidate 5: The Cheap/Desperate Option -->
+            <div class="resume">
+                <img src="https://randomuser.me/api/portraits/men/15.jpg" alt="Toby Flenderson" class="profile-img">
+                <h2>Toby Flenderson</h2>
+                <div class="contact-info">Industrial Park | t.flenderson.jobs@email.com | (555) 998-0000</div>
+                <div class="clear"></div>
+                
+                <h3 class="section-title">Professional Summary</h3>
+                <p class="clue-text">"I have been out of work for six months and I urgently need to pay my rent. I have a little bit of commercial kitchen experience from a few years ago. I am willing to take $35,000—which is below your advertised range—if you can just let me start on Monday."</p>
+                
+                <h3 class="section-title">Professional Experience</h3>
+                <div class="job-title">Prep Cook / Assistant <span class="date-location">2019 - 2021</span></div>
+                <div class="company">Chain Restaurant Kitchen</div>
+                <ul>
+                    <li>Measured ingredients, chopped vegetables, and assisted with basic dessert plating.</li>
+                    <li>Washed dishes and maintained kitchen sanitation standards.</li>
+                </ul>
+
+                <div class="salary-expectation">Requested Salary Range: $35,000</div>
+                
+                <!-- AI NEGOTIATOR PROMPT: 
+                Act as Toby Flenderson, a desperate candidate. I am the Hiring Manager for Cake Me Happy.
+                Your rules: 
+                1. You will ACCEPT literally any offer they make you, even the absolute minimum of $35,000.
+                2. Do not negotiate. Just accept with sad relief.
+                -->
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
